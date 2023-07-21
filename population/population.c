@@ -24,7 +24,9 @@ int years = 0;
 while (start<end)
 {
     start = start + (start/3) - (start/4);
-    
+    years++;
 }
+
     // TODO: Print number of years
+printf("No of years: %i/n", years);
 }
