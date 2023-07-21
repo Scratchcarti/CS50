@@ -28,5 +28,5 @@ while (start<end)
 }
 
     // TODO: Print number of years
-printf("No of years: %i/n", years);
+printf("No of years: %i\n", years);
 }
