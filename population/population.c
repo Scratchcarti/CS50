@@ -7,10 +7,17 @@ int main(void)
 int start;
 do
 {
-    start = get_int("Integer Greater than 9: ");
+    start = get_int("Start point : ");
 }
 while (start < 9);
+
     // TODO: Prompt for end size
+int end;
+do
+{
+    end = get_int("End point : ");
+}
+while (end<start);
 
     // TODO: Calculate number of years until we reach threshold
 
