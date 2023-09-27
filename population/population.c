@@ -18,5 +18,18 @@ int main(void)
     {
         end = get_int("End size: ");
     }
-    while (start<end)
+    while (end < start);
+
+    //Keep track of number of years
+    int years = 0;
+
+    //Updating no of years
+    while (start < end)
+    {
+        start = start + (start / 3) - (start / 4);
+        years++;
+
+    }
+    //printing finale
+    printf("Years: %i\n", years);
 }
