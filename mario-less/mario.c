@@ -15,6 +15,7 @@ int main(void)
     for (int i =0; i<a; i++)
     {
         printf("x");
+        printf("x\n");
     }
-    for (int j = 0; j<a; j++)
+
 }
