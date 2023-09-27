@@ -16,5 +16,5 @@ int main(void)
     {
         printf("x");
     }
-
+    for (int j = 0; j<a; j++)
 }
