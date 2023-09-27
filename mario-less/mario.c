@@ -8,9 +8,10 @@ int main(void)
     {
     int a = get_int("Height: ");
     }
-    while
+    while (a>1 && a<8);
+
+    for (int i =0; i<a; i++)
     {
-        
+        printf("x")
     }
-    for (int i =0; i<a)
 }
