@@ -14,10 +14,10 @@ int main(void)
 
     for (int i =0; i<a; i++)
     {
-        printf ("x\n");
+        printf ("x");
       for (int j =0; j<a; j++)
       {
-        printf("x");
+        printf("x\n");
       }
     }
 
