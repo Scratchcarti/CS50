@@ -13,11 +13,14 @@ int main(void)
 
   for (int i = 0; i < a; i++)
   {
-      for (int j = 0; j < a; j++)
+    for (int s = 0; s < a - i - 1; s++)
+    {
+      printf(" ");
+    }
+      for (int j = 0; j <=i; j++)
       {
           printf("#");
       }
-      printf("\n");
   }
 
 }
