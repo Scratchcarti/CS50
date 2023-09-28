@@ -16,10 +16,11 @@ int main(void)
     {
 
     printf("x");
-    }
-    for (int j =0; j<a; j++)
+      for (int j =0; j<i; j++)
       {
         printf("\n");
 
       }
+    }
+
 }
