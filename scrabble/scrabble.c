@@ -53,7 +53,8 @@ int compute_score(string word)
    }
 
 
-return score;
+return score;check50 cs50/labs/2023/x/scrabble
+
 
 
 
