@@ -24,10 +24,25 @@ int main(void)
 int compute_score(string word)
 {
         // TODO: Compute and return score for string
-    
+   int score =0;
+   //actual code
+   for (int i = 0,len = strlen(word); i<len; i++)
+   {
+        if (isupper(word[i]))
+        {
+            score += POINTS[word[i]-'A'];
+        }
+        else (islower(word[i]))
+        {
+            score += POINTS[word[i]-'a'];
+
+        }
 
 
+   }
 
+
+return score;
 
 
 
