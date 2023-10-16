@@ -1,17 +1,9 @@
 #include <cs50.h>
 #include <stdio.h>
 int main(void)
-{ int x=10;
-float y=5.4;
-y=x;
-printf("%f\n",y);
+{ int x=2;
+int y=3;
+printf("\n%d %d", x++ , ++x);
 
-x=5;
-y=9.6;
-x=y;
-printf("%d\n",x);
-
-x= (int)y;
-printf("%d\n",x);
 
 }
