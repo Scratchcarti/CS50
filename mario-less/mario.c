@@ -14,28 +14,30 @@ int main(void)
 
   for (int i=0; i<a ; i++)
   {
-    for (int j=a; j>0; j--)
+    for (int j= a-i; j>=0; j--)
       {
         printf(" ");
       }
-       
+      printf("#");
+      printf("\n");
+
 
 
   }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
