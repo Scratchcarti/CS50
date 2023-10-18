@@ -10,13 +10,23 @@ int main(void)
      a = get_int("Height: ");
     }
     while (a > 8 || a < 1);
+// now to write actual # rows
 
-    for(int j; j<a, j++)
-    {
-      printf(" ");
-      printf
-    }
-     printf("\n");
+   
 
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
