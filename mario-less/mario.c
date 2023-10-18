@@ -18,7 +18,10 @@ int main(void)
       {
         printf(".");
       }
-    for (int k= i;  )
+    for (int k= i; k>i; k++)
+    {
+      printf("#");
+    }
 
 
 
