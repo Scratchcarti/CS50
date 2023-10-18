@@ -15,12 +15,10 @@ int main(void)
   {
     for (int j = 0; j < a; j++)
     {
-      if (i + j < a-1)
-          printf(" ");
-      else
-          printf("#");
+      printf("#");
 
     }
+    printf("#");
      printf("\n");
 
 }
