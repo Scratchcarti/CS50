@@ -11,7 +11,7 @@ int main(void)
     }
     while (a > 8 || a < 1);
 
-    for(int j=0; j<a, j++)
+    for(int j; j<a, j++)
     {
       printf(" ");
       printf
