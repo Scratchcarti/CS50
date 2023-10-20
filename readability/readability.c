@@ -20,7 +20,7 @@ int main(void)
 
 int count_letters(string text)
 {  L=0;
-    for (i=0, n = strlen(text); i<n; i++ )
+    for (int i=0, n = strlen(text); i<n; i++ )
     {  if (isalpha(text[i]))
         {
           L = L+1;
@@ -30,7 +30,7 @@ int count_letters(string text)
         L = L+0;
        }
     }
-  return = L;
+  return L;
 
 
 }
