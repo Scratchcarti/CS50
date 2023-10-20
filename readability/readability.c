@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
-
+int L;
 int count_letters(string text);
 int main(void)
 {
@@ -18,7 +18,7 @@ int main(void)
 }
 
 int count_letters(string text)
-{  int L=0;
+{  L=0;
     for (int i=0; n = strlen(text); i<n; i++ )
     {  if (isalpha(text[i]))
         {
