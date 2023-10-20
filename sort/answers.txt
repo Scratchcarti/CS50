@@ -1,5 +1,5 @@
 sort1 uses: bubble sort
-sort 1 takes 1.29 s to sort an already sorted sorted50000.txt while sort 2 takes 2.57s. We know that bubble sort dont have to start over and over again and that way when the file is already sorted it takes less time compared to selection sort. As the BIG(O) value is  n.
+sort 1 takes 1.29 s to sort an already sorted sorted50000.txt while sort 2 takes 2.57s. We know that bubble sort dont have to start over and over again and that way when the file is already sorted it takes less time compared to selection sort, As the (Ω) value is n.
 How do you know?: TODO
 
 sort2 uses: merge sort
