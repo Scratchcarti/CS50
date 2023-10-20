@@ -40,7 +40,7 @@ int get_cents(void)
 {
     // TODO
     int c = get_int("Change owed ");
-    return c;
+    
 }
 
 int calculate_quarters(int cents)
