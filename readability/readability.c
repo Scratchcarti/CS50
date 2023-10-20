@@ -2,10 +2,12 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
+int L;
 
 int count_letters(string text);
 int main(void)
 {
+
     // To get a string of chars
 
     string text = get_string("Text: ");
@@ -17,11 +19,18 @@ int main(void)
 }
 
 int count_letters(string text)
-{
+{  L=0;
     for (i=0, n = strlen(text); i<n; i++ )
-    {  if (text[i])
+    {  if (isalpha(text[i]))
         {
-
+          L = L+1;
         }
+      else
+      {
+        L = L+0;
+       }
     }
+  return = L;
+
+
 }
