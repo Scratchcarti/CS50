@@ -15,7 +15,7 @@ int main(void)
 
     // To count the number of letters in a string
     int letters = count_letters(text);
-
+    printf("%i", letters);
 }
 
 int count_letters(string text)
