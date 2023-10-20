@@ -18,8 +18,7 @@ int main(void)
 
     int sentences = count_sentences(text);
 
-    printf ("%i", sentences);
-
+    
 
 }
 
@@ -72,7 +71,19 @@ int main(void)
 
    for (int i=0, n = strlen(text); i < n; i++ )
    {
-        if (text[i] == (! || . || ?))
+        if (text[i] == (46))
+
+        {
+            S = S + 1;
+
+        }
+        else if (text[i] == (63))
+
+        {
+            S = S + 1;
+
+        }
+        else if (text[i] == (33))
 
         {
             S = S + 1;
@@ -86,5 +97,5 @@ int main(void)
    }
    return S;
 }
-
+// program done
 
