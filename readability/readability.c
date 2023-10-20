@@ -72,7 +72,7 @@ int main(void)
 
    for (int i=0, n = strlen(text); i < n; i++ )
    {
-        if (text[i] == ("!" || "." || "?"))
+        if (text[i] == (! || . || ?))
 
         {
             S = S + 1;
