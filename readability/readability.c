@@ -27,7 +27,10 @@ index = (5.88 * ((letters)/(words))) - (29.6 * ((sentences)/(words))) - (15.8);
 
 // final straw
 
-
+if (index > 16)
+{
+    printf ("Grade )
+}
 
 
 
