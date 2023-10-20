@@ -19,7 +19,7 @@ int main(void)
 int count_letters(string text)
 {
     for (i=0, n = strlen(text); i<n; i++ )
-    {  if (s[i])
+    {  if (text[i])
         {
 
         }
