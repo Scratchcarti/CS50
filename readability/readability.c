@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
-int L;
+
 int count_letters(string text);
 int main(void)
 {
@@ -12,14 +12,16 @@ int main(void)
     string text = get_string("Text: ");
 
 
-    // To count the number of letters in a string
+    // To count the number of letters in a string.
     int letters = count_letters(text);
-    printf("%i", letters);
+
+    // To count the number of words in a string.
+    
 }
 
 int count_letters(string text)
-{  L=0;
-    for (int i=0; n == strlen(text); i<n; i++ )
+{  int L=0;
+    for (int i=0, n = strlen(text); i<n; i++ )
     {  if (isalpha(text[i]))
         {
           L = L+1;
@@ -30,6 +32,5 @@ int count_letters(string text)
        }
     }
   return L;
-
-
 }
+
