@@ -8,9 +8,11 @@ int count_words(string text);
 int count_sentences(string text);
 int main(void)
 {
-    // To get a string of chars
+   // To get a string of chars
 
     string text = get_string("Text: ");
+
+// To get main numbers
 
     int letters = count_letters(text);
 
@@ -18,9 +20,31 @@ int main(void)
 
     int sentences = count_sentences(text);
 
-    
+// Now to grade
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
+
 
 // To count the number of letters in a string.
 
