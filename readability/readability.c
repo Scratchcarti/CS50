@@ -6,6 +6,7 @@
 int count_letters(string text);
 int count_words(string text);
 int count_sentences(string text);
+int index;
 int main(void)
 {
    // To get a string of chars
@@ -14,15 +15,17 @@ int main(void)
 
 // To get main numbers
 
-    int letters = count_letters(text);
+    float letters = count_letters(text);
 
-    int words = count_words(text);
+    float words = count_words(text);
 
-    int sentences = count_sentences(text);
+    float sentences = count_sentences(text);
 
 // Now to grade
 
+index = (5.88 * ((letters)/(words))) - (29.6 * ((sentences)/(words))) - (15.8);
 
+printf("Grade %i\n", index);
 
 
 
