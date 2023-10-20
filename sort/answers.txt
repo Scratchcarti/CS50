@@ -1,11 +1,11 @@
-sort1 uses: TODO
-
+sort1 uses: bubble sort
+sort 1 takes 
 How do you know?: TODO
 
-sort2 uses: TODO
+sort2 uses: merge sort
 
 How do you know?: TODO
-
-sort3 uses: TODO
+sort 2 takes 1.002 seconds to sort the random50000.txt file whilst sort 1 take 6.2s and sort 3 takes 2.4s. We know that merge sort is way faster than bubble and selectino sort, hence Sort 2 is merge sort
+sort3 uses: selection sort
 
 How do you know?: TODO
