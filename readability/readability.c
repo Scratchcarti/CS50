@@ -74,11 +74,13 @@ int main(void)
    {
         if (text[i] == ("!" || "." || "?"))
 
-            {
-                S = S + 1;
+        {
+            S = S + 1;
 
-            }
-          else {
+        }
+
+          else
+          {
             S = S+0;
           }
    }
