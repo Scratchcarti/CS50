@@ -70,9 +70,9 @@ int main(void)
 {
     int S = 0;
 
-   for (int i=0, n < strlen(text); i < n; i++ )
+   for (int i=0, n = strlen(text); i < n; i++ )
    {
-        if (text[i] == 33 || 63 || 46  )
+        if (text[i] == "33" || "63")
 
             {
                 S = S + 1;
