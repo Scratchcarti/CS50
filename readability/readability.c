@@ -47,7 +47,7 @@ int main(void)
 
 {
     int W = 0;
-    for (int i= 0, n = strlen(text); i < n; i++)
+    for (int i = 0, n = strlen(text); i < n; i++)
     {
         if (isspace(text[i]))
         {
