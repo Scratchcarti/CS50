@@ -25,8 +25,7 @@ int main(void)
 
 index = (5.88 * ((letters)/(words))) - (29.6 * ((sentences)/(words))) - (15.8);
 
-printf("Grade %i\n", index);
-
+// printing final 
 
 
 
