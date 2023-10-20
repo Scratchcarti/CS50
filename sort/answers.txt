@@ -9,3 +9,4 @@ sort 2 takes 1.002 seconds to sort the random50000.txt file whilst sort 1 take 6
 sort3 uses: selection sort
 
 How do you know?: TODO
+sort 3 takes 2.57 s white sort 1 takes 1.29s for an already sorted document. As we know the omega value for selection sort is n^2, thats why sort 3 is selection sort
