@@ -5,8 +5,8 @@ int count_letters(string text);
 int main(void)
 {
     // To get a string of chars
-    string text;
-    text = get_string("Text: ");
+
+    string text = get_string("Text: ");
 
 
     // To count the number of letters in a string
@@ -14,4 +14,7 @@ int main(void)
 
 }
 
-int count_letters(string text);
+int count_letters(string text)
+{
+    
+}
