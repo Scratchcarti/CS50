@@ -2,11 +2,12 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
+#include <math.h>
 
 int count_letters(string text);
 int count_words(string text);
 int count_sentences(string text);
-int index;
+float index;
 int main(void)
 {
    // To get a string of chars
@@ -25,19 +26,21 @@ int main(void)
 
 index = (5.88 * ((letters)/(words))) - (29.6 * ((sentences)/(words))) - (15.8);
 
+int g = round(index);
+
 // final straw
 
-if (index > 16)
+if (g > 16)
 {
     printf ("Grade 16+\n");
 }
-else if (index < 1)
+else if (g < 1)
 {
     printf ("Before Grade 1\n");
 }
 else
 {
-    printf("Grade %i\n", index);
+    printf("Grade %i\n", g);
 
 }
 
