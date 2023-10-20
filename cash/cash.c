@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 int get_cents(void);
-int calculate_quarters(int cents);
+int calculate_quarters(int q);
 int calculate_dimes(int cents);
 int calculate_nickels(int cents);
 int calculate_pennies(int cents);
@@ -43,10 +43,10 @@ int get_cents(void)
     return c;
 }
 
-int calculate_quarters(int cents)
+int calculate_quarters(int q)
 {
     // TODO
-    int q = cents/25;
+    q = cents/25;
     return q;
 }
 
