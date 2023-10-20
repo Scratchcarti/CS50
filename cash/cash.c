@@ -43,18 +43,18 @@ int get_cents(void)
     return c;
 }
 
-int calculate_quarters(int q)
+int calculate_quarters(int cents)
 {
     // TODO
-    q = cents/25;
-    return q;
+    cents = cents/25;
+    return cents;
 }
 
 int calculate_dimes(int cents)
 {
     // TODO
-    int d = cents/10;
-    return d;
+    cents = cents/10;
+    return cents;
 }
 
 int calculate_nickels(int cents)
