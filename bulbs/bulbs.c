@@ -19,7 +19,10 @@ int main(void)
     q = message[i];
 
         for (int j = 7; j >= 0; j--)
-        {  r = q % 2
+        {  r = q % 2;
+           byte[j] = r;
+           q = q/2;
+
            
 
         }
