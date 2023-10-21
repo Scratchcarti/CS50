@@ -18,7 +18,10 @@ int main(void)
     int r,q;
     q = message[i];
 
-        for (int j = 7; j<0)
+        for (int j = 7; j >= 0; j--)
+        {  r = q % 2
+
+        }
 
 
 
