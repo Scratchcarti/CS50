@@ -20,6 +20,7 @@ int main(void)
 
         for (int j = 7; j >= 0; j--)
         {  r = q % 2
+           
 
         }
 
