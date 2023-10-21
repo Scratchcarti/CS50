@@ -18,7 +18,7 @@ int main(void)
     int r,q;
     q = message[i];
 
-        for (j=)
+        for (int j = 7; j<0)
 
 
 
