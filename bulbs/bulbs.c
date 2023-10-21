@@ -11,6 +11,25 @@ int main(void)
   //get string
   string message;
   message = get_string ("Message: ");
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
