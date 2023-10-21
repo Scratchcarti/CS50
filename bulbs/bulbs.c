@@ -24,7 +24,7 @@ int main(void)
            q = q/2;
 
            int bit = byte [j];
-           
+           print_bulb(bit);
 
         }
 
