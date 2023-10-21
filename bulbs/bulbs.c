@@ -5,15 +5,19 @@
 const int BITS_IN_BYTE = 8;
 
 void print_bulb(int bit);
-
+int byte[8];
 int main(void)
+
 {
-  //get string
+  // get string
   string message;
   message = get_string ("Message: ");
+  // first loop to store 
   for (int i = 0, n = strlen(message); i < n; i++)
   {  int r,q;
-     int 
+     r = q%2;
+     byte[i]=r;
+     q=q/2;
 
 
 
