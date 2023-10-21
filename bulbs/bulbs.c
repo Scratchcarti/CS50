@@ -23,9 +23,13 @@ int main(void)
            byte[j] = r;
            q = q/2;
 
-           int bit = byte [j];
-           
-            printf("%i", bit);
+        }
+        for (int k = 7; k>=0; k--)
+        {
+            int bit = byte [k];
+
+            print_bulb(bit);
+
         }
 
 
