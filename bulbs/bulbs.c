@@ -12,12 +12,13 @@ int main(void)
   // get string
   string message;
   message = get_string ("Message: ");
-  // first loop to store 
-  for (int i = 0, n = strlen(message); i < n; i++)
-  {  int r,q;
-     r = q%2;
-     byte[i]=r;
-     q=q/2;
+  // first loop to take in message[] values and process
+  for (int i = n, n = strlen(message); i =< 0 ; i--)
+  {
+    int r,q;
+    q = message[i];
+
+
 
 
 
