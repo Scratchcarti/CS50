@@ -11,8 +11,7 @@ int main(void)
   //get string
   string message;
   message = get_string ("Message: ");
-  int c = chars(message);
-  printf ("c");
+
 
 
 
