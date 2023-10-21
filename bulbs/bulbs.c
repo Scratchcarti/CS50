@@ -12,7 +12,7 @@ int main(void)
   string message;
   message = get_string ("Message: ");
   for (int i = 0, n = strlen(message); i < n; i++)
-  { 
+  { message[i]
 
 
 
