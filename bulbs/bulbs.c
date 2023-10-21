@@ -11,7 +11,14 @@ int main(void)
   //get string
   string message;
   message = get_string ("Message: ");
-  
+  for (int i = 0, n = strlen(message); i < n; i++)
+  { 
+
+
+
+
+
+  }
 
 
 
