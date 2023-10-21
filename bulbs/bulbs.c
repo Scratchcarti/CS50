@@ -23,6 +23,7 @@ int main(void)
            byte[j] = r;
            q = q/2;
 
+           int bit = byte [j];
            
 
         }
