@@ -49,7 +49,7 @@ int main(int argc, string argv[])
 
     // Loop over all voters
     for (int i = 0; i < voter_count; i++)
-    {   
+    {
         string name = get_string("Vote: ");
 
         // Check for invalid vote
@@ -70,6 +70,7 @@ bool vote(string name)
   for ( int i = 0; i < candidate_count; i++)
   {
     int result = strcmp(name,candidates[i].name);
+    // verifying if its true and then counting the vote 
     if (result ==0)
     { candidates[i].votes++;
     return true;
