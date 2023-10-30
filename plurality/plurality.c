@@ -67,10 +67,10 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
 
-  for ( i = 0; i < candidate_count; i++)
+  for ( int i = 0; i < candidate_count; i++)
   {
-    int result = strcompare (name,candidate[i].name);
-    result = 0;
+    int result = strcmp(name,candidates[i].name);
+    result == 0;
     return true;
   }
 return false;
