@@ -66,8 +66,7 @@ int main(int argc, string argv[])
 // Update vote totals given a new vote
 bool vote(string name)
 {
-   for (i=0; i < strlen (name); i++ )
-
+  int result = strcompare (name,)
 
 
 }
