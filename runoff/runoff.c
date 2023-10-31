@@ -120,8 +120,15 @@ int main(int argc, string argv[])
         {
             candidates[i].votes = 0;
         }
-        
     }
+    for (int i = 0; i < voter_count; i++ )
+    {
+        for (int j = 0; i < candidate_count; j++)
+        {
+            
+        }
+    }
+    printf("%i\n")
     return 0;
 }
 
