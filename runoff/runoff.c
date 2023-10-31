@@ -125,8 +125,9 @@ int main(int argc, string argv[])
     {
         for (int j = 0; i < candidate_count; j++)
         {
-            
+            printf("%i %i = %i\n", i, j, preferances[i][j]);
         }
+        printf ("\n");
     }
     printf("%i\n")
     return 0;
