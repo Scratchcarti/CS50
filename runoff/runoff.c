@@ -89,6 +89,7 @@ int main(int argc, string argv[])
         {
             candidates[i].votes = 0;
         }
+
                 tabulate();
 
                 print_winner();
@@ -120,7 +121,7 @@ void tabulate(void)
        k = preferences[j][i];
        candidates[k].votes = candidates[k].votes - i;
     }
-
+    printf("%i", candidates[0].votes);
     int maxv = -1000;
      for (int i = 0; i < candidate_count; i++)
      {
