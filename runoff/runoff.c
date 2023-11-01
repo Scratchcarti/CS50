@@ -156,7 +156,7 @@ void tabulate(void)
 
 
     }
-  for (int l = 0; l < candidate_count; l++)
+  for (int l = 0; l < 2; l++)
   {
    printf("%i\n", candidates[l].votes);
   }
