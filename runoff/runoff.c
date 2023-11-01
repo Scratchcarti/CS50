@@ -148,9 +148,11 @@ void print_winner(void)
      }
 
      for (int j = 0; j < candidate_count; j++)
+     {
      if (maxv == candidates[j].votes)
      {
         printf ("%s\n", candidates[j].name);
+     }
      }
 }
 
