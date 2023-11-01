@@ -138,10 +138,13 @@ return;
 // Print the winner of the election, if there is one
 void print_winner(void)
 {
-    int maxv = 0;
+    int maxv = -1000;
      for (i = 0; i < candidate_count; i++)
      {
-        if ( > )
+        if ( candidates[i].votes > maxv )
+        {
+            maxv = candidates[i].votes
+        }
      }
 }
 
