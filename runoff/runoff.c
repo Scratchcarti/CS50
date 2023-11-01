@@ -156,7 +156,10 @@ void tabulate(void)
 
 
     }
-
+  for (int l = 0; l < candidate_count; l++)
+  {
+    
+  }
 
 
     }
