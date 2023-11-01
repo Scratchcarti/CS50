@@ -83,13 +83,14 @@ int main(int argc, string argv[])
     }
 
 
-        tabulate();
 
         // Reset vote counts back to zero
         for (int i = 0; i < candidate_count; i++)
         {
             candidates[i].votes = 0;
         }
+                tabulate();
+
                 print_winner();
 
 
