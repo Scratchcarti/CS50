@@ -120,7 +120,8 @@ void tabulate(void)
        k = preferences[j][i];
        candidates[k].votes = candidates[k].votes - i;
     }
-    printf("%i\n", candidates[2].votes);
+    }
+
     int maxv = -1000;
      for (int i = 0; i < candidate_count; i++)
      {
@@ -130,14 +131,18 @@ void tabulate(void)
         }
      }
 
-   printf ("%i\n", maxv);
+     for ( int i = 0; i < candidate_count; i++)
+     {
+        if ( maxv == candidates[i].votes)
+        {
+            printf("%s\n", candidates[i].name);
+        }
+     }
 
 
 
 
 
-
-    }
 
 
 return;
