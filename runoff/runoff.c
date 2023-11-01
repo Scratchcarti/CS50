@@ -161,9 +161,9 @@ void tabulate(void)
    printf("%i\n", candidates[l].votes);
   }
 
-
+return;
     }
-    return;
+
 
 
 // Print the winner of the election, if there is one
