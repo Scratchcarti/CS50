@@ -27,7 +27,7 @@ int candidate_count;
 // Function prototypes
 bool vote(int voter, int rank, string name);
 void tabulate(void);
-bool print_winner(void);
+void print_winner(void);
 int find_min(void);
 bool is_tie(int min);
 void eliminate(int min);
@@ -85,22 +85,13 @@ int main(int argc, string argv[])
 
         tabulate();
 
-
-
-        // Eliminate last-place candidates
-        int min = find_min();
-        bool tie = is_tie(min);
-
-     
-
-        // Eliminate anyone with minimum number of votes
-        eliminate(min);
-
         // Reset vote counts back to zero
         for (int i = 0; i < candidate_count; i++)
         {
             candidates[i].votes = 0;
         }
+                print_winner();
+
 
     return 0;
 }
@@ -137,10 +128,7 @@ void tabulate(void)
 
 
     }
-  for (int l = 0; l < 3; l++)
-  {
-   printf("%i\n", candidates[l].votes);
-  }
+
 
 return;
     }
@@ -148,10 +136,13 @@ return;
 
 
 // Print the winner of the election, if there is one
-bool print_winner(void)
+void print_winner(void)
 {
-    // TODO
-    return false;
+    int maxv = 0;
+     for (i = 0; i < candidate_count; i++)
+     {
+        if ( > )
+     }
 }
 
 // Return the minimum number of votes any remaining candidate has
