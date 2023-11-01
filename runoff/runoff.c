@@ -143,22 +143,9 @@ void tabulate(void)
 {
     for (int j =0; j < voter_count; j++)
     {  for (int i = 0; i < candidate_count; i++)
-    {  if (i=0)
     {
-
+       
     }
-        if (i=1){
-
-        }
-        if (i=2){
-
-        }
-
-        if (i=3){
-
-        }
-        
-
 
 
 
@@ -173,7 +160,7 @@ void tabulate(void)
 
     }
     return;
-}
+
 
 // Print the winner of the election, if there is one
 bool print_winner(void)
