@@ -121,7 +121,16 @@ void tabulate(void)
        candidates[k].votes = candidates[k].votes - i;
     }
 
+    int maxv = -1000;
+     for (int i = 0; i < candidate_count; i++)
+     {
+        if ( candidates[i].votes > maxv )
+        {
+            maxv = candidates[i].votes;
+        }
+     }
 
+   printf ("%i", maxv);
 
 
 
@@ -139,16 +148,7 @@ return;
 // Print the winner of the election, if there is one
 void print_winner(void)
 {
-    int maxv = -1000;
-     for (int i = 0; i < candidate_count; i++)
-     {
-        if ( candidates[i].votes > maxv )
-        {
-            maxv = candidates[i].votes;
-        }
-     }
 
-   printf ("%i", maxv);
 }
 
 // Return the minimum number of votes any remaining candidate has
