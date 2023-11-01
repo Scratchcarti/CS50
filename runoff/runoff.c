@@ -27,10 +27,6 @@ int candidate_count;
 // Function prototypes
 bool vote(int voter, int rank, string name);
 void tabulate(void);
-void print_winner(void);
-int find_min(void);
-bool is_tie(int min);
-void eliminate(int min);
 
 int main(int argc, string argv[])
 {
@@ -148,31 +144,3 @@ void tabulate(void)
 return;
     }
 
-
-
-// Print the winner of the election, if there is one
-void print_winner(void)
-{
-
-}
-
-// Return the minimum number of votes any remaining candidate has
-int find_min(void)
-{
-    // TODO
-    return 0;
-}
-
-// Return true if the election is tied between all candidates, false otherwise
-bool is_tie(int min)
-{
-    // TODO
-    return false;
-}
-
-// Eliminate the candidate (or candidates) in last place
-void eliminate(int min)
-{
-    // TODO
-    return;
-}
