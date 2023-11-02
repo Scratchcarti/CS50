@@ -196,11 +196,12 @@ int mv =0;
         {
             e++;
         }
-    }
-    if (candidates[i].votes == min)
+        if (candidates[i].votes == min)
     {
         mv++;
     }
+    }
+
 if (mv == e)
 {
     return true;
@@ -211,7 +212,7 @@ if (mv == e)
 // Eliminate the candidate (or candidates) in last place
 void eliminate(int min)
 {
-    for (int i =0; i < candidates_count; i++)
+    for (int i =0; i < candidate_count; i++)
     {
     if (candidates[i].votes == min)
     {
