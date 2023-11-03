@@ -1,5 +1,6 @@
 #include <stdio.h>
-void main ()
+
+int main(void)
 {
     int n1=0, n2 = 1, n3, i, number;
     printf("f");
@@ -11,7 +12,7 @@ for (i=2; i<number, ++i)
     printf("%d", n3);
     n1 = n2;
     n2 =n3;
-    
+
 }
 
 }
