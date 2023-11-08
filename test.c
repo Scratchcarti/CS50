@@ -1,10 +1,10 @@
 #include <stdio.h>
 int main (void)
 {
-    int a,b,c,r=0;
+    int a,b,c,r=0,k;
 scanf("%i", &a);
+k = a;
 for (;;)
-
 { b = a % 10;
  r = r * 10 + b;
 a = a/10;
@@ -14,7 +14,7 @@ a = a/10;
 
 }
 
-if (r == a)
+if (r == k)
 {
     printf("issa palindrome\n");
 
