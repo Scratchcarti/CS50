@@ -7,8 +7,9 @@ int main (void)
         num = a % 10;
         sum = sum + num;
         a = a/10;
+        if (a ==0)
+        {break;}
         
-
 
     }
 }
