@@ -3,16 +3,16 @@
 int main(void)
 
 {
-    int a,b,p;
+    int a,b,p=0;
     scanf("%d %d", &a,&b);
 
-    for (int i =0; i < b; i++)
+    for (int i =0; i < b+1; i++)
     {
-        p = 
-
+        p = p + pow (a, i);
 
     }
 
+printf("%i\n", p);
 
 
 
