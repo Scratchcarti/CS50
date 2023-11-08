@@ -1,21 +1,28 @@
 #include <stdio.h>
 int main (void)
-{   int a,b,c;
-    char gang;
-    scanf("%c %d %d", &gang, &a, &b );
+{
+    int a,b,c,r=0;
+scanf("%i", &a);
+for (;;)
 
-    switch (gang)
-    {
-        case '+': c = a + b; printf("Result = %d\n", c);break;
-        case '-': c = a - b; printf("Result = %d\n", c);break;
-        case '*': c = a * b; printf("Result = %d\n", c);break;
-        case '/': c = a / b; printf("Result = %d\n", c);break;
-        case '%': c = a % b; printf("Result = %d\n", c);break;
-        default : printf("invalid arithematic operation\n");break;
-    }
+{ b = a % 10;
+ r = r * 10 + b;
+a = a/10;
 
+  if (a == 0)
+  {break;}
 
+}
 
+if (r == a)
+{
+    printf("issa palindrome\n");
+
+}
+else
+{
+    printf("is your retarded?\n");
+}
 
 
 
