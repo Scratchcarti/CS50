@@ -1,28 +1,29 @@
 #include <stdio.h>
-int main (void)
+#include <math.h>
+int main(void)
+
 {
-    int a,b,c,r=0,k;
-scanf("%i", &a);
-k = a;
-for (;;)
-{ b = a % 10;
- r = r * 10 + b;
-a = a/10;
+    int a,b,p;
+    scanf("%d %d", &a,&b);
 
-  if (a == 0)
-  {break;}
+    for (int i =0; i < b; i++)
+    {
+        p = 
 
-}
 
-if (r == k)
-{
-    printf("issa palindrome\n");
+    }
 
-}
-else
-{
-    printf("is your retarded?\n");
-}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
