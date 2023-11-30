@@ -6,7 +6,9 @@ int main (void)
      FILE *input = fopen(input.wav, "r");
 
      FILE *output = fopen(output3.wav, "w");
-return 0;
+
+     fclose(input);
+    fclose(output);
 }
 
 
