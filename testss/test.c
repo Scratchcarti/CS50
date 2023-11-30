@@ -7,7 +7,9 @@ int main()
   FILE *output = fopen("PDF.txt","w");
 
      char w;
-     fread(&w,)
+     fread(&w,sizeof(char),1,input);
+     fwrite(&w,sizeof(char),1,output);
+
 
 
   return 0;
