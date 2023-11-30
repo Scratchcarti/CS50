@@ -3,7 +3,9 @@
 
 int main (void)
 {
- FILE *output = fopen(first.txt, "w");
+     FILE *input = fopen(input.wav, "r");
+
+     FILE *output = fopen(output3.wav, "w");
 return 0;
 }
 
