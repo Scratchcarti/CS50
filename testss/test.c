@@ -1,17 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main (void)
+int main()
 {
-     FILE *input = fopen(input.wav, "r");
+  FILE *input = fopen("file.txt", "r");
+  FILE *output = fopen("PDF.txt","w");
 
-     FILE *output = fopen(output3.wav, "w");
 
-     fclose(input);
-    fclose(output);
+
+  return 0;
+
 }
-
-
 
 
 
