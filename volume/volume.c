@@ -47,6 +47,10 @@ int main(int argc, char *argv[])
     {
         //volume
         buffer = buffer * factor;
+        for (int i = 0, i<16, i++)
+        {
+            printf("%i", buffer[i]);
+        }
         fwrite(&buffer, sizeof(int16_t), 1, output);
     }
 
