@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
     {
         //volume
         buffer = buffer * factor;
-        printf("%hx",buffer);
+        printf("%d",buffer);
         fwrite(&buffer, sizeof(int16_t), 1, output);
     }
 
