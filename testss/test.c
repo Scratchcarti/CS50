@@ -5,11 +5,12 @@ int main()
 {
   FILE *input = fopen("file.txt", "r");
   FILE *output = fopen("PDF.txt","w");
+  char c;
 
-     char w;
-     fread(&w,sizeof(char),1,input);
-     fwrite(&w,sizeof(char),1,output);
-
+ while(fread(&c, sizeof(char), 1, input))
+    {
+        fwrite(&c, sizeof(char), 1, output);
+    }
 
 
   return 0;
