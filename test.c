@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
-FILE *output = fwrite
-
-
-
+int main (void)
+{
+ FILE *output = fopen(first.txt, "w");
+return 0;
+}
 
 
 
