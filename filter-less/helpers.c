@@ -23,15 +23,33 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 void sepia(int height, int width, RGBTRIPLE image[height][width])
 {
      for (int i = 0; i < height; i++)
-    {   BYTE a,b,c;
+    {   BYTE a,b,c,d,e,f;
         for (int j = 0 ; j < width; j++)
         {
             a =image[i][j].rgbtBlue, b = image[i][j].rgbtGreen, c = image[i][j].rgbtRed;
 
 
-            image[i][j].rgbtBlue = .272 * c + .534 * b + .131 * a;
-            image[i][j].rgbtGreen = .349 * c + .686 * b + .168 * a;
-            image[i][j].rgbtRed = .393 * c + .769 * b + .189 * a;
+
+            d =.272 * c + .534 * b + .131 * a;
+            if (d > 0 && d <255)
+            {
+                image[i][j].rgbtBlue = d;
+            }
+
+            e =.349 * c + .686 * b + .168 * a;
+
+             if (e > 0 && e <255)
+             {
+             image[i][j].rgbtGreen = e;
+             }
+
+             f = .393 * c + .769 * b + .189 * a;
+
+            if (f > 0 && f <255)
+            {
+            image[i][j].rgbtRed =f;
+            }
+
         }
     }
 
@@ -65,7 +83,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
-        
+
 
 
 
