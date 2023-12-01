@@ -1,6 +1,6 @@
 #include <getopt.h>
 #include <stdio.h>
-#include <stdlib.h>mak
+#include <stdlib.h>
 
 #include "helpers.h"
 
