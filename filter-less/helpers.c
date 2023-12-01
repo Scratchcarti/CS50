@@ -37,7 +37,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
                 image[i][j].rgbtBlue = d;
             }
              else
-             {image[i][j].rgbtBlue = 255;}
+             {image[i][j].rgbtBlue = 0;}
 
             e =round(.349 * c + .686 * b + .168 * a);
 
@@ -46,7 +46,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
              image[i][j].rgbtGreen = e;
              }
              else
-             {image[i][j].rgbtGreen = 255;}
+             {image[i][j].rgbtGreen = 0;}
 
              f = round(.393 * c + .769 * b + .189 * a);
 
@@ -55,7 +55,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             image[i][j].rgbtRed =f;
             }
              else
-             {image[i][j].rgbtRed = 255;}
+             {image[i][j].rgbtRed = 0;}
         }
     }
 
