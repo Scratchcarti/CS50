@@ -5,9 +5,13 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
    for (int i = 0; i < height, i++)
    {
+    int n =0;
     for (int j = 0; j < width, j++)
     {
-         image[height][width] = (image[height][width].rgbtRed + image[height][width].rgbtGreen + image[height][width].rgbtBlue)/3.0;
+        n = (image[height][width].rgbtRed + image[height][width].rgbtGreen + image[height][width].rgbtBlue)/3.0;
+         image[height][width].rgbtBlue = n;
+         image[height][width].rgbtGreen = n;
+         image[height][width].rgbtRed = n;
     }
    }
 
