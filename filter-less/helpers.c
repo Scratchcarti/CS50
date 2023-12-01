@@ -6,14 +6,15 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 
     for (int i = 0; i < height; i++)
     {
-        int k =0;
+        int k;
         for (int j = 0 ; j < width; j++)
         {
             k = (image[height][width].rgbtBlue + image[height][width].rgbtGreen + image[height][width].rgbtRed)/3;
-            image[height][width].rgbtBlue = k;
+
+           printf("%d",image[height][width].rgbtBlue);
             image[height][width].rgbtRed = k;
             image[height][width].rgbtGreen = k;
-           
+
         }
     }
 
