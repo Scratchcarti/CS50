@@ -76,7 +76,7 @@ int main(int argc, char *argv[])
         // skip over padding
         fseek(inptr, padding, SEEK_CUR);
     }
-
+        //using helpers.c 
     colorize(height, width, image);
 
     // write outfile's BITMAPFILEHEADER
