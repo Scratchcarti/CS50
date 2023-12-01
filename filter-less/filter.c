@@ -1,4 +1,4 @@
-#include <getopt.h>
+./filter -g images/yard.bmp out.bmp#include <getopt.h>
 #include <stdio.h>
 #include <stdlib.h>
 
