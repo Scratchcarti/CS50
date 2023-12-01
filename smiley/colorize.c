@@ -76,7 +76,8 @@ int main(int argc, char *argv[])
         // skip over padding
         fseek(inptr, padding, SEEK_CUR);
     }
-        //using helpers.c 
+        //using helpers.c smiley/ $ ./colorize smiley.bmp smiley_out.bmp
+
     colorize(height, width, image);
 
     // write outfile's BITMAPFILEHEADER
