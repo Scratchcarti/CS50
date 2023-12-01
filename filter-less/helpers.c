@@ -23,8 +23,7 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 void sepia(int height, int width, RGBTRIPLE image[height][width])
 {
      for (int i = 0; i < height; i++)
-    {   int a,b,c;
-        int k;
+    {   BYTE a,b,c;
         for (int j = 0 ; j < width; j++)
         {
             a =image[i][j].rgbtBlue, b = image[i][j].rgbtGreen, c = image[i][j].rgbtRed;
