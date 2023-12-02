@@ -72,7 +72,9 @@ int main(int argc, char *argv[])
 
     // Get image's dimensions
     int height = abs(bi.biHeight);
+    printf("%d",height);
     int width = bi.biWidth;
+    printf("%d",width);
 
     // Allocate memory for image
     RGBTRIPLE(*image)[width] = calloc(height, width * sizeof(RGBTRIPLE));
