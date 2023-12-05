@@ -51,7 +51,7 @@ int main(int argc, char *argv[])
 
 int check_format(WAVHEADER header)
 {
-    header.audioformat == 
+    header.format
 
 
 
