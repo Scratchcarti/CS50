@@ -51,11 +51,22 @@ int main(int argc, char *argv[])
 
 int check_format(WAVHEADER header)
 {
-    header.format
+    int t,p = 0;
 
+    for (int i =0; i < 4; i++)
+  {
+    p = header.format[i];
+    t = t + p;
+  }
 
-
-     return 0;
+  if (t == 199)
+  {
+    return true;
+  }
+  else
+  {
+     return false;
+  }
 }
 
 int get_block_size(WAVHEADER header)
