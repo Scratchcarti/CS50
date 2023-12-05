@@ -19,7 +19,12 @@ int main(int argc, char *argv[])
 
     // comfaring strings
 
-    char c[] = argv[1];
+    int l = strlen(argv[1]);
+
+    char a[] = {".","w","a","v"};
+
+    for (int i = 0; i < 4;  )
+
 
 
 
