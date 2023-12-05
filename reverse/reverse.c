@@ -66,7 +66,7 @@ BYTE check[] = {'W', 'A', 'V', 'E'};
         {
             // Format does not match, return 0 (false)
             printf("nah\n");
-            return 0;
+            
         }
     }
 }
