@@ -25,13 +25,16 @@ int main(int argc, char *argv[])
     }
 
     // Read header
-    WAVHEADER header[44];
+    WAVHEADER header[1];
 
-    fread(header,44,1,input);
+    fread(header,1,1,input);
 
 
     // Use check_format to ensure WAV format
-    // TODO #4
+
+
+
+
 
     // Open output file for writing
     // TODO #5
