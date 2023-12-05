@@ -22,14 +22,12 @@ int main(int argc, char *argv[])
     int l = strlen(argv[1]);
 
     char a[] = ".wav";
-    char new[l];
+    char new[3];
 
-    int sum = 0;
-
-    for (int i = l; i > l-4; i-- )
-    {
-         new[l] =  argv[1][l];
-    }
+        new[3] = argv[1][l-1];
+           new[2] = argv[1][l-2];
+              new[1] = argv[1][l-3];
+                 new[0] = argv[1][l-4];
 
 
 
