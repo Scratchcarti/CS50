@@ -21,9 +21,12 @@ int main(int argc, char *argv[])
 
     int l = strlen(argv[1]);
 
-    char a[] = {".","w","a","v"};
+    char *a[] = ".wav";
 
-    for (int i = 0; i < 4;  )
+    for (int i = l; i > l-4; i-- )
+    {
+        
+    }
 
 
 
