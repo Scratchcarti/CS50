@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
     int l = strlen(argv[1]);
 
     char a[] = ".wav";
-    char new[3];
+    char new[4];
 
         new[3] = argv[1][l-1];
            new[2] = argv[1][l-2];
@@ -31,8 +31,8 @@ int main(int argc, char *argv[])
 
     if (strcmp(new,a) != 0)
     {
-        printf("wrong input\n");
-        
+        printf("%s", new);
+
     }
 
 
