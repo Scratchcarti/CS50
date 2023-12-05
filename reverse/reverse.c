@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
     }
 
     // Read header
-    WAVHEADER header[0];
+    WAVHEADER header;
 
     fread(header,44,1,input);
 
