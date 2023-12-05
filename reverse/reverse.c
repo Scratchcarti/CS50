@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 
     // Use check_format to ensure WAV format
 
-        check
+        check_format(header);
 
 
 
@@ -51,8 +51,11 @@ int main(int argc, char *argv[])
 
 int check_format(WAVHEADER header)
 {
-    // TODO #4
-    return 0;
+    header.audioformat == 
+
+
+
+     return 0;
 }
 
 int get_block_size(WAVHEADER header)
