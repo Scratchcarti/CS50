@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 
     // Use check_format to ensure WAV format
 
-        check_format(WAVHEADER header);
+        check_format(header);
 
 
 
