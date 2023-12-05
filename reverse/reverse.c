@@ -56,7 +56,16 @@ int main(int argc, char *argv[])
 
 int check_format(WAVHEADER header)
 {
-    
+    BYTE wave [] = {'w','a','v','e'};
+
+    for (int i =0; i < 4; i++)
+    {
+       if ( header.format[i] != wave[i])
+       { printf("not no match\n");
+       return 1;
+       }
+    }
+    return 0;
 }
 
 
