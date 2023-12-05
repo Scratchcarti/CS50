@@ -21,11 +21,18 @@ int main(int argc, char *argv[])
 
     int l = strlen(argv[1]);
 
-    char *a[] = ".wav";
+    char *a[5] = ".wav";
+
+    int sum = 0;
 
     for (int i = l; i > l-4; i-- )
     {
-        
+        sum = strncmp (a,argv[1],l);
+        if (sum !=0)
+        {
+            printf("Input is not a WAV file.\n");
+            break;
+        }
     }
 
 
