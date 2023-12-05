@@ -40,13 +40,12 @@ int main(int argc, char *argv[])
 
         if (output == NULL)
         {
-            printf("output file wasnt able to open properly\n")
+            printf("output file wasnt able to open properly\n");
             return 1;
         }
 
     // Write header to file
 
-        fwrite(&header,sizeof(WAVEHEADER),1,output);
 
     // Use get_block_size to calculate size of block
     // TODO #7
@@ -57,20 +56,14 @@ int main(int argc, char *argv[])
 
 int check_format(WAVHEADER header)
 {
-    int t,p = 0;
-
-    for (int i =0; i < 4; i++)
-  {
-    p = header.format[i];
-    t = t + p;
-  }
-
+    
   if (t == 199)
   {
     return 1;
   }
   else
   {
+    printf("not fuckign wav\n");
      return 0;
   }
 }
