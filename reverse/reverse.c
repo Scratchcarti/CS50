@@ -27,20 +27,26 @@ int main(int argc, char *argv[])
     // Read header
     WAVHEADER header;
 
-    fread(header,44,1,input);
+    fread(&header,sizeof(WAVHEADER),1,input);
 
 
     // Use check_format to ensure WAV format
 
         check_format(header);
 
-
-
     // Open output file for writing
-    // TODO #5
+
+        FILE *output = fopen(argv[2], "w");
+
+        if (output == NULL)
+        {
+            printf("output file wasnt able to open properly\n")
+            return 1;
+        }
 
     // Write header to file
-    // TODO #6
+
+        fwrite(&header,sizeof(WAVEHEADER),1,output);
 
     // Use get_block_size to calculate size of block
     // TODO #7
@@ -61,13 +67,16 @@ int check_format(WAVHEADER header)
 
   if (t == 199)
   {
-    return true;
+    return 1;
   }
   else
   {
-     return false;
+     return 0;
   }
 }
+
+
+
 
 int get_block_size(WAVHEADER header)
 {
