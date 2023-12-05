@@ -16,7 +16,12 @@ int main(int argc, char *argv[])
         printf("Format is ./reverse input.wav output.wav\n");
         return 1;
     }
-    
+
+    // comfaring strings
+
+    char c[] = argv[1];
+
+
 
 
 
