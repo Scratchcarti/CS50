@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
               new[1] = argv[1][l-3];
                  new[0] = argv[1][l-4];
 
-    if (strcmp(new,a) != 0)
+    if (strncmp(new,a) != 0)
     {
         printf("%s\n", new);
 
