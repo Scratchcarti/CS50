@@ -16,6 +16,8 @@ int main(int argc, char *argv[])
         return 1;
     }
 
+    char *argv[1]
+
     // Open input file for reading
     FILE *input = fopen(argv[1],"r");
     if (input == NULL)
@@ -54,7 +56,7 @@ int main(int argc, char *argv[])
 
     // Write reversed audio to file
 
-    
+
 
 
 
