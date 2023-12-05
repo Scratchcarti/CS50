@@ -56,16 +56,7 @@ int main(int argc, char *argv[])
 
 int check_format(WAVHEADER header)
 {
-    int new=0,temp;
-    for (int i = 0; i < 4; i++)
-    {
-         temp = header.format[i];
-         new = new + temp;
-    }
-if (new == 199)
-{
-
-}
+    
 }
 
 
