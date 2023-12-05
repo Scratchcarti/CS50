@@ -28,6 +28,7 @@ int main(int argc, char *argv[])
     for (int i = l; i > l-4; i-- )
     {
         sum = strncmp (a,argv[1],l);
+        printf("%d\n",sum);
         if (sum !=0)
         {
             printf("Input is not a WAV file.\n");
