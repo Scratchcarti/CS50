@@ -1,6 +1,7 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #include "wav.h"
 
@@ -15,8 +16,9 @@ int main(int argc, char *argv[])
         printf("Format is ./reverse input.wav output.wav\n");
         return 1;
     }
+    
 
-    char *argv[1]
+
 
     // Open input file for reading
     FILE *input = fopen(argv[1],"r");
