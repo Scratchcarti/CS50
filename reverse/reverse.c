@@ -46,9 +46,11 @@ int main(int argc, char *argv[])
 
     // Write header to file
 
+        fwrite(&header,sizeof(WAVHEADER),1,output);
 
     // Use get_block_size to calculate size of block
-    // TODO #7
+
+
 
     // Write reversed audio to file
     // TODO #8
@@ -56,14 +58,12 @@ int main(int argc, char *argv[])
 
 int check_format(WAVHEADER header)
 {
-    BYTE wave [] = {'w','a','v','e'};
+    BYTE wave [] = {'W','A','V','E'};
 
     for (int i =0; i < 4; i++)
     {
        if ( header.format[i] != wave[i])
-       { printf("not no match\n");
        return 1;
-       }
     }
     return 0;
 }
