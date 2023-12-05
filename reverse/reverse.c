@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 
     if (strcmp(new,a) != 0)
     {
-        printf("%s", new);
+        printf("%s\n", new);
 
     }
 
