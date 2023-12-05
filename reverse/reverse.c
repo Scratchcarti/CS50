@@ -73,7 +73,7 @@ int check_format(WAVHEADER header)
 
 int get_block_size(WAVHEADER header)
 {
-    int size = header.;
+    int size = (header.numChannels)*;
 
     return 0;
 }
