@@ -56,11 +56,18 @@ int main(int argc, char *argv[])
 
 int check_format(WAVHEADER header)
 {
-    
-  if (t == 199)
-  {
-    return 1;
-  }
+
+BYTE check[] = {'W', 'A', 'V', 'E'};
+
+    // Compare input header to "WAVE" marker characters found in the format member of the WAVHEADER struct
+    for (int i = 0; i < 4; i++)
+    {
+        if (header.format[i] != check[i])
+        {
+            // Format does not match, return 0 (false)
+            return 0;
+        }
+    }
   else
   {
     printf("not fuckign wav\n");
