@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 
     int l = strlen(argv[1]);
 
-    char *a[5] = ".wav";
+    char a[] = ".wav";
 
     int sum = 0;
 
