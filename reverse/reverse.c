@@ -65,14 +65,10 @@ BYTE check[] = {'W', 'A', 'V', 'E'};
         if (header.format[i] != check[i])
         {
             // Format does not match, return 0 (false)
+            printf("nah\n");
             return 0;
         }
     }
-  else
-  {
-    printf("not fuckign wav\n");
-     return 0;
-  }
 }
 
 
