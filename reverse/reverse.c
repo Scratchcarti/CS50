@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
         printf("%s\n", new);
 
     }
-    }
+
 
 
 
@@ -82,7 +82,7 @@ int main(int argc, char *argv[])
     // Write reversed audio to file
 
 
-BYTE buffer[block_size];
+     BYTE buffer[block_size];
 
     // Move Pointer to the End (takes in the pointer, the offset amount of 0, and moves it the end of the file)
     fseek(input, 0, SEEK_END);
