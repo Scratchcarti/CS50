@@ -80,8 +80,30 @@ int main(int argc, char *argv[])
 
     // Write reversed audio to file
 
-    
 
+BYTE buffer[block_size];
+
+    // Move Pointer to the End (takes in the pointer, the offset amount of 0, and moves it the end of the file)
+    fseek(input, 0, SEEK_END);
+
+    // Finding the Buffer Audio Size (excluding the header)
+    long audio_size = ftell(input) - sizeof(WAVHEADER);
+    int audio_block = (int) audio_size / block_size;
+
+    // Iterate through the input file audio data
+    // Maintain the order of the channels for each audio block (Reversed)
+    for (int i = audio_block - 1; i >= 0; i--)
+    {
+        // Starting From End of the File (Block by Block Transferring)
+    fseek(input, sizeof(WAVHEADER) + i * block_size, SEEK_SET);
+    fread(buffer, block_size, 1, input);
+    fwrite(buffer, block_size, 1, output);
+    }
+
+// close the files
+
+    fclose(input);
+     fclose(output);
 
 
 
