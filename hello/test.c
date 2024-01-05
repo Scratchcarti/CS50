@@ -84,9 +84,13 @@ int main() {
     scanf("%f", &amount);
     while (1){
     if (convertCurrency(exchangeRates, fromCurrency, toCurrency, amount) == 0)
-    {printf("This currency was not found, Add this currency by entering the currency code and exchangeRate with USD");
+    {
+        printf("This currency was not found, Add this currency by entering the currency code and exchangeRate with USD");
+    float rate, char code[4];
     scanf("%s",code);
     scanf("%f",rate);
+    addExchangeRate(&exchangeRates, code, rate);
+    }
 
 
     else
@@ -94,7 +98,7 @@ int main() {
     float convertedAmount = convertCurrency(exchangeRates, fromCurrency, toCurrency, amount);
     break;
     }
-    }
+    
     }
     // Display the result
     printf("%.2f %s is %.2f %s\n", amount, fromCurrency, convertedAmount, toCurrency);
