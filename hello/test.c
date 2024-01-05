@@ -97,14 +97,12 @@ int main() {
     else
     {
     float convertedAmount = convertCurrency(exchangeRates, fromCurrency, toCurrency, amount);
-    break;
-    }
-
-    }
-    // Display the result
     printf("%.2f %s is %.2f %s\n", amount, fromCurrency, convertedAmount, toCurrency);
 
-    // Free the allocated memory for the linked list
+    }
+
+    }
+  
     freeExchangeRates(exchangeRates);
 
     return 0;
