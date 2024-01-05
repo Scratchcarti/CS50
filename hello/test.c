@@ -98,11 +98,11 @@ int main() {
     {
     float convertedAmount = convertCurrency(exchangeRates, fromCurrency, toCurrency, amount);
     printf("%.2f %s is %.2f %s\n", amount, fromCurrency, convertedAmount, toCurrency);
-
+        break;
     }
 
     }
-  
+
     freeExchangeRates(exchangeRates);
 
     return 0;
