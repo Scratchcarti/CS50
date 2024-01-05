@@ -13,6 +13,7 @@ int main (void)
 
 	struct currency exc[192];
 exc[1].code = "INR"; exc[1].rate = 1;
+exc[2].code = "USD"; exc[1].rate = 0.012;
 printf("Currency to convert FROM:     ");
 scanf("%s", tempfrom);
 
