@@ -82,10 +82,20 @@ int main() {
 
     printf("Enter the amount to convert: ");
     scanf("%f", &amount);
+    while (1){
+    if (convertCurrency(exchangeRates, fromCurrency, toCurrency, amount) == 0)
+    {printf("This currency was not found, Add this currency by entering the currency code and exchangeRate with USD");
+    scanf("%s",code);
+    scanf("%f",rate);
 
-    // Perform the currency conversion using linked list
+
+    else
+    {
     float convertedAmount = convertCurrency(exchangeRates, fromCurrency, toCurrency, amount);
-
+    break;
+    }
+    }
+    }
     // Display the result
     printf("%.2f %s is %.2f %s\n", amount, fromCurrency, convertedAmount, toCurrency);
 
