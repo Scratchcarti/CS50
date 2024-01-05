@@ -16,6 +16,15 @@ exc[1].code = "INR"; exc[1].rate = 1;
 printf("Currency to convert FROM:     ");
 scanf("%s", tempfrom);
 
+for (int i =0; i < 192; i++)
+{
+if (strcmp(tempfrom,exc.code[i])==0)
+{printf("Currency not found\nAdd this currency by entering the name then the exchange rate with inr");
+	scanf("%s",new);
+	scanf("%d",&newrate);
+}
+
+
 printf("Currency to convert TO:     " );
 
 scanf("%s", tempto);
@@ -34,6 +43,8 @@ if (strcmp(tempto,exc.code[i])==0)
 if (count == 0)
 {
 	printf("Currency not found\nAdd this currency by entering the name then the exchange rate with inr");
+	scanf("%s",new);
+	scanf("%d",&newrate);
 
 }
 
