@@ -4,14 +4,16 @@
 int main (void)
 {
 	int count=0,i,j,newrate;
-	struct
+	
+	struct currency
 	{
 	char code[4];
 	float rate;
 	}
-	currency;
+	;
 
 	struct currency exc[192];
+
 exc[1].code = "INR"; exc[1].rate = 1;
 exc[2].code = "USD"; exc[1].rate = 0.012;
 printf("Currency to convert FROM:     ");
