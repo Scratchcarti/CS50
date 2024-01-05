@@ -40,11 +40,14 @@ float convertCurrency(struct ExchangeRateNode* head, char fromCurrency[4], char 
         }
              if (!fromNode || !toNode)
     {
-        fprintf(stderr, "Exchange rates not found for specified currencies\n");
-        exit(EXIT_FAILURE);
+        printf("Currency not found, Add this currency by entering currency code and exchangeRate with USD\n");
+        scanf("%s",code);
+        scanf("%f",&er);
+
+        addExchangeRate(&exchangeRates, "s", f);
 
     }
-    
+
     }
 
     while (!fromNode || !toNode)
