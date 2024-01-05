@@ -42,7 +42,8 @@ float convertCurrency(struct ExchangeRateNode* head, char fromCurrency[4], char 
     {
         return 0;
     }
-
+        if (fromNode && toNode)
+        {break;}
     }
 
 
