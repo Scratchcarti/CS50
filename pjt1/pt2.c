@@ -14,14 +14,23 @@ int main (void)
 exc[1].code = "INR"; exc[1].rate = 1;
 printf("Currency to convert FROM:     ");
 scanf("%s", tempfrom);
+
 printf("Currency to convert TO:     " );
+
 scanf("%s", tempto);
+
 for (int i =0; i < 192; i++)
 {
 if (strcmp(tempto,exc.code[i])==0)
+{
+	printf("Enter the amount to be converted:           ");
+         scanf("%s", amount);
 }
-printf("Enter the amount to be converted:           ");
-scanf("%s", amount);
+
+}
+
+
+
 
 
 }
