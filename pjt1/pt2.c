@@ -3,6 +3,7 @@
 
 int main (void)
 {
+	int count=0;
 	struct
 	{
 	char code[4];
@@ -23,13 +24,18 @@ for (int i =0; i < 192; i++)
 {
 if (strcmp(tempto,exc.code[i])==0)
 {
+	count++;
 	printf("Enter the amount to be converted:           ");
          scanf("%s", amount);
 }
 
 }
 
+if (count == 0)
+{
+	printf("Currency not found\nAdd this currency by entering the name then the exchange rate with inr");
 
+}
 
 
 
