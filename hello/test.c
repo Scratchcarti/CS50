@@ -39,11 +39,10 @@ float convertCurrency(struct ExchangeRateNode* head, char fromCurrency[4], char 
             toNode = current;
         }
 
-        if (fromNode && toNode) {
-            break; // Both currencies found, no need to continue searching
-        }
+        
     }
     }
+    while (!fromNode || !toNode)
     // Check if exchange rates were found
     if (!fromNode || !toNode) {
         fprintf(stderr, "Exchange rates not found for specified currencies\n");
