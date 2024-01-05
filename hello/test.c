@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <string.h>
 // Node structure for the linked list
 struct ExchangeRateNode {
     char currency[4]; // Assuming 3-letter currency codes
@@ -41,6 +41,8 @@ float convertCurrency(struct ExchangeRateNode* head, char fromCurrency[4], char 
              if (!fromNode || !toNode)
     {
         printf("Currency not found, Add this currency by entering currency code and exchangeRate with USD\n");
+
+            float er; char code[4];
         scanf("%s",code);
         scanf("%f",&er);
 
