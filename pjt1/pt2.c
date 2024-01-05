@@ -2,6 +2,11 @@
 
 int main (void)
 {
-	struct 
+	struct
+	{	char code[4];
+		float rate;
+		
+
+	}
 
 }
