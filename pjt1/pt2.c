@@ -15,8 +15,8 @@ int main (void)
 
 	struct currency exc[192];
 
-strcpy(exc[1].code,"INR"); exc[1].rate = 1;
-strcpy(exc[2].code,"USD"); exc[1].rate = 0.012;
+strcpy(exc[0].code,"INR"); exc[1].rate = 1;
+strcpy(exc[1].code,"USD"); exc[1].rate = 0.012;
 
 printf("Currency to convert FROM:     ");
 scanf("%s", tempfrom);
@@ -38,7 +38,7 @@ if (count == 0)
 	scanf("%s",new);
 	scanf("%d",&newrate);
 
-	strcpy(exc[i].code,new); exc[i].rate = newrate;
+	strcpy(exc[3].code,new); exc[3].rate = newrate;
 
 	goto from;
 }
