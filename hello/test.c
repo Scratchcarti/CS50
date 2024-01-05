@@ -38,12 +38,14 @@ float convertCurrency(struct ExchangeRateNode* head, char fromCurrency[4], char 
         } else if (strcmp(current->currency, toCurrency) == 0) {
             toNode = current;
         }
-             if (!fromNode || !toNode)
-    {
-        return 0;
+
+    if (fromNode && toNode) {
+            break; // Both currencies found, no need to continue searching
+        }
     }
-        if (fromNode && toNode)
-        {break;}
+
+     if (!fromNode || !toNode) {
+        return 0;
     }
 
 
