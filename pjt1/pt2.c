@@ -4,7 +4,7 @@
 int main (void)
 {
 	int count=0,i,j,newrate;
-	char tempfrom[4],tempto[4];
+	char tempfrom[4],tempto[4],new[4];
 
 	struct currency
 	{
@@ -25,7 +25,7 @@ from:
 
 for (i =0; i < 192; i++)
 {
-if (strcmp(tempfrom,exc.code[i])==0)
+if (strcmp(tempfrom,exc[i].code)==0)
 {
 	count++;
 	break;
@@ -49,7 +49,7 @@ count = 0;
 
 for (j =0; j < 192; j++)
 {
-if (strcmp(tempto,exc.code[i])==0)
+if (strcmp(tempto,exc[i].code)==0)
 {
 	count++;
 	break;
