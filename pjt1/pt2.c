@@ -3,7 +3,7 @@
 
 int main (void)
 {
-	int count=0;
+	int count=0,i,j,newrate;
 	struct
 	{
 	char code[4];
@@ -16,17 +16,21 @@ exc[1].code = "INR"; exc[1].rate = 1;
 printf("Currency to convert FROM:     ");
 scanf("%s", tempfrom);
 
-for (int i =0; i < 192; i++)
+from:
+
+for (i =0; i < 192; i++)
 {
 if (strcmp(tempfrom,exc.code[i])==0)
 {
 	count++;
+	break;
 }
 if (count == 0)
 {
 	printf("Currency not found\nAdd this currency by entering the name then the exchange rate with inr");
 	scanf("%s",new);
 	scanf("%d",&newrate);
+	goto from;
 }
 
 
@@ -34,18 +38,17 @@ printf("Currency to convert TO:     " );
 
 scanf("%s", tempto);
 
-nah:
+to:
 
 count = 0;
-for (int i =0; i < 192; i++)
+
+for (j =0; j < 192; j++)
 {
 if (strcmp(tempto,exc.code[i])==0)
 {
 	count++;
-	printf("Enter the amount to be converted:           ");
-         scanf("%s", amount);
+	break;
 }
-
 }
 
 if (count == 0)
@@ -54,7 +57,7 @@ if (count == 0)
 	scanf("%s",new);
 	scanf("%d",&newrate);
 
-	goto nah;
+	goto to;
 }
 
 
