@@ -29,6 +29,8 @@ printf("Currency to convert TO:     " );
 
 scanf("%s", tempto);
 
+nah:
+
 for (int i =0; i < 192; i++)
 {
 if (strcmp(tempto,exc.code[i])==0)
@@ -46,8 +48,8 @@ if (count == 0)
 	scanf("%s",new);
 	scanf("%d",&newrate);
 
+	goto nah;
 }
-
 
 
 }
