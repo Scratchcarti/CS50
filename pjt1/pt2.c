@@ -30,6 +30,8 @@ if (strcmp(tempfrom,exc[i].code)==0)
 	count++;
 	break;
 }
+
+}
 if (count == 0)
 {
 	printf("Currency not found\nAdd this currency by entering the name then the exchange rate with inr");
@@ -49,7 +51,7 @@ count = 0;
 
 for (j =0; j < 192; j++)
 {
-if (strcmp(tempto,exc[i].code)==0)
+if (strcmp(tempto,exc[j].code)==0)
 {
 	count++;
 	break;
@@ -66,5 +68,4 @@ if (count == 0)
 }
 
 
-}
 }
