@@ -38,15 +38,17 @@ float convertCurrency(struct ExchangeRateNode* head, char fromCurrency[4], char 
         } else if (strcmp(current->currency, toCurrency) == 0) {
             toNode = current;
         }
-
-        
-    }
-    }
-    while (!fromNode || !toNode)
-    // Check if exchange rates were found
-    if (!fromNode || !toNode) {
+             if (!fromNode || !toNode)
+    {
         fprintf(stderr, "Exchange rates not found for specified currencies\n");
         exit(EXIT_FAILURE);
+
+    }
+    
+    }
+
+    while (!fromNode || !toNode)
+
     }
 
     // Perform the currency conversion
