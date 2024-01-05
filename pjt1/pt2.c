@@ -37,6 +37,9 @@ if (count == 0)
 	printf("Currency not found\nAdd this currency by entering the name then the exchange rate with inr");
 	scanf("%s",new);
 	scanf("%d",&newrate);
+
+	strcpy(exc[i].code,new); exc[i].rate = newrate;
+
 	goto from;
 }
 
