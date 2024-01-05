@@ -19,7 +19,12 @@ scanf("%s", tempfrom);
 for (int i =0; i < 192; i++)
 {
 if (strcmp(tempfrom,exc.code[i])==0)
-{printf("Currency not found\nAdd this currency by entering the name then the exchange rate with inr");
+{
+	count++;
+}
+if (count == 0)
+{
+	printf("Currency not found\nAdd this currency by entering the name then the exchange rate with inr");
 	scanf("%s",new);
 	scanf("%d",&newrate);
 }
@@ -31,6 +36,7 @@ scanf("%s", tempto);
 
 nah:
 
+count = 0;
 for (int i =0; i < 192; i++)
 {
 if (strcmp(tempto,exc.code[i])==0)
