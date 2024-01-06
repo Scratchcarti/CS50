@@ -71,9 +71,23 @@ if (count == 0)
 	goto to;
 }
 
-	
+	if (exc[i].rate == 1)
 
+	{
 
+	}
+
+	else if (exc[j].rate == 1 )
+
+	{
+
+	}
+
+	else
+
+	 {
+			
+	 }
 
 
 
