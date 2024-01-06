@@ -36,7 +36,7 @@ if (strcmp(tempfrom,exc[i].code)==0)
 }
 if (count == 0)
 {
-	printf("Currency not found\nENTER 1 to ADD this new currency\nEnter 2 to EXIT\n");
+	printf("Currency not found\nEnter 1 to ADD this new currency\nEnter 2 to EXIT\n");
 	scanf("%d",&opt);
 	if (opt == 1 )
 	{
@@ -74,10 +74,11 @@ if (strcmp(tempto,exc[j].code)==0)
 
 if (count == 0)
 {
-	printf("Currency not found\nenter 1 to ADD this new currency\nenter 2 to EXIT\n");
+	printf("Currency not found\nEnter 1 to ADD this new currency\nEnter 2 to EXIT\n");
 	scanf("%d",&opt);
 	if (opt == 1 )
 	{
+	printf("")
 	scanf("%s",new);
 	scanf("%f",&newrate);
 
