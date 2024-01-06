@@ -18,6 +18,11 @@ int main (void)
 
 strcpy(exc[0].code,"INR"); exc[0].rate = 1;
 strcpy(exc[1].code,"USD"); exc[1].rate = 0.012;
+strcpy(exc[1].code,"USD"); exc[1].rate = 0.012;
+strcpy(exc[1].code,"USD"); exc[1].rate = 0.012;
+strcpy(exc[1].code,"USD"); exc[1].rate = 0.012;
+strcpy(exc[1].code,"USD"); exc[1].rate = 0.012;
+strcpy(exc[1].code,"USD"); exc[1].rate = 0.012;
 
 
 printf("Currency to convert FROM(ex: USD...):  ");
