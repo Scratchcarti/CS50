@@ -3,7 +3,7 @@
 
 int main (void)
 {
-	int count=0,i,j;
+	int count=0,i,j,opt;
 	char tempfrom[4],tempto[4],new[4];
 	float newrate,amount;
 
@@ -74,11 +74,22 @@ if (strcmp(tempto,exc[j].code)==0)
 
 if (count == 0)
 {
-	printf("Currency not found\nAdd this currency by entering the name followed by the exchange rate with 1 INR");
+	printf("Currency not found\nENTER 1 to Add this new currency\nEnter 2 to EXIT");
+	scanf("%d",&opt);
+	if (opt == 1 )
+	{
 	scanf("%s",new);
 	scanf("%f",&newrate);
 
+	strcpy(exc[4].code,new); exc[4].rate = newrate;
+
 	goto to;
+	}
+
+	if (opt == 2)
+	{
+		exit(2);
+	}
 }
 
 printf("Enter the amount to be converted:  ");
