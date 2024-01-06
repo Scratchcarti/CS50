@@ -20,7 +20,7 @@ strcpy(exc[0].code,"INR"); exc[0].rate = 1;
 strcpy(exc[1].code,"USD"); exc[1].rate = 0.012;
 
 
-printf("Currency to convert FROM:");
+printf("Currency to convert FROM:  ");
 scanf("%s", tempfrom);
 
 from:
@@ -46,7 +46,7 @@ if (count == 0)
 }
 
 
-printf("Currency to convert to:" );
+printf("Currency to convert to:  " );
 
 scanf("%s", tempto);
 
@@ -72,7 +72,7 @@ if (count == 0)
 	goto to;
 }
 
-printf("Enter the amount to be converted:");
+printf("Enter the amount to be converted:  ");
 scanf("%f",&amount);
 
 		printf("%f from %s to %s is %f\n", amount,exc[i].code,exc[j].code,amount*((exc[j].rate)/exc[i].rate));
