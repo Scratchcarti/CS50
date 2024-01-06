@@ -24,7 +24,7 @@ scanf("%s", tempfrom);
 
 from:
 
-for (i =0; i < 5; i++)
+for (i =0; i < 192; i++)
 {
 if (strcmp(tempfrom,exc[i].code)==0)
 {
