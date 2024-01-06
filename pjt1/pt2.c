@@ -50,7 +50,7 @@ if (count == 0)
 
 	if (opt == 2)
 	{
-		exit(1);
+		return 1;
 	}
 }
 
@@ -74,7 +74,7 @@ if (strcmp(tempto,exc[j].code)==0)
 
 if (count == 0)
 {
-	printf("Currency not found\nENTER 1 to Add this new currency\nEnter 2 to EXIT");
+	printf("Currency not found\ 1 to Add this new currency\nEnter 2 to EXIT");
 	scanf("%d",&opt);
 	if (opt == 1 )
 	{
@@ -88,7 +88,7 @@ if (count == 0)
 
 	if (opt == 2)
 	{
-		exit(2);
+		return 2;
 	}
 }
 
@@ -97,6 +97,6 @@ scanf("%f",&amount);
 
 		printf("%f from %s to %s is %f\n", amount,exc[i].code,exc[j].code,amount*((exc[j].rate)/exc[i].rate));
 
-
+	return 0;
 
 }
