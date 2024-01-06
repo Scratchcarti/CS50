@@ -3,8 +3,9 @@
 
 int main (void)
 {
-	int count=0,i,j,newrate;
+	int count=0,i,j;
 	char tempfrom[4],tempto[4],new[4];
+	float newrate;
 
 	struct currency
 	{
@@ -15,7 +16,7 @@ int main (void)
 
 	struct currency exc[192];
 
-strcpy(exc[0].code,"INR"); exc[1].rate = 1;
+strcpy(exc[0].code,"INR"); exc[0].rate = 1;
 strcpy(exc[1].code,"USD"); exc[1].rate = 0.012;
 
 printf("Currency to convert FROM:     ");
@@ -36,7 +37,7 @@ if (count == 0)
 {
 	printf("Currency not found\nAdd this currency by entering the name then the exchange rate with inr");
 	scanf("%s",new);
-	scanf("%d",&newrate);
+	scanf("%f",&newrate);
 
 	strcpy(exc[3].code,new); exc[3].rate = newrate;
 
@@ -65,7 +66,7 @@ if (count == 0)
 {
 	printf("Currency not found\nAdd this currency by entering the name then the exchange rate with inr");
 	scanf("%s",new);
-	scanf("%d",&newrate);
+	scanf("%f",&newrate);
 
 	goto to;
 }
