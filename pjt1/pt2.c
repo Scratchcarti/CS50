@@ -20,7 +20,7 @@ strcpy(exc[0].code,"INR"); exc[0].rate = 1;
 strcpy(exc[1].code,"USD"); exc[1].rate = 0.012;
 
 
-printf("Currency to convert FROM:  ");
+printf("Currency to convert FROM(ex: USD...):  ");
 scanf("%s", tempfrom);
 
 from:
@@ -57,7 +57,7 @@ printf("ENTER THE CODENAME OF CURRENCY:   ");
 }
 
 
-printf("Currency to convert to:  " );
+printf("Currency to convert to(ex:INR...):  " );
 
 scanf("%s", tempto);
 
