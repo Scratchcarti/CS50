@@ -77,13 +77,13 @@ scanf("%f",&amount);
 	if (exc[i].rate == 1)
 
 	{
-		printf("%f from %s to %s is %f", amount,exc[i].code,exc[j].code,amount*(1/exc[j].rate));
+		printf("%f from %s to %s is %f", amount,exc[i].code,exc[j].code,amount*(exc[j].rate));
 	}
 
 	else if (exc[j].rate == 1 )
 
 	{
-		printf("%f from %s to %s is %f", amount,exc[i].code,exc[j].code,amount*(exc[i].rate));
+		printf("%f from %s to %s is %f", amount,exc[i].code,exc[j].code,amount*(1/exc[i].rate));
 	}
 
 	else
