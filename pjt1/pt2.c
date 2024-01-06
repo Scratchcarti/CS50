@@ -36,13 +36,22 @@ if (strcmp(tempfrom,exc[i].code)==0)
 }
 if (count == 0)
 {
-	printf("Currency not found\nAdd this currency by entering the name followed by the exchange rate with 1 INR");
+	printf("Currency not found\nENTER 1 to Add this new currency\nEnter 2 to EXIT");
+	scanf("%d",&opt);
+	if (opt == 1 )
+	{
 	scanf("%s",new);
 	scanf("%f",&newrate);
 
 	strcpy(exc[3].code,new); exc[3].rate = newrate;
 
 	goto from;
+	}
+
+	if (opt == 2)
+	{
+		exit(1);
+	}
 }
 
 
