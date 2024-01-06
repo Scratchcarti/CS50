@@ -23,7 +23,9 @@ strcpy(exc[2].code,"GBP"); exc[2].rate = 0.0094;
 strcpy(exc[3].code,"AED"); exc[3].rate = 0.044;
 strcpy(exc[4].code,"EUR"); exc[4].rate = 0.011;
 strcpy(exc[5].code,"RUB"); exc[5].rate = 1.09;
-strcpy(exc[6].code,"CNY"); exc[6].rate = 0.012;
+strcpy(exc[6].code,"CNY"); exc[6].rate = 0.085;
+strcpy(exc[7].code,"JPY"); exc[6].rate = 1.75;
+
 
 
 printf("Currency to convert FROM(ex: USD...):  ");
