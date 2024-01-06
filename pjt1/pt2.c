@@ -5,7 +5,7 @@ int main (void)
 {
 	int count=0,i,j;
 	char tempfrom[4],tempto[4],new[4];
-	float newrate;
+	float newrate,amount;
 
 	struct currency
 	{
@@ -71,22 +71,25 @@ if (count == 0)
 	goto to;
 }
 
+printf("Enter the amount to be converted:          ");
+scanf("%f",&amount);
+
 	if (exc[i].rate == 1)
 
 	{
-
+		printf("%f from %s to %s is %f", amount,exc[i].code,exc[j].code,amount*(1/exc[i].rate));
 	}
 
 	else if (exc[j].rate == 1 )
 
 	{
-
+		printf("%f from %s to %s is %f", amount,exc[i].code,exc[j].code,amount*(exc[i].rate));
 	}
 
 	else
 
 	 {
-			
+		printf("%f from %s to %s is %f", amount,exc[i].code,exc[j].code,amount*(1/exc[i].rate));
 	 }
 
 
