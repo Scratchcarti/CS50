@@ -19,7 +19,8 @@ int main (void)
 strcpy(exc[0].code,"INR"); exc[0].rate = 1;
 strcpy(exc[1].code,"USD"); exc[1].rate = 0.012;
 
-printf("Currency to convert FROM:     ");
+
+printf("Currency to convert FROM:");
 scanf("%s", tempfrom);
 
 from:
@@ -35,7 +36,7 @@ if (strcmp(tempfrom,exc[i].code)==0)
 }
 if (count == 0)
 {
-	printf("Currency not found\nAdd this currency by entering the name then the exchange rate with inr");
+	printf("Currency not found\nAdd this currency by entering the name followed by the exchange rate with 1 INR");
 	scanf("%s",new);
 	scanf("%f",&newrate);
 
@@ -45,7 +46,7 @@ if (count == 0)
 }
 
 
-printf("Currency to convert TO:     " );
+printf("Currency to convert to:" );
 
 scanf("%s", tempto);
 
@@ -64,37 +65,17 @@ if (strcmp(tempto,exc[j].code)==0)
 
 if (count == 0)
 {
-	printf("Currency not found\nAdd this currency by entering the name then the exchange rate with inr");
+	printf("Currency not found\nAdd this currency by entering the name followed by the exchange rate with 1 INR");
 	scanf("%s",new);
 	scanf("%f",&newrate);
 
 	goto to;
 }
 
-printf("Enter the amount to be converted:          ");
+printf("Enter the amount to be converted:");
 scanf("%f",&amount);
 
-	if (exc[i].rate == 1)
-
-	{
-		printf("%f from %s to %s is %f", amount,exc[i].code,exc[j].code,amount*(exc[j].rate));
-	}
-
-	else if (exc[j].rate == 1 )
-
-	{
-		printf("%f from %s to %s is %f", amount,exc[i].code,exc[j].code,amount*(1/exc[i].rate));
-	}
-
-	else
-
-	 {
-		printf("%f from %s to %s is %f", amount,exc[i].code,exc[j].code,amount*((exc[j].rate)/exc[i].rate));
-	 }
-
-
-
-
+		printf("%f from %s to %s is %f\n", amount,exc[i].code,exc[j].code,amount*((exc[j].rate)/exc[i].rate));
 
 
 
