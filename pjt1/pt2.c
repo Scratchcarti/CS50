@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#define  MAX = 192
+#define  MAX 192
 
 int main (void)
 {
@@ -15,15 +15,15 @@ int main (void)
 	}
 	;
 
-	struct currency exc[192];
+	struct currency exc[MAX];
 
 strcpy(exc[0].code,"INR"); exc[0].rate = 1;
 strcpy(exc[1].code,"USD"); exc[1].rate = 0.012;
-strcpy(exc[1].code,"USD"); exc[1].rate = 0.012;
-strcpy(exc[1].code,"USD"); exc[1].rate = 0.012;
-strcpy(exc[1].code,"USD"); exc[1].rate = 0.012;
-strcpy(exc[1].code,"USD"); exc[1].rate = 0.012;
-strcpy(exc[1].code,"USD"); exc[1].rate = 0.012;
+strcpy(exc[2].code,"USD"); exc[1].rate = 0.012;
+strcpy(exc[3].code,"USD"); exc[1].rate = 0.012;
+strcpy(exc[4].code,"USD"); exc[1].rate = 0.012;
+strcpy(exc[5].code,"USD"); exc[1].rate = 0.012;
+strcpy(exc[6].code,"USD"); exc[1].rate = 0.012;
 
 
 printf("Currency to convert FROM(ex: USD...):  ");
@@ -50,7 +50,7 @@ if (count == 0)
 	printf("ENTER THE EXCHANGE RATE OF THIS CURRENCY WITH ONE INR:   ");
 	scanf("%f",&newrate);
 
-	strcpy(exc[3].code,tempfrom); exc[3].rate = newrate;
+	strcpy(exc[MAX-1].code,tempfrom); exc[MAX-1].rate = newrate;
 
 	goto from;
 	}
@@ -88,7 +88,7 @@ if (count == 0)
 	printf("ENTER THE EXCHANGE RATE OF THIS CURRENCY WITH ONE INR:   ");
 	scanf("%f",&newrate);
 
-	strcpy(exc[4].code,tempto); exc[4].rate = newrate;
+	strcpy(exc[MAX-2].code,tempto); exc[MAX-2].rate = newrate;
 
 	goto to;
 	}
