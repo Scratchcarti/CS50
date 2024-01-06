@@ -40,12 +40,11 @@ if (count == 0)
 	scanf("%d",&opt);
 	if (opt == 1 )
 	{
-printf("ENTER THE CODENAME OF CURRENCY:   ");
-	scanf("%s",new);
+
 	printf("ENTER THE EXCHANGE RATE OF THIS CURRENCY WITH ONE INR:   ");
 	scanf("%f",&newrate);
 
-	strcpy(exc[3].code,new); exc[3].rate = newrate;
+	strcpy(exc[3].code,tempfrom); exc[3].rate = newrate;
 
 	goto from;
 	}
@@ -80,12 +79,10 @@ if (count == 0)
 	scanf("%d",&opt);
 	if (opt == 1 )
 	{
-	printf("ENTER THE CODENAME OF CURRENCY:   ");
-	scanf("%s",new);
 	printf("ENTER THE EXCHANGE RATE OF THIS CURRENCY WITH ONE INR:   ");
 	scanf("%f",&newrate);
 
-	strcpy(exc[4].code,new); exc[4].rate = newrate;
+	strcpy(exc[4].code,tempto); exc[4].rate = newrate;
 
 	goto to;
 	}
