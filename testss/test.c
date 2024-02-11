@@ -5,9 +5,9 @@ int x;
 
 char c = 'Z';
 
-x = c;
+c = c - 'B';
 
-printf("%d",x);
+printf("%d",c);
 }
 
 
