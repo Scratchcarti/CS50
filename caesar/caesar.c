@@ -41,10 +41,14 @@ int key;
 
     // Prompt user for plaintext
 
-    string text = get_string 
+        string pt = get_string("plaintext: ");
+
 
 
     // For each character in the plaintext:
+
+
+    
 
         // Rotate the character if it's a letter
 }
