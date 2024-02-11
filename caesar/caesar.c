@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <cs50.h>
 #include <ctype.h>
 
@@ -6,6 +7,9 @@ bool only_digits(string s);
 
 int main(int argc, string argv[])
 {
+
+
+int key;
 
 // Make sure program was run with just one command-line argument
 
@@ -16,6 +20,7 @@ int main(int argc, string argv[])
         return 1;
 
     }
+
 
     // Make sure every character in argv[1] is a digit
     if (bool only_digits(argv[1]) == false)
@@ -29,16 +34,25 @@ int main(int argc, string argv[])
 
     // Convert argv[1] from a `string` to an `int`
 
+    key = atoi("argv[1]");
 
 
-    
 
     // Prompt user for plaintext
+    
 
     // For each character in the plaintext:
 
         // Rotate the character if it's a letter
 }
+
+
+
+
+
+
+
+
 
 
 bool only_digits(string s)
