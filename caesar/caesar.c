@@ -3,8 +3,8 @@
 #include <cs50.h>
 #include <ctype.h>
 
-bool only_digits(string s);
-char rotate(char c, int n);
+bool only_digits(string);
+char rotate(char, int);
 
 int main(int argc, string argv[])
 {
@@ -83,8 +83,16 @@ bool only_digits(string s)
 
 
 
+
+
+
+
+
 char rotate(char c, int n)
 
 {
     
+
+
+
 }
