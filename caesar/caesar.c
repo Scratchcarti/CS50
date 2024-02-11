@@ -122,7 +122,7 @@ char rotate(char c, int n)
     {
         x = 'c'- 'A';
 
-        'c' = ('c'+ n) % 26;
+        'c' = (x + n) % 26;
 
         return c;
     }
