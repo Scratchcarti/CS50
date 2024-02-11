@@ -89,7 +89,7 @@ bool only_digits(string s)
     for (int i =0; i < strlen(s); i++)
 
     {
-        if (isdigit(s[i]) != 1)
+        if (isdigit(s[i]) == 0)
         {
             counter++;
         }
