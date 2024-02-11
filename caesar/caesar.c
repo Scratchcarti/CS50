@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include <cs50.h>
 
-
-
+bool only_digits(string s);
 
 int main(int argc, string argv[])
 {
@@ -18,6 +17,7 @@ int main(int argc, string argv[])
     }
 
     // Make sure every character in argv[1] is a digit
+    bool only_digits(argv[1]);
 
 
 
@@ -31,10 +31,12 @@ int main(int argc, string argv[])
     // For each character in the plaintext:
 
         // Rotate the character if it's a letter
-
-
-
-
-
 }
 
+
+bool only_digits(string s)
+
+{
+    
+
+}
