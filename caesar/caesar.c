@@ -41,6 +41,8 @@ int key;
 
     // Prompt user for plaintext
 
+    string text = get_string 
+
 
     // For each character in the plaintext:
 
@@ -91,7 +93,7 @@ bool only_digits(string s)
 char rotate(char c, int n)
 
 {
-    
+
 
 
 
