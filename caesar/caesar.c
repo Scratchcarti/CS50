@@ -12,7 +12,8 @@ int main(int argc, string argv[])
 
 
 int key;
-string pt,ct;
+string pt;
+
 
 // Make sure program was run with just one command-line argument
 
@@ -44,6 +45,7 @@ string pt,ct;
     // Prompt user for plaintext
 
          pt = get_string("plaintext: ");
+         char ct [strlen(pt)];
 
 
 
@@ -114,6 +116,7 @@ bool only_digits(string s)
 char rotate(char c, int n)
 
 {
+    
     if ('c'<='Z' && 'c' >= 'A')
     {
         'c' = 'c'- 'A';
