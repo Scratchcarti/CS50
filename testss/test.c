@@ -5,7 +5,7 @@ int x;
 
 char c = 'Z';
 
-c = c - 'B';
+c = c - 'A';
 
 printf("%d",c);
 }
