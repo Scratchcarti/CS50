@@ -4,6 +4,7 @@
 #include <ctype.h>
 
 bool only_digits(string s);
+char rotate(char c, int n);
 
 int main(int argc, string argv[])
 {
@@ -39,7 +40,7 @@ int key;
 
 
     // Prompt user for plaintext
-    
+
 
     // For each character in the plaintext:
 
@@ -77,4 +78,13 @@ bool only_digits(string s)
 
     return true;
 
+}
+
+
+
+
+char rotate(char c, int n)
+
+{
+    
 }
