@@ -54,6 +54,19 @@ string pt,ct;
     }
 
         // Rotate the character if it's a letter
+
+        printf("ciphertext: ");
+
+        for ( int i = 0; i < strlen(pt); i++)
+
+        {
+            printf("%c",ct[i]);
+        }
+
+printf("\n");
+
+
+
 }
 
 
@@ -106,8 +119,22 @@ char rotate(char c, int n)
 
         'c' = ('c'+ n) % 26;
 
+        return c;
     }
 
 
+    if ('c'<='z' && 'c' >= 'a')
+    {
+        'c' = 'c'- 'a';
+
+        'c' = ('c'+ n) % 26;
+
+        return c;
+    }
+
+    else
+    {
+        return c;
+    }
 
 }
