@@ -9,7 +9,20 @@ int main(int argc, string argv[])
 
 // Make sure program was run with just one command-line argument
 
+    if (argc != 2)
+    {
+        printf("Usage: ./caesar key\n");
+
+        return 1;
+
+    }
+
     // Make sure every character in argv[1] is a digit
+
+
+
+
+
 
     // Convert argv[1] from a `string` to an `int`
 
