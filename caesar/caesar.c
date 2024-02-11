@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <cs50.h>
+#include <ctype.h>
 
 bool only_digits(string s);
 
@@ -17,14 +18,20 @@ int main(int argc, string argv[])
     }
 
     // Make sure every character in argv[1] is a digit
-    bool only_digits(argv[1]);
+    if (bool only_digits(argv[1]) == false)
 
+    {
+        printf("Usage: ./caesar key\n");
 
-
-
+        return 1;
+    }
 
 
     // Convert argv[1] from a `string` to an `int`
+
+
+
+    
 
     // Prompt user for plaintext
 
@@ -37,6 +44,23 @@ int main(int argc, string argv[])
 bool only_digits(string s)
 
 {
-    
+    int counter = 0;
+
+    for (int i =0; i < strlen(s); i++)
+
+    {
+        if (isdigit(s[i]) != 1)
+        {
+            counter++;
+        }
+
+    }
+
+    if (counter != 0)
+    {
+        return false;
+    }
+
+    return true;
 
 }
