@@ -116,10 +116,11 @@ bool only_digits(string s)
 char rotate(char c, int n)
 
 {
-    
+    int x;
+
     if ('c'<='Z' && 'c' >= 'A')
     {
-        'c' = 'c'- 'A';
+        x = 'c'- 'A';
 
         'c' = ('c'+ n) % 26;
 
