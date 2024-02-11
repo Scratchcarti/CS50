@@ -15,7 +15,7 @@ int key;
 string pt;
 
 
-// Make sure program was run with just one command-line argument
+
 
     if (argc != 2)
     {
@@ -26,7 +26,7 @@ string pt;
     }
 
 
-    // Make sure every character in argv[1] is a digit
+
     if ( only_digits(argv[1]) == false)
 
     {
@@ -36,27 +36,23 @@ string pt;
     }
 
 
-    // Convert argv[1] from a `string` to an `int`
 
-    key = atoi("argv[1]");
-
+    key = atoi(argv[1]);
 
 
-    // Prompt user for plaintext
+
 
          pt = get_string("plaintext: ");
          char ct [strlen(pt)];
 
 
 
-    // For each character in the plaintext:
 
     for (int i =0; i < strlen(pt); i++)
     {
         ct[i] = rotate (pt[i],key);
     }
 
-        // Rotate the character if it's a letter
 
         printf("ciphertext: ");
 
@@ -65,6 +61,8 @@ string pt;
         {
             printf("%c",ct[i]);
         }
+
+
 
 printf("\n");
 
@@ -125,8 +123,6 @@ char rotate(char c, int n)
 
         c = c + 'A';
 
-
-        printf("%c", c);
 
         return c;
     }
