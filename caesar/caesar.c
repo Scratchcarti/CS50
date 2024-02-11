@@ -11,6 +11,7 @@ int main(int argc, string argv[])
 
 
 int key;
+string pt,ct;
 
 // Make sure program was run with just one command-line argument
 
@@ -41,7 +42,7 @@ int key;
 
     // Prompt user for plaintext
 
-        string pt = get_string("plaintext: ");
+         pt = get_string("plaintext: ");
 
 
 
@@ -49,7 +50,7 @@ int key;
 
     for (int i =0; i < strlen(pt); i++)
     {
-        rotate (pt[i],key);
+        ct[i] = rotate (pt[i],key);
     }
 
         // Rotate the character if it's a letter
