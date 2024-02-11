@@ -123,6 +123,8 @@ char rotate(char c, int n)
 
         c = (c+ n) % 26;
 
+        printf("%c", c);
+
         return c;
     }
 
