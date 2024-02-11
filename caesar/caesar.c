@@ -47,8 +47,10 @@ int key;
 
     // For each character in the plaintext:
 
-
-    
+    for (int i =0; i < strlen(pt); i++)
+    {
+        rotate (pt[i],key);
+    }
 
         // Rotate the character if it's a letter
 }
