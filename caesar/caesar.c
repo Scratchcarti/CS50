@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <cs50.h>
 #include <ctype.h>
 
@@ -25,7 +26,7 @@ string pt,ct;
 
 
     // Make sure every character in argv[1] is a digit
-    if (bool only_digits(argv[1]) == false)
+    if ( only_digits(argv[1]) == false)
 
     {
         printf("Usage: ./caesar key\n");
