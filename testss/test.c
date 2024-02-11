@@ -3,9 +3,9 @@
 
 int x;
 
-char c = "Z";
+char c = 'Z';
 
-x = 'c';
+x = c;
 
 printf("%d",x);
 
