@@ -98,15 +98,20 @@ bool load(const char *dictionary)
         return false;
     }
 
+       for (int i =0; i < N; i++)
+    {
+        table[i] = NULL;
+    }
+
 
     while ((fscanf(fp1,"%s",word)) != EOF)
     {
 
     counter++;
 
-    node *n = NULL;
 
-     n = malloc(sizeof(node));
+
+    node *n = malloc(sizeof(node));
 
     if( n == NULL)
     {
