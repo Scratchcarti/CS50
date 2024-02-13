@@ -28,9 +28,25 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO
+    node *cursor = table[hash(word)];
 
-    
-    return false;
+      if (cursor == NULL)
+
+        {
+            printf("cursor fault");
+            return false;
+        }
+
+            while ( cursor != NULL)
+        {
+            if (strcursor -> word,word)
+
+                            }
+
+
+
+
+
 }
 
 // Hashes word to a number
