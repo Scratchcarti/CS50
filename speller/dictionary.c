@@ -39,12 +39,23 @@ bool check(const char *word)
 
             while ( cursor != NULL)
         {
-            if (strcursor -> word,word)
+            if (strcasecmp(cursor -> word,word)==0)
+            {
+                checkcount++;
 
-                            }
+                return true;
+
+            }
+
+            else
+            {
+                cursor = cursor -> next;
+            }
+
+                          }
 
 
-
+            return false;
 
 
 }
@@ -109,6 +120,7 @@ unsigned int size(void)
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
-    // TODO
+    
+
     return false;
 }
