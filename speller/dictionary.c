@@ -98,9 +98,22 @@ bool load(const char *dictionary)
 
     strcpy(n->word,word);
 
-    n -> next = table[hash(word)];
-    
-    table[hash(word)] = n;
+    node *temp = table[hash(word)];
+
+        if (temp == NULL)
+        {
+            table[hash(word)] = n;
+
+        }
+
+        else
+        {
+            n->next = table[hash(word)];
+
+            table[hash(word)] = n;
+
+        }
+
 
     }
     fclose(fp1);
