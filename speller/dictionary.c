@@ -105,7 +105,7 @@ bool load(const char *dictionary)
     counter++;
 
 
-
+   
     node *n = malloc(sizeof(node));
 
     if( n == NULL)
