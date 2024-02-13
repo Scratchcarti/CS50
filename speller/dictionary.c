@@ -47,16 +47,13 @@ bool load(const char *dictionary)
         return false;
     }
 
-    int eofreader = 0;
-    node *n = NULL;
 
-    while (eofreader != EOF)
+    while ((fscanf(fp1,"%s",word)) != EOF)
     {
-    fscanf(fp1,"%d",&eofreader);
 
     fscanf(fp1,"%s",word);
 
-     n = malloc(sizeof(node));
+    node *n = malloc(sizeof(node));
 
     if( n == NULL)
     {
