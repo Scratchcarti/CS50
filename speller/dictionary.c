@@ -104,6 +104,8 @@ bool load(const char *dictionary)
 
     counter++;
 
+
+
     node *n = malloc(sizeof(node));
 
     if( n == NULL)
@@ -112,6 +114,15 @@ bool load(const char *dictionary)
         return false;
     }
 
+     char dicword[LENGTH+1];
+
+        strcpy(dicword,word);
+
+        for (int i =0; i <strlen(word);i++)
+        {
+            word[i] = tolower(dicword[i]);
+        }
+            
 
 
 
