@@ -130,13 +130,13 @@ bool load(const char *dictionary)
             word[i] = tolower(dicword[i]);
         }
 
-
+        n->next = NULL;
 
 
     strcpy(n->word,word);
 
 
-    node *temp = table[hash(word)];
+       node *temp = table[hash(word)];
 
         if (temp == NULL)
         {
@@ -145,6 +145,7 @@ bool load(const char *dictionary)
         }
 
         else
+
         {
             n->next = table[hash(word)];
 
