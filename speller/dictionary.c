@@ -45,7 +45,7 @@ bool load(const char *dictionary)
 
 
 
-    fread(&c,)
+    fscanf(fp1,%s,word);
 
 
     fclose(fp1);
