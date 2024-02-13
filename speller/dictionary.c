@@ -162,25 +162,19 @@ unsigned int size(void)
 bool unload(void)
 {
 
-    for (int i =0; i < N; i++)
-    {
+  node *tmp = NULL;
     node *cursor = NULL;
-    cursor = table[i];
-
-    node *temp = cursor;
-
-    while (cursor != NULL)
-
-    {   temp = cursor;
-
-        cursor = cursor -> next;
-
-        free(temp);
-
+    for (int i = 0; i < N; i++)
+    {
+        cursor = table[i];
+        while (cursor != NULL)
+        {
+           tmp = cursor;
+            cursor = cursor->next;
+           free(tmp);
+        }
     }
-
-    }
-
-    
     return true;
 }
+
+
