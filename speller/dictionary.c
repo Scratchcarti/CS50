@@ -102,11 +102,11 @@ bool load(const char *dictionary)
 
         strcpy(cpy,word);
 
-        for (int i =0; i <strlen(word);i++ )
+        for (int i =0; i <strlen(word);i++)
         {
             word[i] = tolower(cpy[i]);
         }
-        
+
     strcpy(n->word,word);
 
     node *temp = table[hash(word)];
