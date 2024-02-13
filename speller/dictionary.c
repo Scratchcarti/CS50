@@ -34,7 +34,6 @@ bool check(const char *word)
     // TODO
 
 
-    node *cursor = table[hash(word)];
 
      char cpy[LENGTH+1];
 
@@ -45,6 +44,10 @@ bool check(const char *word)
             cpy[i] = tolower(word[i]);
         }
             cpy[strlen(cpy)] = '\0';
+
+
+                node *cursor = table[hash(cpy)];
+
 
 
 
