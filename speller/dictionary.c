@@ -66,7 +66,7 @@ bool load(const char *dictionary)
 
     n -> next = table[hash(word)];
     table[hash(word)] = n;
-    free(n);
+
     }
     fclose(fp1);
     return false;
