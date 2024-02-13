@@ -98,7 +98,15 @@ bool load(const char *dictionary)
         return false;
     }
 
-    strlwr(word);
+        char cpy[LENGTH+1];
+
+        strcpy(cpy,word);
+
+        for (int i =0; i <strlen(word);i++ )
+        {
+            word[i] = tolower(cpy[i]);
+        }
+        
     strcpy(n->word,word);
 
     node *temp = table[hash(word)];
