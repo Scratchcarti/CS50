@@ -106,7 +106,7 @@ bool load(const char *dictionary)
         {
             word[i] = tolower(cpy[i]);
         }
-        printf("%s",word);
+        
 
     strcpy(n->word,word);
 
