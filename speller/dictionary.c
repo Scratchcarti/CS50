@@ -18,7 +18,7 @@ typedef struct node
 } node;
 
 // TODO: Choose number of buckets in hash table
-const unsigned int N = 7000;
+const unsigned int N = 6000;
 
 // number of nodes counter.
 int counter = 0;
@@ -97,7 +97,7 @@ bool load(const char *dictionary)
 
     if( n == NULL)
     {
-        printf("malloc coulndt allocate memory\n")
+        printf("malloc coulndt allocate memory\n");
         return false;
     }
 
