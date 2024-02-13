@@ -2,6 +2,9 @@
 
 #include <ctype.h>
 #include <stdbool.h>
+#include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 #include "dictionary.h"
 
@@ -36,20 +39,21 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     // TODO
+    char *word;
     FILE *fp1 = fopen(dictionary,"r");
-    if (fp1==NULL)
+    if (fp1 == NULL)
     {
         printf("fp1 invalid");
         return false;
     }
 
-    while (fp1!=EOF)
+    while (word != EOF)
     {
 
     fscanf(fp1,%s,word);
     node *n = malloc(sizeof(node));
 
-    if( n = NULL)
+    if( n == NULL)
     {
         return false;
     }
