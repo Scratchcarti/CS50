@@ -47,12 +47,15 @@ bool load(const char *dictionary)
     {
 
     fscanf(fp1,%s,word);
-    counter++;
-    table[counter] = malloc(sizeof(node));
-    if 
-    {
+    node *n = malloc(sizeof(node));
 
+    if( n = NULL)
+    {
+        return false;
     }
+
+    strcpy(word,n->word);
+
 
 
     }
