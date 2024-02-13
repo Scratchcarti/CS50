@@ -96,9 +96,10 @@ bool load(const char *dictionary)
         return false;
     }
 
-    strcpy(word,n->word);
+    strcpy(n->word,word);
 
     n -> next = table[hash(word)];
+    
     table[hash(word)] = n;
 
     }
