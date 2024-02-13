@@ -43,11 +43,13 @@ bool load(const char *dictionary)
         return false;
     }
 
-
+    while (fp1!=EOF)
+    {
 
     fscanf(fp1,%s,word);
+    
 
-
+    }
     fclose(fp1);
     return false;
 }
