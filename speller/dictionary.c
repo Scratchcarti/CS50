@@ -47,7 +47,10 @@ bool load(const char *dictionary)
     {
 
     fscanf(fp1,%s,word);
+    counter++;
+    table[counter] = malloc(sizeof(node));
     
+
 
     }
     fclose(fp1);
