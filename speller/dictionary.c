@@ -122,7 +122,7 @@ bool load(const char *dictionary)
         {
             word[i] = tolower(dicword[i]);
         }
-            
+
 
 
 
@@ -169,11 +169,13 @@ bool unload(void)
     while (cursor != NULL)
 
     {
+        temp = cursor;
+        
         cursor = cursor -> next;
 
         free(temp);
 
-        temp = cursor;
+
 
     }
 
