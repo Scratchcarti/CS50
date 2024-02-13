@@ -123,7 +123,7 @@ bool unload(void)
 {
     for (int i =0; i < N-1; i++)
     {
-    node *cursor = table[N];
+    node *cursor = table[i];
 
     node *temp = cursor;
 
