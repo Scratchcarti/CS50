@@ -57,6 +57,7 @@ bool load(const char *dictionary)
 
     if( n == NULL)
     {
+        printf("malloc coulndt allocate memory\n")
         return false;
     }
 
@@ -67,7 +68,7 @@ bool load(const char *dictionary)
 
     }
     fclose(fp1);
-    return false;
+    return true;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
