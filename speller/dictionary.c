@@ -69,6 +69,8 @@ unsigned int hash(const char *word)
     {
         hash = (hash << 2) ^ word[i];
     }
+
+    printf("%s",word);
     return hash % N;
 }
 
@@ -106,7 +108,7 @@ bool load(const char *dictionary)
         {
             word[i] = tolower(cpy[i]);
         }
-        
+
 
     strcpy(n->word,word);
 
