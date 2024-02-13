@@ -47,10 +47,14 @@ bool load(const char *dictionary)
         return false;
     }
 
-    while (word != EOF)
+    int eofreader = 0;
+
+    while (eofreader != EOF)
     {
+    fscanf(fp1,"%d",&eofreader);
 
     fscanf(fp1,"%s",word);
+
     node *n = malloc(sizeof(node));
 
     if( n == NULL)
@@ -59,6 +63,8 @@ bool load(const char *dictionary)
     }
 
     strcpy(word,n->word);
+
+    hash(word);
 
 
 
