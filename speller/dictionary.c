@@ -36,11 +36,21 @@ bool check(const char *word)
 
     node *cursor = table[hash(word)];
 
+     char cpy[LENGTH+1];
+
+        strcpy(cpy,word);
+
+        for (int i =0; i <strlen(word);i++)
+        {
+            cpy[i] = tolower(word[i]);
+        }
+            cpy[strlen(cpy)] = '\0';
+
 
 
             while ( cursor != NULL)
         {
-            if (strcasecmp(cursor -> word,word)==0)
+            if (strcasecmp(cursor -> word,cpy)==0)
             {
 
                 return true;
@@ -99,15 +109,7 @@ bool load(const char *dictionary)
         return false;
     }
 
-        char cpy[LENGTH+1];
 
-        strcpy(cpy,word);
-
-        for (int i =0; i <strlen(word);i++)
-        {
-            word[i] = tolower(cpy[i]);
-        }
-            word[strlen(word)] = '\0';
 
 
     strcpy(n->word,word);
