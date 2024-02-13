@@ -128,6 +128,7 @@ bool load(const char *dictionary)
 
     strcpy(n->word,word);
 
+
     node *temp = table[hash(word)];
 
         if (temp == NULL)
