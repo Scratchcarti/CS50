@@ -5,6 +5,8 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <strings.h>
+
 
 #include "dictionary.h"
 
@@ -41,7 +43,6 @@ bool check(const char *word)
         {
             if (strcasecmp(cursor -> word,word)==0)
             {
-                checkcount++;
 
                 return true;
 
@@ -68,7 +69,7 @@ unsigned int hash(const char *word)
     // TODO: Improve this hash function
     for (int i =0; i < strlen(word); i++)
     {
-        sum = sum + 'word[i]';
+        sum = sum + word[i] ;
     }
     return sum;
 }
