@@ -28,6 +28,8 @@ int counter = 0;
 // Hash table
 node *table[N];
 
+
+
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
@@ -98,7 +100,7 @@ bool load(const char *dictionary)
         return false;
     }
 
-       for (int i =0; i < N; i++)
+    for (int i =0; i < N; i++)
     {
         table[i] = NULL;
     }
