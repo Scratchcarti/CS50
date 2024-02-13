@@ -30,13 +30,17 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO
-    node *cursor = table[hash(word)];
+
+    char cpy[LENGTH + 1];
+    strcpy(cpy,word);
+
+    node *cursor = table[hash(cpy)];
 
 
 
             while ( cursor != NULL)
         {
-            if (strcasecmp(cursor -> word,word)==0)
+            if (strcasecmp(cursor -> word,cpy)==0)
             {
 
                 return true;
