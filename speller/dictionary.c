@@ -32,13 +32,6 @@ bool check(const char *word)
     // TODO
     node *cursor = table[hash(word)];
 
-      if (cursor == NULL)
-
-        {
-            printf("cursor fault");
-            return false;
-        }
-
             while ( cursor != NULL)
         {
             if (strcasecmp(cursor -> word,word)==0)
