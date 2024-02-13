@@ -37,9 +37,18 @@ bool load(const char *dictionary)
 {
     // TODO
     FILE *fp1 = fopen(dictionary,"r");
+    if (fp1==NULL)
+    {
+        printf("fp1 invalid");
+        return false;
+    }
+
+
 
     fread(&c,)
 
+
+    fclose(fp1);
     return false;
 }
 
