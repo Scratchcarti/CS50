@@ -32,6 +32,8 @@ bool check(const char *word)
     // TODO
     node *cursor = table[hash(word)];
 
+
+
             while ( cursor != NULL)
         {
             if (strcasecmp(cursor -> word,word)==0)
@@ -46,7 +48,7 @@ bool check(const char *word)
                 cursor = cursor -> next;
             }
 
-                          }
+        }
 
 
             return false;
@@ -114,7 +116,7 @@ unsigned int size(void)
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
-    for (int i =0; i < N-1; i++)
+    for (int i =0; i < N; i++)
     {
     node *cursor = table[i];
 
