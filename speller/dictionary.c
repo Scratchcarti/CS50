@@ -61,16 +61,15 @@ bool check(const char *word)
 }
 
 // Hashes word to a number
+// Hash function from cs50 subreddit.
 unsigned int hash(const char *word)
 {
-    int sum = 0;
-
-    // TODO: Improve this hash function
-    for (int i =0; i < strlen(word); i++)
+    int hash = 0;
+    for (int i = 0, i < strlen(word); i++)
     {
-        sum = sum + word[i] ;
+        hash = (hash << 2) ^ word[i];
     }
-    return sum;
+    return hash % HASHTABLE_SIZE;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
