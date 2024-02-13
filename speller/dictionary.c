@@ -65,11 +65,11 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     int hash = 0;
-    for (int i = 0, i < strlen(word); i++)
+    for (int i = 0; i < strlen(word); i++)
     {
         hash = (hash << 2) ^ word[i];
     }
-    return hash % HASHTABLE_SIZE;
+    return hash % N;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
