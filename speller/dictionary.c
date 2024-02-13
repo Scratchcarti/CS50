@@ -33,16 +33,14 @@ bool check(const char *word)
 {
     // TODO
 
-    char cpy[LENGTH + 1];
-    strcpy(cpy,word);
 
-    node *cursor = table[hash(cpy)];
+    node *cursor = table[hash(word)];
 
 
 
             while ( cursor != NULL)
         {
-            if (strcasecmp(cursor -> word,cpy)==0)
+            if (strcasecmp(cursor -> word,word)==0)
             {
 
                 return true;
@@ -100,6 +98,7 @@ bool load(const char *dictionary)
         return false;
     }
 
+    strlwr(word);
     strcpy(n->word,word);
 
     node *temp = table[hash(word)];
