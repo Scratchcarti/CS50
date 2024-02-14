@@ -1,11 +1,20 @@
 from cs50 import get_int
 
-height = get_int("Height: ")
-if:
-height > 8 or height < 1
+def inp():
+    height = get_int("Height: ")
+    main
 
-for i in range(0,height,1):
-    print(f"{i}")
+def main():
+
+    if height > 8 or height < 1 :
+        inp()
+
+    else :
+
+        for i in range(0,height,1):
+            print(f"{i}")
 
 
+
+main()
 
