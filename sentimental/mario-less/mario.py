@@ -16,9 +16,9 @@ def main():
 
         for j in range(i-1,h,1):
 
-            print("",end="")
+            print(" ",end="")
 
-        for k in range(h,0,-1):
+        for k in range(i,h,1):
 
             print("#",end="")
 
