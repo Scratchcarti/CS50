@@ -1,5 +1,6 @@
 from cs50 import get_int
 
+
 def inp():
     height = get_int("Height: ")
     return height
