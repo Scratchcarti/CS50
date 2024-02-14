@@ -6,12 +6,15 @@ def inp():
 
 def main():
 
-    inp()
+    h = inp()
 
-    while (height > 8 or height < 1 ):
+    while (h > 8 or h < 1 ):
 
-        inp()
+        h = inp()
 
+    for i in range(0,h,1):
+
+        for j
 
 
 
