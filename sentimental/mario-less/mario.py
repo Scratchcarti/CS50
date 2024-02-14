@@ -4,5 +4,6 @@ height = get_int("Height: ")
 
 for i in range(height):
     print(f"{i}")
+    i+=1
 
 
