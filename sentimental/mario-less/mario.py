@@ -5,10 +5,10 @@ def inp():
 
 def main():
 
-   inp()
+    inp()
 
     if n > 8 or n < 1 :
-        inp()
+        
 
     else :
 
