@@ -14,7 +14,17 @@ def main():
 
     for i in range(0,h,1):
 
-        for j
+        for j in range(i-1,h,1):
+
+            print("",end="")
+
+        for k in range(h,0,-1):
+
+            print("#",end="")
+
+        print()
+
+
 
 
 
