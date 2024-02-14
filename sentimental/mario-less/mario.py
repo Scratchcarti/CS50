@@ -14,7 +14,7 @@ def main():
 
     for i in range(0,h,1):
 
-        for j in range(i-1,h,1):
+        for j in range(h-i-1,0,-1):
 
             print(" ",end="")
 
