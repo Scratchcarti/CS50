@@ -12,25 +12,29 @@ def let_count(string):
 
 def word_count(string):
 
+
     wcount = string.count(" ")
+    wcount += 1
     return wcount
 
 
 def sent_count(string):
 
-    scount = string.count(".","!","?")
+    scount1 = string.count(".")
+    scount2 = string.count("?")
+    scount3 = string.count("!")
+    scount = scount1 + scount2 + scount3
     return scount
 
 def main():
 
-    string = input("Enter string")
+    string = input("Enter string:  ")
 
     L = let_count(string)
     W = word_count(string)
     S = sent_count(string)
 
-    print(f"{L,W,S}")
-
+    
 main()
 
 
