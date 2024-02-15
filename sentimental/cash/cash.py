@@ -12,21 +12,21 @@ def get_money():
 
 def quaters(money):
 
-    money = money/25
+    money = round (money/25)
     return money
 
 def dimes(money):
 
-    money = money/10
+    money = round (money/10)
     return money
 
 def nickels(money):
 
-    money = money/5
+    money = round (money/5)
     return money
 
 def pennies(money):
-    money = money/1
+    money = round (money/1)
     return money
 
 
