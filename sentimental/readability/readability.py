@@ -34,7 +34,22 @@ def main():
     W = word_count(string)
     S = sent_count(string)
 
-    
+    index = round(5.88 * ((L)/(W))) - (29.6 * ((S)/(W))) - (15.8)
+
+    if (index > 16):
+
+        print(f"Grade 16+")
+
+    elif (index < 1):
+
+        printf (f"Before Grade 1")
+
+    else:
+
+        printf(f"Grade {index}")
+
+
+
 main()
 
 
