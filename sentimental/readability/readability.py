@@ -8,10 +8,7 @@ def let_count(string):
     return lcount
 
 
-
-
 def word_count(string):
-
 
     wcount = string.count(" ")
     wcount += 1
@@ -26,6 +23,7 @@ def sent_count(string):
     scount = scount1 + scount2 + scount3
     return scount
 
+
 def main():
 
     string = input("Text: ")
@@ -34,7 +32,7 @@ def main():
     W = word_count(string)
     S = sent_count(string)
 
-    index = round ((5.88 * ((L)/(W))) - (29.6 * ((S)/(W))) - (15.8))
+    index = round((5.88 * ((L)/(W))) - (29.6 * ((S)/(W))) - (15.8))
 
     if (index > 16):
 
@@ -49,11 +47,4 @@ def main():
         print(f"Grade {index}")
 
 
-
 main()
-
-
-
-
-
-
