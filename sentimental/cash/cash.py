@@ -1,6 +1,16 @@
 from cs50 import get_float
 
-def get_cents():
+def get_money():
 
-    while(True):
-        
+    money = -1
+
+    while(money < 0):
+
+        money = get_int("Change Owed ")
+
+    return money
+
+
+
+
+
