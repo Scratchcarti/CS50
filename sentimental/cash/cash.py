@@ -1,32 +1,37 @@
 from cs50 import get_float
 
+
 def get_money():
 
     money = -1
 
-    while(money < 0):
+    while (money < 0):
 
         money = get_float("Change Owed ")
 
     return (money*100)
 
+
 def quaters(money):
 
-    money =  int(money/25)
+    money = int(money/25)
     return money
+
 
 def dimes(money):
 
-    money =  int(money/10)
+    money = int(money/10)
     return money
+
 
 def nickels(money):
 
-    money =  int(money/5)
+    money = int(money/5)
     return money
 
+
 def pennies(money):
-    money =  int(money/1)
+    money = int(money/1)
     return money
 
 
@@ -50,13 +55,9 @@ def main():
 
     money = money - (pennie * 1)
 
-    coins = quater + dime + nickel+ pennie
+    coins = quater + dime + nickel + pennie
 
     print(f"{coins}")
 
 
 main()
-
-
-
-
