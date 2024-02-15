@@ -8,25 +8,25 @@ def get_money():
 
         money = get_float("Change Owed ")
 
-    return money*100
+    return int(money*100)
 
 def quaters(money):
 
-    money = round (money/25)
+    money =  (money/25)
     return money
 
 def dimes(money):
 
-    money = round (money/10)
+    money =  (money/10)
     return money
 
 def nickels(money):
 
-    money = round (money/5)
+    money =  (money/5)
     return money
 
 def pennies(money):
-    money = round (money/1)
+    money =  (money/1)
     return money
 
 
