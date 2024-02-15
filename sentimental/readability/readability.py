@@ -10,7 +10,7 @@ def let_count(string):
 
 
 
-def word_cont(string):
+def word_count(string):
 
     wcount = string.count(" ")
     return wcount
@@ -21,7 +21,7 @@ def sent_count(string):
     scount = string.count(".","!","?")
     return scount
 
-def main()
+def main():
 
     string = input("Enter string")
 
