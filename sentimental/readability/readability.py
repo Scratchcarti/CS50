@@ -12,9 +12,13 @@ def let_count(string):
 
 def word_cont(string):
 
-    for character in string:
-        wcount = string.count(" ")
-    return
+    wcount = string.count(" ")
+    return wcount
+
+
+def sent_count(string):
+
+    scount = string.count(".")
 
 
 
