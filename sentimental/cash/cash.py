@@ -34,25 +34,25 @@ def main():
 
     money = get_money()
 
-    quaters = quaters(money)
+    quater = quaters(money)
 
-    money = money - quaters * 25
+    money = money - quater * 25
 
-    dimes = dimes(money)
+    dime = dimes(money)
 
-    money = money - dimes * 10
+    money = money - dime * 10
 
-    nickels = nickels(money)
+    nickel = nickels(money)
 
-    money = money - nickels * 5
+    money = money - nickel * 5
 
-    pennies = pennies(money)
+    pennie = pennies(money)
 
-    money = money - pennis * 1
+    money = money - pennie * 1
 
-    coins = quaters + dimes + nickels + pennies
+    coins = quater + dime + nickel+ pennie
 
-    print("f{coins}")
+    print(f"{coins}")
 
 
 main()
