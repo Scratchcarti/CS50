@@ -28,7 +28,7 @@ def sent_count(string):
 
 def main():
 
-    string = input("Enter string:  ")
+    string = input("Text: ")
 
     L = let_count(string)
     W = word_count(string)
@@ -42,11 +42,11 @@ def main():
 
     elif (index < 1):
 
-        printf (f"Before Grade 1")
+        print(f"Before Grade 1")
 
     else:
 
-        printf(f"Grade {index}")
+        print(f"Grade {index}")
 
 
 
