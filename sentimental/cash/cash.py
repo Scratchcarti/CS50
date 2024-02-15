@@ -36,19 +36,19 @@ def main():
 
     quater = quaters(money)
 
-    money = money - quater * 25
+    money = money - (quater * 25)
 
     dime = dimes(money)
 
-    money = money - dime * 10
+    money = money - (dime * 10)
 
     nickel = nickels(money)
 
-    money = money - nickel * 5
+    money = money - (nickel * 5)
 
     pennie = pennies(money)
 
-    money = money - pennie * 1
+    money = money - (pennie * 1)
 
     coins = quater + dime + nickel+ pennie
 
