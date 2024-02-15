@@ -18,7 +18,20 @@ def word_cont(string):
 
 def sent_count(string):
 
-    scount = string.count(".")
+    scount = string.count(".","!","?")
+    return scount
+
+def main()
+
+    string = input("Enter string")
+
+    L = let_count(string)
+    W = word_count(string)
+    S = sent_count(string)
+
+    print(f"{L,W,S}")
+
+main()
 
 
 
