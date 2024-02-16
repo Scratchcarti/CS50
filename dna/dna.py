@@ -1,11 +1,3 @@
-
-
-
-import csv
-from sys import argv
-
-def main():
-
 import csv
 from sys import argv
 
