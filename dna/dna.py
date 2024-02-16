@@ -15,6 +15,7 @@ def main():
     with open(argv[1]) as e:
         reader = csv.DictReader(e)
         database = list(reader)
+        print(f"{database}")
 
     # TODO: Read DNA sequence file into a variable
     with open(argv[2]) as f:
