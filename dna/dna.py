@@ -48,7 +48,7 @@ def main():
             match_counter = 1
 
         print(f"suspect")
-return
+        return
 
 
 
