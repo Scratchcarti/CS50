@@ -11,7 +11,12 @@ def main():
         return 1
 
     # TODO: Read database file into a variable
-    
+
+    with open (argv[1]) as di:
+        read = csv.reader(di)
+        
+
+
 
 
     # TODO: Read DNA sequence file into a variable
