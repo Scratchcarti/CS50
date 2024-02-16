@@ -48,12 +48,9 @@ def main():
             match_counter = 1
 
         print(f"suspect")
-return 
+return
 
 
-
-
-    return
 
 
 def longest_match(sequence, subsequence):
