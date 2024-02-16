@@ -24,11 +24,34 @@ def main():
 
     matches = {}
 
-        for i in database[0]:
-            matches[i] = (longest_match(sequence,i))
+    for i in database[0]:
+        matches[i] = (longest_match(sequence,i))
 
 
     # TODO: Check database for matching profiles
+
+    match = "NO MATCH"
+    match_counter = 1
+
+    for i in range(len(database)):
+        for j in matches:
+
+            if str(matches[j]) == database[i][j]:
+
+                match_counter += 1
+
+        if match_counter == len_matches:
+
+            match = database[i]['name']
+            break
+        else:
+            match_counter = 1
+
+        print(f"suspect")
+return 
+
+
+
 
     return
 
