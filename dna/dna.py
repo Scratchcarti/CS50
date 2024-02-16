@@ -13,15 +13,15 @@ def main():
     # TODO: Read database file into a variable
 
     with open (argv[1]) as di:
-        read = csv.reader(di)
-        database
-
-
-
+        database = list(csv.reader(di))
 
     # TODO: Read DNA sequence file into a variable
+    with open (argv[2]) as sqnc:
+        sequence = sqnc.read()
+
 
     # TODO: Find longest match of each STR in DNA sequence
+    
 
     # TODO: Check database for matching profiles
 
