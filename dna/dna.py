@@ -14,7 +14,7 @@ def main():
 
     with open (argv[1]) as di:
         read = csv.reader(di)
-        
+        database
 
 
 
