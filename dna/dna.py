@@ -10,11 +10,9 @@ def main():
 
     # TODO: Read database file into a variable
     with open(argv[1]) as e:
-        reader = csv.DictReader(e)
-        dic = {}
-        dic = dict(reader)
-        for row in reader:
-            print(f"{row}")
+        reader = {}
+        reader = dict(csv.DictReader(e))
+        print(reader)
 
 
 
