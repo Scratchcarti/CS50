@@ -1,7 +1,6 @@
-SELECT name
-FROM people
-WHERE id =
-(
-    SELECT id 
-)
+SELECT movie_id
+FROM ratings
+LIMIT 10
+;
+
 
