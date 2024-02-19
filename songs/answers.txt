@@ -1,0 +1,2 @@
+1. To calculate spotify aura of a person, i would average out the values of Energy, Valence and danceability andThen decide their aura according to these average values.
+2. 
