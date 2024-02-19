@@ -1,6 +1,6 @@
-SELECT names
+SELECT name
 FROM movies
 JOIN stars on movies.id = stars.movie_id
-JOIN people on movies.id = people.
+JOIN people on stars.person_id = people.id
 WHERE movies.title = "TOY STORY"
 ;
