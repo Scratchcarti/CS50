@@ -3,7 +3,7 @@ FROM people
 WHERE id in
 (
     SELECT person_id
-    FROM stars
+    FROM directors
     WHERE movie_id in
     (
         SELECT movie_id
