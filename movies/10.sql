@@ -1,5 +1,15 @@
 SELECT name
 FROM people
-WHERE id
+WHERE id =
+(
+    SELECT person_id
+    FROM stars
+    WHERE movie_id =
+    (
+        SELECT movie_id
+        FROM ratings
+        WHERE rating >= 9
+    )
+)
 
 
