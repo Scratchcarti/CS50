@@ -19,7 +19,7 @@ def main():
 
     # TODO: Find longest match of each STR in DNA sequence
     matches = {}
-    for i in database[0]:
+    for i in database:
         print(f"{i}")
         matches[i] = (longest_match(sequence, i))
 
