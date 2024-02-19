@@ -1,5 +1,5 @@
 SELECT AVG(rating)
 FROM movies
-JOIN ratings on movies.id = ratings.movies_id
+JOIN ratings on movies.id = ratings.movie_id
 ;
 
