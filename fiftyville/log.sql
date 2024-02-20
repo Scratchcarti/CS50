@@ -28,8 +28,22 @@ WHERE month = 7 AND day = 28 AND year = 2023 AND transcript LIKE '%bakery%';
 -- bakery secuity logs
 SELECT *
 FROM bakery_security_logs
-WHERE month = 7 AND day = 28 AND year = 2023 AND hour = 10 AND minute > 15
+WHERE month = 7 AND day = 28 AND year = 2023 AND hour = 10 AND minute > 15 AND minute < 28 AND activity = 'exit'
 ;
+/*
++-----+------+-------+-----+------+--------+----------+---------------+
+| id  | year | month | day | hour | minute | activity | license_plate |
++-----+------+-------+-----+------+--------+----------+---------------+
+| 260 | 2023 | 7     | 28  | 10   | 16     | exit     | 5P2BI95       |
+| 261 | 2023 | 7     | 28  | 10   | 18     | exit     | 94KL13X       |
+| 262 | 2023 | 7     | 28  | 10   | 18     | exit     | 6P58WS2       |
+| 263 | 2023 | 7     | 28  | 10   | 19     | exit     | 4328GD8       |
+| 264 | 2023 | 7     | 28  | 10   | 20     | exit     | G412CB7       |
+| 265 | 2023 | 7     | 28  | 10   | 21     | exit     | L93JTIZ       |
+| 266 | 2023 | 7     | 28  | 10   | 23     | exit     | 322W7JE       |
+| 267 | 2023 | 7     | 28  | 10   | 23     | exit     | 0NTHK55       |
++-----+------+-------+-----+------+--------+----------+---------------+
+*/
 
 
 
