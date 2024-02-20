@@ -133,5 +133,5 @@ WHERE duration < 60 AND month = 7 AND day = 28 AND year = 2023;
 */
 
 SELECT *
-FROM people
-WHERE 
+FROM passenger
+WHERE id = 36
