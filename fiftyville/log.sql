@@ -45,21 +45,6 @@ WHERE month = 7 AND day = 28 AND year = 2023 AND hour = 10 AND minute > 15 AND m
 +-----+------+-------+-----+------+--------+----------+---------------+
 */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* early morning leggett street atm details, withdrawing money  */
 
 SELECT *
@@ -80,4 +65,5 @@ WHERE month = 7 AND day = 28 AND year = 2023 AND transaction_type = 'withdraw' A
 +-----+----------------+------+-------+-----+----------------+------------------+--------+
 */
 
+-- fiftyville flight tickets
 
