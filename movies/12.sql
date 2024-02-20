@@ -7,10 +7,4 @@ SELECT id
 FROM people
 WHERE name = 'Jennifer Lawrence'
 )
-AND  stars.person_id =
-(
-SELECT id
-FROM people
-WHERE name = 'Bradley Cooper'
-)
 ;
