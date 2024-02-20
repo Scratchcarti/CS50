@@ -150,14 +150,23 @@ WHERE flight_id = 36;
 | 36        | 8496433585      | 7B   |
 +-----------+-----------------+------+
 */
-SELECT *
-FROM people
+SELECT name
+    FROM people
+        WHERE
+            passport_number IN
+            (
+            SELECT passport_number
+                FROM passengers
+                    WHERE flight_id = 36
+            )
 
-WHERE
-passport_number IN
-(
-SELECT passport_number
-FROM passengers
-WHERE flight_id = 36;
+            AND
+            
+            license IN
+            (
+            SELECT lisence_plate
+                FROM bakery_security_logs
+                    WHERE month = 7 AND day = 28 AND year = 2023 AND hour = 10 AND minute > 15 AND minute < 28 AND activity = 'exit'
+            )
+            ;
 
-)
