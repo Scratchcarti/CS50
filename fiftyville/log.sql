@@ -10,8 +10,8 @@ WHERE month = 7 AND day = 28 AND year = 2023 AND transcript LIKE '%bakery%';
 163 | Raymond | 2023 | 7     | 28  | As the thief was leaving the bakery, they called someone who talked to them for less than a minute. In the call, I heard the thief say that they were planning to take the earliest flight out of Fiftyville tomorrow. The thief then asked the person on the other end of the phone to purchase the flight ticket. |
 */
 
-/* early morning legget street atm details, withdrawing money */
+/* early morning leggett street atm details, withdrawing money  */
 
 SELECT *
 FROM atm_transactions
-WHERE month = 7 AND day = 28 AND year = 2023 AND transaction_type = 'withdraw';
+WHERE month = 7 AND day = 28 AND year = 2023 AND transaction_type = 'withdraw' AND atm_location = 'Leggett Street';
