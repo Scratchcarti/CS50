@@ -112,3 +112,7 @@ FROM airports;
 CSF IS THE REQUIRED ABBREVATION
 */
 
+-- PHONE CALL
+SELECT *
+FROM phone_calls
+WHERE duration < 60 AND month = 7 AND day = 28 AND year = 2023;
