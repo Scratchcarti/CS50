@@ -12,7 +12,7 @@ WHERE month = 7 AND day = 28 AND year = 2023;
 | 294 | 2023 | 7     | 28  | Boyce Avenue    | Shoplifting took place at 03:01. Two people witnessed the event.                                                                                                                                                         |
 | 295 | 2023 | 7     | 28  | Humphrey Street | Theft of the CS50 duck took place at 10:15am at the Humphrey Street bakery. Interviews were conducted today with three witnesses who were present at the time – each of their interview transcripts mentions the bakery. |
 | 296 | 2023 | 7     | 28  | Widenius Street | Money laundering took place at 20:30. No known witnesses.                                                                                                                                                                |
-| 297 | 2023 | 7     | 28  | Humphrey Street | Littering took place at 16:36. No known witnesses.                              
+| 297 | 2023 | 7     | 28  | Humphrey Street | Littering took place at 16:36. No known witnesses.
 */
 -- to read the interviews
 SELECT *
@@ -24,6 +24,22 @@ WHERE month = 7 AND day = 28 AND year = 2023 AND transcript LIKE '%bakery%';
 | 162 | Eugene  | 2023 | 7     | 28  | I don't know the thief's name, but it was someone I recognized. Earlier this morning, before I arrived at Emma's bakery, I was walking by the ATM on Leggett Street and saw the thief there withdrawing some money.                                                                                                 |
 163 | Raymond | 2023 | 7     | 28  | As the thief was leaving the bakery, they called someone who talked to them for less than a minute. In the call, I heard the thief say that they were planning to take the earliest flight out of Fiftyville tomorrow. The thief then asked the person on the other end of the phone to purchase the flight ticket. |
 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* early morning leggett street atm details, withdrawing money  */
 
