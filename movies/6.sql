@@ -1,4 +1,4 @@
-SELECT ROUND(AVG(rating),3)
+SELECT ROUND(AVG(rating),2)
 FROM movies
 JOIN ratings on movies.id = ratings.movie_id
 ;
