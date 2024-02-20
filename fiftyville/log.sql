@@ -131,7 +131,33 @@ WHERE duration < 60 AND month = 7 AND day = 28 AND year = 2023;
 | 281 | (338) 555-6650 | (704) 555-2131 | 2023 | 7     | 28  | 54       |
 +-----+----------------+----------------+------+-------+-----+----------+
 */
-
+-- for flight id
 SELECT *
 FROM passengers
 WHERE flight_id = 36;
+
+/*flight ids
++-----------+-----------------+------+
+| flight_id | passport_number | seat |
++-----------+-----------------+------+
+| 36        | 7214083635      | 2A   |
+| 36        | 1695452385      | 3B   |
+| 36        | 5773159633      | 4A   |
+| 36        | 1540955065      | 5C   |
+| 36        | 8294398571      | 6C   |
+| 36        | 1988161715      | 6D   |
+| 36        | 9878712108      | 7A   |
+| 36        | 8496433585      | 7B   |
++-----------+-----------------+------+
+*/
+SELECT *
+FROM people
+
+WHERE
+passport_number IN
+(
+SELECT passport_number
+FROM passengers
+WHERE flight_id = 36;
+
+)
