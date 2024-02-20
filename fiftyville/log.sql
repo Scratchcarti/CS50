@@ -161,12 +161,24 @@ SELECT name
             )
 
             AND
-            
-            license IN
+
+            license_plate IN
             (
-            SELECT lisence_plate
+            SELECT license_plate
                 FROM bakery_security_logs
                     WHERE month = 7 AND day = 28 AND year = 2023 AND hour = 10 AND minute > 15 AND minute < 28 AND activity = 'exit'
             )
             ;
+
+            AND
+
+            phone_number IN
+            (
+            SELECT *
+                FROM phone_calls
+                    WHERE duration < 60 AND month = 7 AND day = 28 AND year = 2023
+            )
+
+            AND 
+
 
