@@ -132,4 +132,6 @@ WHERE duration < 60 AND month = 7 AND day = 28 AND year = 2023;
 +-----+----------------+----------------+------+-------+-----+----------+
 */
 
-SELECT 
+SELECT *
+FROM people
+WHERE 
