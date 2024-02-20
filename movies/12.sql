@@ -2,9 +2,5 @@ SELECT (movies.title)
 FROM stars
 JOIN movies on stars.movie_id = movies.id
 JOIN people on stars.person_id = people.id
-WHERE stars.person_id = (
-SELECT id
-FROM people
-WHERE name = 'Jennifer Lawrence'
-)
+WHERE people.name = 'Bradley Cooper' AND people.id = ''
 ;
