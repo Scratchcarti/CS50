@@ -1,4 +1,4 @@
-SELECT count(name)
+SELECT name
 FROM people
 WHERE id in
 (
