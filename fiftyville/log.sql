@@ -150,6 +150,8 @@ WHERE flight_id = 36;
 | 36        | 8496433585      | 7B   |
 +-----------+-----------------+------+
 */
+
+-- bank accounts
 SELECT name
     FROM people
         WHERE
@@ -168,17 +170,31 @@ SELECT name
                 FROM bakery_security_logs
                     WHERE month = 7 AND day = 28 AND year = 2023 AND hour = 10 AND minute > 15 AND minute < 28 AND activity = 'exit'
             )
-            ;
+            
 
             AND
 
             phone_number IN
             (
-            SELECT *
+            SELECT caller
                 FROM phone_calls
                     WHERE duration < 60 AND month = 7 AND day = 28 AND year = 2023
             )
 
-            AND 
+            AND
+
+            id IN
+            (
+            SELECT id
+                FROM bank_accounts
+                WHERE account_number IN
+                (
+                    SELECT account_number
+                    FROM atm_transactions
+                    WHERE month = 7 AND day = 28 AND year = 2023 AND transaction_type = 'withdraw' AND atm_location = 'Leggett Street'
+                )
+            )
+
+;
 
 
