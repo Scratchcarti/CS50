@@ -66,7 +66,14 @@ WHERE month = 7 AND day = 28 AND year = 2023 AND transaction_type = 'withdraw' A
 */
 
 -- fiftyville flight tickets
+
+--flights outta fifty
+SELECT *
+FROM flights
+WHERE origin_airport_id = 8 AND month = 7 AND day = 29 AND year = 2023
 /*
+
+
 */
 
 
@@ -94,5 +101,4 @@ FROM airports;
 
 CSF IS THE REQUIRED ABBREVATION
 */
-
 
