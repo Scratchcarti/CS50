@@ -1,16 +1,18 @@
 -- Keep a log of any SQL queries you execute as you solve the mystery.
 
 --crime scene report
+SELECT *
+FROM crime_scene_reports
+WHERE month = 7 AND day = 28 AND year = 2023;
+
 /*
-
-
-
-
-
-
-
-
-
+| id  | year | month | day |     street      |                                                                                                       description                                                                                                        |
++-----+------+-------+-----+-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| 293 | 2023 | 7     | 28  | Axmark Road     | Vandalism took place at 12:04. No known witnesses.                                                                                                                                                                       |
+| 294 | 2023 | 7     | 28  | Boyce Avenue    | Shoplifting took place at 03:01. Two people witnessed the event.                                                                                                                                                         |
+| 295 | 2023 | 7     | 28  | Humphrey Street | Theft of the CS50 duck took place at 10:15am at the Humphrey Street bakery. Interviews were conducted today with three witnesses who were present at the time – each of their interview transcripts mentions the bakery. |
+| 296 | 2023 | 7     | 28  | Widenius Street | Money laundering took place at 20:30. No known witnesses.                                                                                                                                                                |
+| 297 | 2023 | 7     | 28  | Humphrey Street | Littering took place at 16:36. No known witnesses.                              
 */
 -- to read the interviews
 SELECT *
