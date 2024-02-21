@@ -152,7 +152,7 @@ WHERE flight_id = 36;
 */
 
 -- bank accounts
-SELECT name
+SELECT *
     FROM people
         WHERE
             passport_number IN
@@ -170,7 +170,7 @@ SELECT name
                 FROM bakery_security_logs
                     WHERE month = 7 AND day = 28 AND year = 2023 AND hour = 10 AND minute > 15 AND minute < 28 AND activity = 'exit'
             )
-            
+
 
             AND
 
