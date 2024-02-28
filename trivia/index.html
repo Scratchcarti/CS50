@@ -6,11 +6,19 @@
         <link href="styles.css" rel="stylesheet">
         <title>Trivia!</title>
         <script>
+
             // TODO: Add code to check answers to questions
-            document.addEventListener('DOMContentLoaded', function(){
-                let correct = document.querySelectorAll;
-                
-            })
+            function checkmcq(event){
+
+                let button = event.target;
+                if (button.innerHTML == "1:6")
+                {
+                    button.style.backgroundColour = "Green";
+                    button.parentElement.querySelector('.feedback').innerHTML = 'Correct!';
+                }
+
+
+            }
         </script>
     </head>
     <body>
