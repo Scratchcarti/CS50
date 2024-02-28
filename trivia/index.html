@@ -8,7 +8,7 @@
         <script>
 
             // TODO: Add code to check answers to questions
-            function checkmcq(event){
+            function checkmcq(event) {
 
                 let button = event.target;
                 if (button.innerHTML == "1:6")
@@ -21,9 +21,25 @@
                     button.style.backgroundColour = "Red";
                     button.parentElement.querySelector('.feedback').innerHTML = 'Incorrect';
                 }
-
-
             }
+
+                function checkFreeResponse(event) {
+
+
+                    let button = event.target;
+                    let input = button.parentElement.querySelector('input');
+                    
+                    if (input.value === 'Switzerland') {
+                        input.style.backgroundColor = 'Green';
+                        input.parentElement.querySelector('.feedback').innerHTML = 'Correct!';
+                        }
+                        else {
+                            input.style.backgroundColor = 'Red';
+                            input.parentElement.querySelector('.feedback').innerHTML = 'Incorrect';
+                        }
+                }
+
+
         </script>
     </head>
     <body>
