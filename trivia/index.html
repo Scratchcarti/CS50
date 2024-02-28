@@ -16,6 +16,11 @@
                     button.style.backgroundColour = "Green";
                     button.parentElement.querySelector('.feedback').innerHTML = 'Correct!';
                 }
+                else
+                {
+                    button.style.backgroundColour = "Red";
+                    button.parentElement.querySelector('.feedback').innerHTML = 'Incorrect';
+                }
 
 
             }
@@ -32,10 +37,10 @@
                 <hr>
                 <!-- TODO: Add multiple choice question here -->
                 <h3> What is the approximate ratio of people to sheep in New Zealand? </h3>
-                <button class ="incorrect">6:1</button>
-                <button class ="incorrect">3:1</button>
-                <button class ="incorrect">1:1</button>
-                <button class ="correct">1:6</button>
+                <button onclick="checkMultiChoice(event)">6:1</button>
+                <button onclick="checkMultiChoice(event)">3:1</button>
+                <button onclick="checkMultiChoice(event)">1:1</button>
+                <button onclick="checkMultiChoice(event)">1:6</button>
                 <p class ="feedback"></p>
             </div>
 
