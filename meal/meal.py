@@ -4,6 +4,7 @@ def main():
     min = float(minutes)
     hr = float(hours)
     fuck = convert(min, hr)
+    print(min)
     if 7.0 <= fuck <= 8.0:
         print("breakfast time")
     elif (12.0 <= fuck <= 13.0):
