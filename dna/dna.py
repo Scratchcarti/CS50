@@ -81,3 +81,5 @@ def longest_match(sequence, subsequence):
 
 
 main()
+if __name__ == "__main__":
+    main()
