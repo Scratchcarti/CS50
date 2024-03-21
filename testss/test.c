@@ -1,5 +1,5 @@
 #include <stdio.h>
 int main()
 {   int x=15;
-    printf("%d,%d,%d",x,x=20,x);
+    printf("%d,%d,%d",x!=15,x=20,x<30);
 }
