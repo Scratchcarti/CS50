@@ -1,5 +1,4 @@
 #include <stdio.h>
-int main()
-{   int x=15;
-    printf("%d%d%d",x!=15,x=20,x<30);
+int main(){
+printf("what the fuck is we doing");
 }
