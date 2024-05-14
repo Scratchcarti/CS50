@@ -111,7 +111,10 @@ def shortest_path(source, target):
 
         explored.add(node.state)
         nbrs = neighbors_for_person(node.state)
-        
+
+        for movie,actor in nbrs:
+
+            if (actor not in explored) and (actor not in frontier.)
 
 
 
