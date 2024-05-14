@@ -115,16 +115,12 @@ def shortest_path(source, target):
         for movie,actor in nbrs:
 
             if actor not in explored and  not frontier.contains_state(actor):
-
                 child = Node(state = actor, parent = node, action = movie)
-
                 if child.state == target:
-
                     path = []
                     node = child
 
                     while node.parent is not None:
-
                         path.append((node.action,node.parent))
                         node = node.parent
 
