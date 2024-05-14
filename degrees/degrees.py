@@ -97,14 +97,20 @@ def shortest_path(source, target):
     start = Node(state = source , parent = 0, action = 0)
     frontier = QueueFrontier()
     frontier.add(start)
+    explored = set()
 
     while True:
 
         if frontier.empty():
             raise Exception(" empty frontier ")
+
     #selecting node by removing from frontier
         node = frontier.remove()
+
         # check if node is what we need
+
+        
+
 
 
 
