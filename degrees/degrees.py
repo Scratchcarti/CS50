@@ -93,7 +93,12 @@ def shortest_path(source, target):
     """
 
     # TODO
+    #frontier
+    start = Node(state = self.start,parent = 0, action = 0)
+    frontier = StackFrontier()
+    frontier.add(start)
     
+
     raise NotImplementedError
 
 
