@@ -94,6 +94,7 @@ def shortest_path(source, target):
 
     # TODO
     raise NotImplementedError
+    
 
 
 def person_id_for_name(name):
