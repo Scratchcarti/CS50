@@ -114,7 +114,7 @@ def shortest_path(source, target):
 
         for movie,actor in nbrs:
 
-            if (actor not in explored) and (actor not in frontier.)
+            if actor not in explored and  not in frontier.contains_state(actor)
 
 
 
