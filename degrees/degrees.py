@@ -94,10 +94,22 @@ def shortest_path(source, target):
 
     # TODO
     #frontier
-    start = Node(state = self.start,parent = 0, action = 0)
+    start = Node(state = source , parent = 0, action = 0)
     frontier = StackFrontier()
     frontier.add(start)
-    
+
+    while True:
+
+        if frontier.empty():
+            raise Exception(" empty frontier ")
+    #selecting node by removing from frontier
+        node = frontier.remove()
+        # check if node is what we need
+        
+
+
+
+
 
     raise NotImplementedError
 
