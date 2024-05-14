@@ -125,25 +125,13 @@ def shortest_path(source, target):
 
                     while node.parent is not None:
 
-                        path.append(node.action,node.parent)
+                        path.append((node.action,node.parent))
                         node = node.parent
 
                     path.reverse()
                     return path
 
             frontier.add(child)
-
-
-
-
-
-
-
-
-
-
-    raise NotImplementedError
-
 
 
 def person_id_for_name(name):
