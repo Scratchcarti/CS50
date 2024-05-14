@@ -95,7 +95,7 @@ def shortest_path(source, target):
     # TODO
     #frontier
     start = Node(state = source , parent = 0, action = 0)
-    frontier = StackFrontier()
+    frontier = QueueFrontier()
     frontier.add(start)
 
     while True:
@@ -105,7 +105,7 @@ def shortest_path(source, target):
     #selecting node by removing from frontier
         node = frontier.remove()
         # check if node is what we need
-        
+
 
 
 
