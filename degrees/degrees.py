@@ -125,7 +125,8 @@ def shortest_path(source, target):
 
                     while node.parent is not None:
 
-                        path.append()
+                        path.append(node.action,node.parent)
+                        
 
 
 
