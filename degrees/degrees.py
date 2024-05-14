@@ -109,7 +109,11 @@ def shortest_path(source, target):
 
         # check if node is what we need
 
+        explored.add(node.state)
+        nbrs = neighbors_for_person(node.state)
         
+
+
 
 
 
