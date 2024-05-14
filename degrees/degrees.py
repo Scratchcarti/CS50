@@ -92,42 +92,43 @@ def shortest_path(source, target):
     If no possible path, returns None.
     """
 
-    # TODO
-    #frontier
-    start = Node(state = source , parent = 0, action = 0)
+    # For keeping track of how many nodes have been explored
+    num_explored = 0
+
+    start = Node(state=source, parent=None, action=None)
     frontier = QueueFrontier()
     frontier.add(start)
+
+    # Set of explored actors
     explored = set()
 
     while True:
-
+        # If nothing left in frontier, then no path
         if frontier.empty():
-            raise Exception(" empty frontier ")
+            return None
 
-    #selecting node by removing from frontier
         node = frontier.remove()
+        #print(f"Exploring {node.state}")
+        num_explored += 1
 
-        # check if node is what we need
-
+        # Mark actor (node) as explored
         explored.add(node.state)
-        nbrs = neighbors_for_person(node.state)
-
-        for movie,actor in nbrs:
-
+        # Find the neighbors (actors to which he can connect) of the actor
+        neighbors = neighbors_for_person(node.state)
+        for movie, actor in neighbors:
             if actor not in explored and  not frontier.contains_state(actor):
-                child = Node(state = actor, parent = node, action = movie)
+                child = Node(state=actor, parent=node, action=movie)
                 if child.state == target:
+                    # Return list of tuples (movie_id, actor_id)
                     path = []
                     node = child
-
                     while node.parent is not None:
-                        path.append((node.action,node.parent))
+                        path.append((node.action, node.state))
                         node = node.parent
 
                     path.reverse()
                     return path
-
-            frontier.add(child)
+                frontier.add(child)
 
 
 def person_id_for_name(name):
