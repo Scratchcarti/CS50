@@ -95,7 +95,14 @@ def shortest_path(source, target):
     # TODO
     #frontier
     start = Node(state = source, parent = None, action = None)
-    QueueFrontier()
+    frontier = QueueFrontier()
+    frontier.add(start)
+    explored = set()
+
+    while True:
+    #checking neighbours for target
+        
+        node = frontier.remove()
 
 
 def person_id_for_name(name):
