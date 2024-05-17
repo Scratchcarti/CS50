@@ -94,7 +94,7 @@ def shortest_path(source, target):
 
     # TODO
     #frontier
-    start = Node(state = source , parent = 0, action = 0)
+    start = Node(state = source , parent = None, action = None)
     frontier = QueueFrontier()
     frontier.add(start)
     explored = set()
