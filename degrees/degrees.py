@@ -99,6 +99,10 @@ def shortest_path(source, target):
     frontier.add(start)
     explored = set()
 
+    if (source == target):
+        path2[]
+        return path2
+
     while True:
     #checking neighbours for target
         if frontier.empty():
