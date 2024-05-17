@@ -101,8 +101,10 @@ def shortest_path(source, target):
 
     while True:
     #checking neighbours for target
-        
+        if frontier.empty():
+            return None
         node = frontier.remove()
+        
 
 
 def person_id_for_name(name):
