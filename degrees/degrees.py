@@ -100,7 +100,7 @@ def shortest_path(source, target):
     explored = set()
 
     if (source == target):
-        path2[]
+        path2 = []
         return path2
 
     while True:
