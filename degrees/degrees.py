@@ -98,6 +98,7 @@ def shortest_path(source, target):
     frontier = QueueFrontier()
     frontier.add(start)
     explored = set()
+    num_ex = 0
 
     while True:
 
@@ -106,6 +107,7 @@ def shortest_path(source, target):
 
     #selecting node by removing from frontier
         node = frontier.remove()
+        num_ex += 1
 
         # check if node is what we need
 
@@ -122,7 +124,7 @@ def shortest_path(source, target):
                     while node.parent is not None:
                         path.append((node.action,node.parent))
                         node = node.parent
-                        
+
                     path.reverse()
                     return path
             frontier.add(child)
