@@ -104,7 +104,12 @@ def shortest_path(source, target):
         if frontier.empty():
             return None
         node = frontier.remove()
-        
+        nbrs = neighbors_for_person(node.state)
+
+        for movie,actor in nbrs:
+            child = Node(state = actor, parent = node, action = movie)
+            if child.state is not in explored and not frontier.contains_state(actor)
+
 
 
 def person_id_for_name(name):
