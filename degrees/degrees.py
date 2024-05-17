@@ -104,13 +104,14 @@ def shortest_path(source, target):
         if frontier.empty():
             return None
         node = frontier.remove()
+        explored.add(node.state)
         nbrs = neighbors_for_person(node.state)
 
         for movie,actor in nbrs:
-            if actor is not in explored and not frontier.contains_state(actor):
+            if actor not in explored and not frontier.contains_state(actor):
                 child = Node(state = actor, parent = node, action = movie)
                 if child.state == target:
-                    path[]
+                    path = []
                     pnode = child
                     while pnode.parent is not None:
                         path.append((pnode.state,pnode.actor))
