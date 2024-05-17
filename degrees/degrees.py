@@ -94,38 +94,8 @@ def shortest_path(source, target):
 
     # TODO
     #frontier
-    start = Node(state = source , parent = None, action = None)
-    frontier = QueueFrontier()
-    frontier.add(start)
-    explored = set()
-    num_ex = 0
-
-    while True:
-
-        if frontier.empty():
-            return None
-    #selecting node by removing from frontier
-        node = frontier.remove()
-        num_ex += 1
-
-        # check if node is what we need
-
-        explored.add(node.state)
-        nbrs = neighbors_for_person(node.state)
-
-        for movie, actor in nbrs:
-            if actor not in explored and not frontier.contains_state(actor):
-                child = Node(state = actor, parent = node, action = movie)
-                if child.state == target:
-                    path = []
-                    node = child
-                    while node.parent is not None:
-                        path.append((node.action,node.state))
-                        node = node.parent
-
-                    path.reverse()
-                    return path
-                frontier.add(child)
+    start = Node(state = source, parent = None, action = None)
+    QueueFrontier()
 
 
 def person_id_for_name(name):
