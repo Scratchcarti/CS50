@@ -43,22 +43,21 @@ class Maze():
 
     def __init__(self, filename):
 
-        # Read file and set height and width of maze
+
         with open(filename) as f:
             contents = f.read()
 
-        # Validate start and goal
         if contents.count("A") != 1:
             raise Exception("maze must have exactly one start point")
         if contents.count("B") != 1:
             raise Exception("maze must have exactly one goal")
 
-        # Determine height and width of maze
+
         contents = contents.splitlines()
         self.height = len(contents)
         self.width = max(len(line) for line in contents)
 
-        # Keep track of walls
+
         self.walls = []
         for i in range(self.height):
             row = []
@@ -119,7 +118,6 @@ class Maze():
     def solve(self):
         """Finds a solution to maze, if one exists."""
 
-        # Keep track of number of states explored
         self.num_explored = 0
 
         # Initialize frontier to just the starting position
@@ -127,21 +125,18 @@ class Maze():
         frontier = StackFrontier()
         frontier.add(start)
 
-        # Initialize an empty explored set
         self.explored = set()
 
-        # Keep looping until solution found
         while True:
 
-            # If nothing left in frontier, then no path
             if frontier.empty():
                 raise Exception("no solution")
 
-            # Choose a node from the frontier
+
             node = frontier.remove()
             self.num_explored += 1
 
-            # If node is the goal, then we have a solution
+
             if node.state == self.goal:
                 actions = []
                 cells = []
@@ -154,10 +149,8 @@ class Maze():
                 self.solution = (actions, cells)
                 return
 
-            # Mark node as explored
             self.explored.add(node.state)
 
-            # Add neighbors to frontier
             for action, state in self.neighbors(node.state):
                 if not frontier.contains_state(state) and state not in self.explored:
                     child = Node(state=state, parent=node, action=action)
@@ -169,7 +162,7 @@ class Maze():
         cell_size = 50
         cell_border = 2
 
-        # Create a blank canvas
+
         img = Image.new(
             "RGBA",
             (self.width * cell_size, self.height * cell_size),
