@@ -133,10 +133,13 @@ class Maze():
             self.num_explored+=1
             if (node.state == self.goal):
                 action = []
-                cells = []
-                for action,cells in self.neighbors(node.state):
-                    action.append()
-                    cells.append()
+                cell = []
+                while node.parent is True:
+                    action.append(node.action)
+                    cell.append(node.cell)
+                    node = node.parent
+                return
+            if node is not stack
 
 
 
