@@ -131,8 +131,15 @@ class Maze():
 
             node = frontier.remove()
             self.num_explored+=1
-            if (node.state = goal):
-                
+            if (node.state == self.goal):
+                action = []
+                cells = []
+                for action,cells in self.neighbors(node.state):
+                    action.append()
+                    cells.append()
+
+
+
 
 
 
