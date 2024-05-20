@@ -130,7 +130,6 @@ class Maze():
         while True:
 
             node = frontier.remove()
-            explored.append(node)
             self.num_explored+=1
 
             if (node.state == self.goal):
@@ -142,8 +141,10 @@ class Maze():
                     node = node.parent
                 return
 
-            if node is not StackFrontier.contains_state(node.state) and not in explored():
-                for action,state in self.neighbors(node):
+            self.explored.add(node.state)
+
+            for action, state in self.neighbors(node.state):
+                if not StackFrontier.contains_state(state) and state not in self.explored():
                     child = Node(state = state, parent = node, action = action)
                     frontier.add(child)
 
