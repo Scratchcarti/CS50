@@ -131,7 +131,9 @@ class Maze():
 
             node = frontier.remove()
             self.num_explored+=1
-            if node.state = goal.state
+            if (node.state = goal):
+                
+
 
 
 
