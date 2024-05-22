@@ -81,6 +81,10 @@ def winner(board):
                 x+=1
             if (board[j][i] == O):
                 o+=1
+            if x == 3:
+                return X
+            if o == 3:
+                return O
 
     for i in range(3):
         x2,o2 = 0,0
