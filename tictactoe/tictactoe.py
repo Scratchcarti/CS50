@@ -27,9 +27,9 @@ def player(board):
     for row in board:
         for column in row:
             if column == X:
-                xcount=+1
+                xcount+=1
             if column == O:
-                ocount=+1
+                ocount+=1
 
     if xcount == ocount:
         return X
