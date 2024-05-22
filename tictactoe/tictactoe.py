@@ -44,7 +44,7 @@ def actions(board):
     for row in board:
         for column in row:
             if column == EMPTY:
-                all_action.add((index(row),index(column)))
+                all_action.add(board.index(column))
 
     return all_action
 
