@@ -22,12 +22,20 @@ def player(board):
     """
     Returns player who has the next turn on a board.
     """
-    for columns in board:
-        for 
+    xcount = 0
+    ocount = 0
+    for row in board:
+        for column in row:
+            if column == X:
+                xcount=+1
+            if column == O:
+                ocount=+1
 
-    raise NotImplementedError
-
-
+    if xcount == ocount:
+        return X
+    if xcount > ocount:
+        return O
+    
 def actions(board):
     """
     Returns set of all possible actions (i, j) available on the board.
