@@ -53,6 +53,9 @@ def result(board, action):
     """
     Returns the board that results from making move (i, j) on the board.
     """
+    if action not in all_action:
+        raise InvalidError
+    
     raise NotImplementedError
 
 
