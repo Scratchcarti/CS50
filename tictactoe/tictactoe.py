@@ -35,7 +35,7 @@ def player(board):
         return X
     if xcount > ocount:
         return O
-    
+
 def actions(board):
     """
     Returns set of all possible actions (i, j) available on the board.
