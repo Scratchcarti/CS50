@@ -54,12 +54,11 @@ def result(board, action):
     Returns the board that results from making move (i, j) on the board.
     """
     if action not in actions(board):
-        raise InvalidError
+        raise Exception("Sorry, invalid action")
 
     copy_board = board[:]
     i,j = action
     copy_board[i][j] = player(copy_board)
-    print(copy_board)
     return copy_board
 
 
