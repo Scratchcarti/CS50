@@ -57,7 +57,9 @@ def result(board, action):
         raise InvalidError
 
     copy_board = board[:]
-    
+    i,j = action
+    copy_board[i,j] = player(copy_board)
+    return copy_board
 
 
 
