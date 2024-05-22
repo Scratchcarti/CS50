@@ -40,9 +40,11 @@ def actions(board):
     """
     Returns set of all possible actions (i, j) available on the board.
     """
-    action_set
+    allaction = set()
     for row in board:
         for column in row:
+            if column == EMPTY:
+                allaction.add(row,column)
 
     raise NotImplementedError
 
