@@ -75,10 +75,14 @@ def winner(board):
     #rows
 
     for row in board:
-        
+        x = 0
+        o = 0
         for column in row:
             if column == X:
-                xcount
+                x += 1
+            if column == O:
+                o += 1
+        
 
 
 
