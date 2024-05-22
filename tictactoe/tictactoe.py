@@ -41,15 +41,10 @@ def actions(board):
     Returns set of all possible actions (i, j) available on the board.
     """
     all_action = set()
-    r = -1
     for row in board:
-        r+=1
-        c = -1
         for column in row:
-            c+=1
-            print(column)
             if column == EMPTY:
-                all_action.add((r,c))
+                all_action.add((row,column))
 
     return all_action
 
