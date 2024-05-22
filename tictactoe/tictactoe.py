@@ -74,9 +74,11 @@ def winner(board):
 
     #rows
 
-    for rows in board:
-        for columns in rows:
-            
+    for row in board:
+        
+        for column in row:
+            if column == X:
+                xcount
 
 
 
