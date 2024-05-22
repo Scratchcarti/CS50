@@ -55,7 +55,10 @@ def result(board, action):
     """
     if action not in actions(board):
         raise InvalidError
+
+    copy_board = board[:]
     
+
 
 
 
