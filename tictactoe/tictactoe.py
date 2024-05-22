@@ -23,6 +23,7 @@ def player(board):
     Returns player who has the next turn on a board.
     """
     
+
     raise NotImplementedError
 
 
