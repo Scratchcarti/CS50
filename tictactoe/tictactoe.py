@@ -45,8 +45,10 @@ def actions(board):
     for row in board:
         r+=1
         c = -1
+        print(row)
         for column in row:
             c+=1
+            print(column)
             if column == EMPTY:
                 all_action.add((r,c))
 
