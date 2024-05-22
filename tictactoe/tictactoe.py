@@ -65,7 +65,18 @@ def winner(board):
     """
     Returns the winner of the game, if there is one.
     """
-    
+    #diagonal
+    if (board[0][0] == board[1][1] == board[2][2]):
+        return board[1][1]
+
+    if (board[0][2] == board[1][1] == board[2][0]):
+        return board[1][1]
+
+    #rows
+
+    for rows in board:
+        for columns in rows:
+            
 
 
 
