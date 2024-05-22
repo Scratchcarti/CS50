@@ -48,9 +48,9 @@ def actions(board):
         for column in row:
             c+=1
             if column == EMPTY:
-                all_action.add(r,c)
+                all_action.add((r,c))
 
-    raise NotImplementedError
+    return all_action
 
 
 def result(board, action):
