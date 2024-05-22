@@ -3,4 +3,4 @@ import tictactoe as t
 broad = [["X", None, "O"],
             [None,None, None],
             ["X", None, None]]
-print(t.actions(broad))
+print(t.result(broad,(0,0)))
