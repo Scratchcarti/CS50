@@ -1,6 +1,6 @@
 import tictactoe as t
 
-broad = [["X", "X", "X"],
-            ["O", "O", "O"],
-            [None, None, None]]
-t.player(broad)
+broad = [["X", None, "O"],
+            [None,None, None],
+            ["X", None, None]]
+print(t.player(broad))
