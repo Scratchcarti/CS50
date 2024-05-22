@@ -59,6 +59,7 @@ def result(board, action):
     copy_board = board[:]
     i,j = action
     copy_board[i,j] = player(copy_board)
+    print(copy_board)
     return copy_board
 
 
