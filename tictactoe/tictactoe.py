@@ -75,7 +75,8 @@ def winner(board):
     #rows
 
     for i in range(3):
-        
+        for j in range(3):
+            board[j][i]
 
 
 
