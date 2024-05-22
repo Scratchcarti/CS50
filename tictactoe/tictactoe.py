@@ -75,14 +75,27 @@ def winner(board):
     #rows
 
     for i in range(3):
+        x,o = 0,0
         for j in range(3):
-            board[j][i]
+            if (board[j][i] == X):
+                x+=1
+            if (board[j][i] == O):
+                o+=1
 
-
-
-
-
-    raise NotImplementedError
+    for i in range(3):
+        x2,o2 = 0,0
+        for j in range(3):
+            if (board[i][j] == X):
+                x2+=1
+            if (board[i][j] == O):
+                o2+=1
+    print (x,o,x2,o2)
+    if x == 3 or x2 == 3:
+        return X
+    elif o == 3 or o2 == 3:
+        return O
+    else:
+        return None
 
 
 def terminal(board):
