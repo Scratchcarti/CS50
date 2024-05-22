@@ -40,6 +40,10 @@ def actions(board):
     """
     Returns set of all possible actions (i, j) available on the board.
     """
+    action_set
+    for row in board:
+        for column in row:
+
     raise NotImplementedError
 
 
