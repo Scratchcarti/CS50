@@ -106,13 +106,13 @@ def terminal(board):
     """
     Returns True if game is over, False otherwise.
     """
-    if winner(board) is not None:
+    if winner(board) is not EMPTY:
         return True
 
     ncount = 0
     for i in board:
         for j in i:
-            if j == None:
+            if j == EMPTY:
                 ncount += 1
 
     if ncount == 0:
