@@ -27,24 +27,25 @@ def player(board):
     for row in board:
         for column in row:
             if column == X:
-                xcount+=1
+                xcount += 1
             if column == O:
-                ocount+=1
+                ocount += 1
 
     if xcount == ocount:
         return X
     if xcount > ocount:
         return O
 
+
 def actions(board):
     """
     Returns set of all possible actions (i, j) available on the board.
     """
     all_action = set()
-    for index,row in enumerate(board):
-        for ind,column in enumerate(row):
+    for index, row in enumerate(board):
+        for ind, column in enumerate(row):
             if column == EMPTY:
-                all_action.add((index,ind))
+                all_action.add((index, ind))
 
     return all_action
 
@@ -57,42 +58,43 @@ def result(board, action):
         raise Exception("Sorry, invalid action")
 
     copy_board = board[:]
-    i,j = action
+    i, j = action
     copy_board[i][j] = player(copy_board)
     return copy_board
+
 
 def winner(board):
     """
     Returns the winner of the game, if there is one.
     """
-    #diagonal
+    # diagonal
     if (board[0][0] == board[1][1] == board[2][2]):
         return board[1][1]
 
     if (board[0][2] == board[1][1] == board[2][0]):
         return board[1][1]
 
-    #rows
+    # rows
 
     for i in range(3):
-        x,o = 0,0
+        x, o = 0, 0
         for j in range(3):
             if (board[j][i] == X):
-                x+=1
+                x += 1
             if (board[j][i] == O):
-                o+=1
+                o += 1
             if x == 3:
                 return X
             if o == 3:
                 return O
 
     for i in range(3):
-        x,o = 0,0
+        x, o = 0, 0
         for j in range(3):
             if (board[i][j] == X):
-                x+=1
+                x += 1
             if (board[i][j] == O):
-                o+=1
+                o += 1
 
             if x == 3:
                 return X
@@ -125,7 +127,12 @@ def utility(board):
     """
     Returns 1 if X has won the game, -1 if O has won, 0 otherwise.
     """
-    raise NotImplementedError
+    if (winner(board) == X):
+        return 1
+    elif (winner(board) == O):
+        return -1
+    else:
+        return 0
 
 
 def minimax(board):
