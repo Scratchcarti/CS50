@@ -112,7 +112,7 @@ def terminal(board):
     ncount = 0
     for i in board:
         for j in i:
-            if j == EMPTY:
+            if j == None:
                 ncount += 1
 
     if ncount == 0:
