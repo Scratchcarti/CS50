@@ -56,7 +56,7 @@ def result(board, action):
     Returns the board that results from making move (i, j) on the board.
     """
     if action not in actions(board):
-        raiseexception()
+        raise exception("wrong input")
     copy_board = copy.deepcopy(board)
     copy_board[action[0]][action[1]] = player(copy_board)
     return copy_board
