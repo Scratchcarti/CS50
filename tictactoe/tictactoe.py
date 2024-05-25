@@ -55,7 +55,8 @@ def result(board, action):
     """
     Returns the board that results from making move (i, j) on the board.
     """
-
+    if action not in actions(board):
+        raiseexception()
     copy_board = copy.deepcopy(board)
     copy_board[action[0]][action[1]] = player(copy_board)
     return copy_board
@@ -146,7 +147,7 @@ def minimax(board):
         return Max_Value(board, Max, Min)[1]
     else:
         return Min_Value(board, Max, Min)[1]
-    
+
 
 def Max_Value(board, Max, Min):
     move = None
@@ -178,7 +179,7 @@ def Min_Value(board, Max, Min):
         if Max >= Min:
             break
     return [v, move]
-    
+
 
 
 
