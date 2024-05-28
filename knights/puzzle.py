@@ -25,7 +25,7 @@ knowledge1 = And(
   Or(AKnight,AKnave),
   Or(BKnight,BKnave),
   Implication(AKnave,Not(And(AKnave,BKnave))),
-  Implication(BKnight,Not(AKnave))
+  Implication(BKnight,Not(And(AKnave,BKnave)))
 )
 
 # Puzzle 2
