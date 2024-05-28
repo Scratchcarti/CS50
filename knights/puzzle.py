@@ -32,7 +32,9 @@ knowledge1 = And(
 # A says "We are the same kind."
 # B says "We are of different kinds."
 knowledge2 = And(
-    # TODO
+    Or(AKnight,AKnave),
+    Or(BKnight,BKnave),
+    
 )
 
 # Puzzle 3
