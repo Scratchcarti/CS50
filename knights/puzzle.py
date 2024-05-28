@@ -34,7 +34,9 @@ knowledge1 = And(
 knowledge2 = And(
     Or(AKnight,AKnave),
     Or(BKnight,BKnave),
-    
+    Implication(AKnight,And(AKnight,BKnight)),
+    Implication(AKnave,Not(And(AKnave,BKnave))),
+
 )
 
 # Puzzle 3
