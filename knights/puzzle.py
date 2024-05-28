@@ -24,7 +24,6 @@ knowledge1 = And(
 
   Or(AKnight,AKnave),
   Or(BKnight,BKnave),
-  Implication(AKnight,And(BKnave,AKnave)),
   Implication(AKnave,Not(And(AKnave,BKnave))),
   Implication(BKnight,Not(AKnave))
 )
