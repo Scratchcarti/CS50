@@ -109,8 +109,8 @@ class Sentence():
         for c in self.cells:
             for a in Minesweeper.mines_found:
                 if c == a:
-                    cell_foundmines.add(c)
-
+                    cells_foundmines.add(c)
+        print("hello")
         return cells_foundmines
 
 
