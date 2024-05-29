@@ -1,4 +1,4 @@
 import minesweeper as ms
 
-M = ms.Minesweeper
+M = ms.Minesweeper()
 M.print()
