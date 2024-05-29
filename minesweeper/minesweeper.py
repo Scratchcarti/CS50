@@ -127,9 +127,10 @@ class Sentence():
         Updates internal knowledge representation given the fact that
         a cell is known to be a mine.
         """
-        self.cells
+
         if cell in self.cells:
             self.cells.remove(cell)
+            self.count-=1
 
 
 
@@ -139,7 +140,7 @@ class Sentence():
         Updates internal knowledge representation given the fact that
         a cell is known to be safe.
         """
-        self.cells
+
         if cell in self.cells:
             self.cells.remove(cell)
 
