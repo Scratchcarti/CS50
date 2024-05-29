@@ -141,7 +141,7 @@ class Sentence():
         """
         sx = self.known_safes()
         if cell in sx:
-            self.cells.
+            self.cells.remove(cell)
 
 
 class MinesweeperAI():
