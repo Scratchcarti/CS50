@@ -78,7 +78,7 @@ class Minesweeper():
         return count
 
     def mf(self):
-        return self.mines_found:
+        return self.mines_found
 
     def won(self):
         """
@@ -108,12 +108,13 @@ class Sentence():
         """
         Returns the set of all cells in self.cells known to be mines.
         """
+        M = Minesweeper()
+        k = M.mf()
         cells_foundmines = set()
         for c in self.cells:
-            for a in Minesweeper.mf:
+            for a in k:
                 if c == a:
                     cells_foundmines.add(c)
-        print("hello")
         return cells_foundmines
 
 
