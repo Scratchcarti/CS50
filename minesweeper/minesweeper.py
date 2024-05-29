@@ -77,6 +77,9 @@ class Minesweeper():
 
         return count
 
+    def mf(self):
+        return self.mines_found:
+
     def won(self):
         """
         Checks if all mines have been flagged.
@@ -107,7 +110,7 @@ class Sentence():
         """
         cells_foundmines = set()
         for c in self.cells:
-            for a in Minesweeper.mines_found:
+            for a in Minesweeper.mf:
                 if c == a:
                     cells_foundmines.add(c)
         print("hello")
