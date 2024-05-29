@@ -127,8 +127,10 @@ class Sentence():
         Updates internal knowledge representation given the fact that
         a cell is known to be a mine.
         """
-        if cell in self.cells:
-            
+        s = self.known_mines()
+        if cell in s:
+            self.cells.remove(cell)
+
 
 
 
@@ -137,7 +139,9 @@ class Sentence():
         Updates internal knowledge representation given the fact that
         a cell is known to be safe.
         """
-        raise NotImplementedError
+        sx = self.known_safes()
+        if cell in sx:
+            self.cells.
 
 
 class MinesweeperAI():
