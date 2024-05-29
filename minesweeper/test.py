@@ -1,2 +1,2 @@
 import minesweeper as ms
-ms.Sentence()
+ms.Sentence.known_mines()
