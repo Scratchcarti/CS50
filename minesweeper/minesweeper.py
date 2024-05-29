@@ -77,9 +77,6 @@ class Minesweeper():
 
         return count
 
-    def mf(self):
-        return self.mines_found
-
     def won(self):
         """
         Checks if all mines have been flagged.
