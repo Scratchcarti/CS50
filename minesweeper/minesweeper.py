@@ -105,14 +105,11 @@ class Sentence():
         """
         Returns the set of all cells in self.cells known to be mines.
         """
-        M = Minesweeper()
-        k = M.mf()
-        cells_foundmines = set()
-        for c in self.cells:
-            for a in k:
-                if c == a:
-                    cells_foundmines.add(c)
-        return cells_foundmines
+        if (len(self.cells) == self.count and self.count != 0):
+            return self.cells
+        else:
+            return set()
+
 
 
     def known_safes(self):
