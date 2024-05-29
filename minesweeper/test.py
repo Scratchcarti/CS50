@@ -1,3 +1,4 @@
 import minesweeper as ms
-S = ms.Sentence
-S.known_mines
+
+M = ms.Minesweeper
+M.print()
