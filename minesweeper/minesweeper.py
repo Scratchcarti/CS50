@@ -108,7 +108,7 @@ class Sentence():
         if (len(self.cells) == self.count and self.count != 0):
             return self.cells
         else:
-            return None
+            return set()
 
 
 
@@ -119,7 +119,7 @@ class Sentence():
         if (self.count == 0):
             return self.cells
         else:
-            return None
+            return set()
 
 
     def mark_mine(self, cell):
