@@ -226,7 +226,11 @@ class MinesweeperAI():
 
         #4a marking more mines and safes from knowledge base
 
+        tempmine = set()
+        tempsafe = set()
+
         for sentence in self.knowledge:
+            tempmine = sentence - 
 
 
 
