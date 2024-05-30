@@ -224,6 +224,8 @@ class MinesweeperAI():
 
         self.knowledge.append(self.neighbors,count)
 
+        
+
 
 
     def make_safe_move(self):
