@@ -204,6 +204,8 @@ class MinesweeperAI():
         #2
         self.mark_safe(cell)
         #3
+        self.neighbors = set()
+
         for i in range(cell[0] - 1, cell[0] + 2):
             for j in range(cell[1] - 1, cell[1] + 2):
 
@@ -212,11 +214,15 @@ class MinesweeperAI():
                     continue
 
                 # Update count if cell in bounds and is mine
-                if self.known
-                if 0 <= i < self.height and 0 <= j < self.width:
-                    self.knowledge.append(Sentence((i,j),count))
+                if (i,j) in self.mines():
+                    continue
+                if (i,j) in self.safes():
+                    continue
 
-        #4
+                if 0 <= i < self.height and 0 <= j < self.width:
+                    self.neighbors.add((i,j))
+
+        self.knowledge.append(self.neighbors,count)
 
 
 
