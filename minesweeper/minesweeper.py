@@ -199,13 +199,16 @@ class MinesweeperAI():
             5) add any new sentences to the AI's knowledge base
                if they can be inferred from existing knowledge
         """
-        #1
         self.moves_made.add(cell)
-        #2
-        self.mark_safe(cell)
-        #3
-        self.neighbors = set()
 
+        # 2) mark the cell as safe
+        self.mark_safe(cell)
+
+        # 3) add a new sentence to the AI's knowledge base
+        #    based on the value of `cell` and `count`
+        cells = set()
+
+        # Loop over all cells within one row and column
         for i in range(cell[0] - 1, cell[0] + 2):
             for j in range(cell[1] - 1, cell[1] + 2):
 
@@ -213,21 +216,18 @@ class MinesweeperAI():
                 if (i, j) == cell:
                     continue
 
-                # Update count if cell in bounds and is mine
-                if (i,j) in self.mines:
-                    count -= 1
-                    continue
-
-                if (i,j) in self.safes:
-                    continue
-
+                # Add to the cell collection if the cell is not yet explored
+                # and is not the mine already none
                 if 0 <= i < self.height and 0 <= j < self.width:
-                    self.neighbors.add((i,j))
+                    if (i, j) not in self.moves_made and (i, j) not in self.mines:
+                        cells.add((i, j))
+                    # when excluding a known mine cell, decrease the count by 1
+                    elif (i, j) in self.mines:
+                        count -= 1
+        self.knowledge.append(Sentence(cells, count))
 
-        self.knowledge.append(Sentence(self.neighbors,count))
-
-        #4a marking more mines and safes from knowledge base
-
+        # 4) mark any additional cells as safe or as mines
+        #    if it can be concluded based on the AI's knowledge base
         for sentence in self.knowledge:
             safes = sentence.known_safes()
             if safes:
@@ -238,10 +238,8 @@ class MinesweeperAI():
                 for cell in mines.copy():
                     self.mark_mine(cell)
 
-
-
-        #5
-
+        # 5) add any new sentences to the AI's knowledge base
+        #    if they can be inferred from existing knowledge
         for sentence1 in self.knowledge:
             for sentence2 in self.knowledge:
                 if sentence1 is sentence2:
@@ -254,7 +252,6 @@ class MinesweeperAI():
                         sentence2.count - sentence1.count)
                     if new_knowledge not in self.knowledge:
                         self.knowledge.append(new_knowledge)
-
 
 
 
