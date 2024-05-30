@@ -215,7 +215,9 @@ class MinesweeperAI():
 
                 # Update count if cell in bounds and is mine
                 if (i,j) in self.mines():
+                    count -= 1
                     continue
+
                 if (i,j) in self.safes():
                     continue
 
@@ -226,17 +228,16 @@ class MinesweeperAI():
 
         #4a marking more mines and safes from knowledge base
 
-        tempmine = set()
-        tempsafe = set()
-
         for sentence in self.knowledge:
-            tempmine = sentence.known_mines() - self.mines
+            safes = sentence.known_safes()
+            if safes:
+                for cell in safes.copy():
+                    self.mark_safe(cell)
+            mines = sentence.known_mines()
+            if mines:
+                for cell in mines.copy():
+                    self.mark_mine(cell)
 
-        for sentence in self.knowledge:
-            tempsafe = sentence.known_safes() - self.safes
-
-        for t in tempmine:
-            
 
 
 
