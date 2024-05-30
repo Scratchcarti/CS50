@@ -212,11 +212,12 @@ class MinesweeperAI():
                     continue
 
                 # Update count if cell in bounds and is mine
+                if self.known
                 if 0 <= i < self.height and 0 <= j < self.width:
                     self.knowledge.append(Sentence((i,j),count))
 
         #4
-        
+
 
 
     def make_safe_move(self):
