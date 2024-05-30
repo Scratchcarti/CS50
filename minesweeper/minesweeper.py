@@ -230,7 +230,14 @@ class MinesweeperAI():
         tempsafe = set()
 
         for sentence in self.knowledge:
-            tempmine = sentence - 
+            tempmine = sentence.known_mines() - self.mines
+
+        for sentence in self.knowledge:
+            tempsafe = sentence.known_safes() - self.safes
+
+         
+
+
 
 
 
