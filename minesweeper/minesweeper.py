@@ -240,6 +240,13 @@ class MinesweeperAI():
 
 
 
+        #5
+
+        
+
+
+
+
 
 
 
