@@ -228,34 +228,56 @@ class MinesweeperAI():
 
         #4a marking more mines and safes from knowledge base
 
-        for sentence in self.knowledge:
-            safes = sentence.known_safes()
+        while knowledge_changed:
+            knowledge_changed = False
+
+            safes = set()
+            mines = set()
+
+            # Get set of safe spaces and mines from KB
+            for sentence in self.knowledge:
+                safes = safes.union(sentence.known_safes())
+                mines = mines.union(sentence.known_mines())
+
+            # Mark any safe spaces or mines:
             if safes:
-                for cell in safes.copy():
-                    self.mark_safe(cell)
-            mines = sentence.known_mines()
+                knowledge_changed = True
+                for safe in safes:
+                    self.mark_safe(safe)
             if mines:
-                for cell in mines.copy():
-                    self.mark_mine(cell)
+                knowledge_changed = True
+                for mine in mines:
+                    self.mark_mine(mine)
 
+            # Remove any empty sentences from knowledge base:
+            empty = Sentence(set(), 0)
 
+            self.knowledge[:] = [x for x in self.knowledge if x != empty]
 
-        #5
+            # Try to infer new sentences from the current ones:
+            for sentence_1 in self.knowledge:
+                for sentence_2 in self.knowledge:
 
-        for sentence1 in self.knowledge:
-            for sentence2 in self.knowledge:
-                if sentence1 is sentence2:
-                    continue
-                if sentence1 == sentence2:
-                    self.knowledge.remove(sentence2)
-                elif sentence1.cells.issubset(sentence2.cells):
-                    new_knowledge = Sentence(
-                        sentence2.cells - sentence1.cells,
-                        sentence2.count - sentence1.count)
-                    if new_knowledge not in self.knowledge:
-                        self.knowledge.append(new_knowledge)
+                    # Ignore when sentences are identical
+                    if sentence_1.cells == sentence_2.cells:
+                        continue
 
+                    if sentence_1.cells == set() and sentence_1.count > 0:
+                        print('Error - sentence with no cells and count created')
+                        raise ValueError
 
+                    # Create a new sentence if 1 is subset of 2, and not in KB:
+                    if sentence_1.cells.issubset(sentence_2.cells):
+                        new_sentence_cells = sentence_2.cells - sentence_1.cells
+                        new_sentence_count = sentence_2.count - sentence_1.count
+
+                        new_sentence = Sentence(new_sentence_cells, new_sentence_count)
+
+                        # Add to knowledge if not already in KB:
+                        if new_sentence not in self.knowledge:
+                            knowledge_changed = True
+                            print('New Inferred Knowledge: ', new_sentence, 'from', sentence_1, ' and ', sentence_2)
+                            self.knowledge.append(new_sentence)
 
 
 
