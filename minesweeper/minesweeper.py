@@ -185,27 +185,14 @@ class MinesweeperAI():
             sentence.mark_safe(cell)
 
     def add_knowledge(self, cell, count):
-        """
-        Called when the Minesweeper board tells us, for a given
-        safe cell, how many neighboring cells have mines in them.
-
-        This function should:
-            1) mark the cell as a move that has been made
-            2) mark the cell as safe
-            3) add a new sentence to the AI's knowledge base
-               based on the value of `cell` and `count`
-            4) mark any additional cells as safe or as mines
-               if it can be concluded based on the AI's knowledge base
-            5) add any new sentences to the AI's knowledge base
-               if they can be inferred from existing knowledge
-        """
-        #1
+        
         self.moves_made.add(cell)
-        #2
         self.mark_safe(cell)
-        #3
-        self.neighbors = set()
 
+        # Create set to store undecided cells for KB:
+        new_sentence_cells = set()
+
+        # Loop over all cells within one row and column
         for i in range(cell[0] - 1, cell[0] + 2):
             for j in range(cell[1] - 1, cell[1] + 2):
 
@@ -213,20 +200,25 @@ class MinesweeperAI():
                 if (i, j) == cell:
                     continue
 
-                # Update count if cell in bounds and is mine
-                if (i,j) in self.mines:
-                    count -= 1
+                # If cells are already safe, ignore them:
+                if (i, j) in self.safes:
                     continue
 
-                if (i,j) in self.safes:
+                # If cells are known to be mines, reduce count by 1 and ignore them:
+                if (i, j) in self.mines:
+                    count = count - 1
                     continue
 
+                # Otherwise add them to sentence if they are in the game board:
                 if 0 <= i < self.height and 0 <= j < self.width:
-                    self.neighbors.add((i,j))
+                    new_sentence_cells.add((i, j))
 
-        self.knowledge.append(Sentence(self.neighbors,count))
+        # Add the new sentence to the AI's Knowledge Base:
+        print(f'Move on cell: {cell} has added sentence to knowledge {new_sentence_cells} = {count}' )
+        self.knowledge.append(Sentence(new_sentence_cells, count))
 
-        #4a marking more mines and safes from knowledge base
+        # Iteratively mark guaranteed mines and safes, and infer new knowledge:
+        knowledge_changed = True
 
         while knowledge_changed:
             knowledge_changed = False
@@ -278,6 +270,12 @@ class MinesweeperAI():
                             knowledge_changed = True
                             print('New Inferred Knowledge: ', new_sentence, 'from', sentence_1, ' and ', sentence_2)
                             self.knowledge.append(new_sentence)
+
+        # Print out AI current knowledge to terminal:
+        print('Current AI KB length: ', len(self.knowledge))
+        print('Known Mines: ', self.mines)
+        print('Safe Moves Remaining: ', self.safes - self.moves_made)
+        print('====================================================')
 
 
 
