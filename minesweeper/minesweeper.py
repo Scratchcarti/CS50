@@ -242,7 +242,18 @@ class MinesweeperAI():
 
         #5
 
-        
+        for sentence1 in self.knowledge:
+            for sentence2 in self.knowledge:
+                if sentence1 is sentence2:
+                    continue
+                if sentence1 == sentence2:
+                    self.knowledge.remove(sentence2)
+                elif sentence1.cells.issubset(sentence2.cells):
+                    new_knowledge = Sentence(
+                        sentence2.cells - sentence1.cells,
+                        sentence2.count - sentence1.count)
+                    if new_knowledge not in self.knowledge:
+                        self.knowledge.append(new_knowledge)
 
 
 
