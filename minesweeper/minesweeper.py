@@ -214,11 +214,11 @@ class MinesweeperAI():
                     continue
 
                 # Update count if cell in bounds and is mine
-                if (i,j) in self.mines():
+                if (i,j) in self.mines:
                     count -= 1
                     continue
 
-                if (i,j) in self.safes():
+                if (i,j) in self.safes:
                     continue
 
                 if 0 <= i < self.height and 0 <= j < self.width:
