@@ -224,7 +224,10 @@ class MinesweeperAI():
 
         self.knowledge.append(self.neighbors,count)
 
-        
+        #4a marking more mines and safes from knowledge base
+
+        for sentence in self.knowledge:
+
 
 
 
