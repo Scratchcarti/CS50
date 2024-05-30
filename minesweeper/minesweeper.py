@@ -224,7 +224,7 @@ class MinesweeperAI():
                 if 0 <= i < self.height and 0 <= j < self.width:
                     self.neighbors.add((i,j))
 
-        self.knowledge.append(self.neighbors,count)
+        self.knowledge.append(Sentence(self.neighbors,count))
 
         #4a marking more mines and safes from knowledge base
 
