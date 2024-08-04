@@ -18,11 +18,12 @@
 
                 let wongs = document.querySelectorAll("#wrong");
 
-                for (let i = 0; i < wongs.length, i++)
+                for (let i = 0; i < wongs.length; i++)
                 {
                     wongs[i].addEventListener("click",function(){
 
                         wongs[i].style.backgroundColor = "Red";
+                        document.querySelector("#slatt").innerHTML = "Incorrect";
 
                     })
                 }
