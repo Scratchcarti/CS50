@@ -6,6 +6,7 @@
         <link href="styles.css" rel="stylesheet">
         <title>Trivia!</title>
         <script>
+            //script for first thing
             document.addEventListener("DOMContentLoaded",function(){
 
                 let white = document.querySelector("#right");
@@ -29,6 +30,15 @@
                 }
 
             })
+
+            //script for second thing
+
+            function textanswer(){
+
+                let ans = document.querySelector("#answer");
+
+                
+            }
 
         </script>
     </head>
@@ -60,7 +70,7 @@
                 <!-- TODO: Add free response question here -->
                 <h3>What they doing on the other side?</h3>
                 <input type = "text" id = "answer">
-                <input type="submit" value="Check Answer">
+                <button onclick = "textanswer()">Check Answer</button>
 
             </div>
         </div>
