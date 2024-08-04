@@ -48,7 +48,12 @@
 
             }
 
-              document.getElementById("false").onclick;
+              document.getElementById("false").onclick = function() {no1()};
+
+
+             function no1(){
+                document.getElementById("slatt").innerHTML = "Incorrect";
+                document.getElementById("false").style.backgroundColor = "#00FF00";
 
              }
 
