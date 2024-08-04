@@ -8,19 +8,22 @@
         <script>
             // TODO: Add code to check answers to questions
 
-            document.addEventListener("DOMContentLoaded", function(){
-                //  for correct answer
+            document.addEventListener('DOMContentLoaded', function() {
 
-                let right = document.querySelector("right");
+// Get all elements with class "correct"
+let corrects = document.querySelectorAll('right');
 
-                right.addEventListener('click', function() {
+// Add event listeners to each correct button
+for (let i = 0; i < corrects.length; i++) {
+    corrects[i].addEventListener('click', function() {
 
-                        // Set background color to green
-                        right.style.backgroundColor = 'Green';
+        // Set background color to green
+        corrects[i].style.backgroundColor = 'Green';
 
-                        // Go to parent element of correct button and find the first element with class "feedback" which has that parent
-                        right.parentElement.querySelector('slatt').innerHTML = 'Correct!';
-                    });
+        // Go to parent element of correct button and find the first element with class "feedback" which has that parent
+        corrects[i].parentElement.querySelector('slatt').innerHTML = 'Correct!';
+    });
+}
 
 
 
