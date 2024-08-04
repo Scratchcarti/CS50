@@ -39,13 +39,16 @@
 
         <script>
             // TODO: Add code to check answers to questions
-            const abc = document.getElementById("true").onclick
-            abc = function() {yes()};
+
+            document.getElementById("true").onclick = function() {yes()};
 
             function yes(){
-                document.getElementById("slatt").innerHTML = "Correct";
+                document.getElementById("slatt").innerHTML = "Correct!";
+                document.getElementById("true").style.backgroundColor = "#00FF00"
 
             }
+
+            
 
 
 
