@@ -6,7 +6,28 @@
         <link href="styles.css" rel="stylesheet">
         <title>Trivia!</title>
         <script>
-            
+            document.addEventListener("DOMContentLoaded",function(){
+
+                let white = document.querySelector("#right");
+
+                white.addEventListener("click",function(){
+
+                    white.style.backgroundColor = "Green";
+                    document.querySelector("#slatt").innerHTML = "Correct!";
+                })
+
+                let wongs = document.querySelectorAll("#wrong");
+
+                for (let i = 0; i < wongs.length, i++)
+                {
+                    wongs[i].addEventListener("click",function(){
+
+                        wongs[i].style.backgroundColor = "Red";
+
+                    })
+                }
+
+            })
 
         </script>
     </head>
