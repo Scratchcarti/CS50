@@ -39,9 +39,14 @@
 
                 if (ans === "embarassing"){
 
-                    ans.style.backgroundColor = "Green";
+                    document.querySelector("#answer").style.backgroundColor = "Green";
+                    document.querySelector("#magic").innerHTML = "Correct!";
 
-
+                }
+                else
+                {
+                    document.querySelector("#answer").style.backgroundColor = "Red";
+                    document.querySelector("#magic").innerHTML = "Incorrect";
                 }
             }
 
@@ -74,6 +79,7 @@
                 <hr>
                 <!-- TODO: Add free response question here -->
                 <h3>What they doing on the other side?</h3>
+                <p id = "magic"></p>
                 <input type = "text" id = "answer">
                 <button onclick = "textanswer()">Check Answer</button>
 
