@@ -35,9 +35,14 @@
 
             function textanswer(){
 
-                let ans = document.querySelector("#answer");
+                let ans = document.querySelector("#answer").value;
 
-                
+                if (ans === "embarassing"){
+
+                    ans.style.backgroundColor = "Green";
+
+
+                }
             }
 
         </script>
