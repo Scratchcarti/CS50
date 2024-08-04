@@ -40,7 +40,14 @@
         <script>
             // TODO: Add code to check answers to questions
 
-            
+            document.addEventListener("DOMContentLoaded", function(){
+                //  for correct answer
+                let right = document.querySelector("true");
+                right.style.backgroundColor = "Green";
+                
+                document.querySelector("slatt").innerHTML = "Correct!";
+
+            })
 
 
 
