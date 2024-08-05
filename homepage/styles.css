@@ -16,12 +16,12 @@ a:hover {
 header {
     background-color: #e6e6fa;
     padding: 20px;
-    text-align: center;
+    text-align: left;
     border-bottom: 2px solid #d4a1e0;
 }
 
 header h1 {
-    color: #5d2a91; /* Deep purple for a strong headline */
+    color: #5d2a91;
 }
 
 nav ul {
