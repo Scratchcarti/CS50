@@ -3,5 +3,6 @@ int main(){
     int a = 5;
     int* p;
     p = &a;
-    printf("%d",p);
+    p=>a = 7;
+    printf("%d",*p);
 }
