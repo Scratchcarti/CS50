@@ -1,4 +1,7 @@
 #include <stdio.h>
 int main(){
-printf("what the fuck is we doing");
+    int a = 5;
+    int* p;
+    p = &a;
+    printf("%d",p);
 }
