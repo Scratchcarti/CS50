@@ -13,4 +13,17 @@
 <p>
 <img>
 <a>
-
+<h4>
+<h5>
+<h6>
+font-family
+background-color
+color
+padding
+text-decoration
+text-allign
+margin
+font-size
+border-radius
+i used javascript to include a button which will validate user input and its like a little easter egg
+i used bootstrap to make different colored links
