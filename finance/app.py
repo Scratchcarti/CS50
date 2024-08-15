@@ -54,14 +54,15 @@ def buy():
     elif request.method == "POST":
 
         sym = request.form.get("symbol")
-        shr = request.form.get("shares")
+        shr = int(request.form.get("shares"))
 
         if (not sym) or (not sym in lookup(sym)):
-
             return apology("Symbol doesnt exist")
 
-        if not isdigit(shr) or shr <= 0:
-            
+        if shr <= 0:
+            return apology("Weird shares")
+
+        
 
 
 
@@ -83,7 +84,10 @@ def buy():
 
 
 
-    return apology("TODO")
+
+
+
+    return redirect("/")
 
 
 
