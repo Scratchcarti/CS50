@@ -125,13 +125,13 @@ def register():
             return apology("Must provide password", 403)
 
         if request.form.get("password") != request.form.get("conformation"):
-            return apology("Passwords must match", 1729)
+            return apology("Passwords must match", 403)
 
         try:
             db.execute("INSERT INTO users (username,hash) VALUES(?,?)", uss, generate_password_hash(request.form.get("password")))
 
         except:
-            return apologize("Username already exist")
+            return apology("Username already exist")
 
         return redirect("/")
 
