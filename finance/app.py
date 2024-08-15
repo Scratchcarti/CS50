@@ -60,7 +60,8 @@ def buy():
 
             return apology("Symbol doesnt exist")
 
-        if 
+        if not isdigit(shr) or shr <= 0:
+            
 
 
 
