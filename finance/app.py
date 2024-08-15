@@ -126,9 +126,13 @@ def register():
         #password shi
 
         if not request.form.get("password"):
-            return apology("must provide password", 403)
+            return apology("Must provide password", 403)
 
-        
+        if request.form.get("password") != request.form.get("conformation"):
+
+            return apology("Passwords must match", 1729)
+
+        db.execute("INSERT INTO users (hash) VALUES(?)", )
 
 
     elif request.method == "GET":
