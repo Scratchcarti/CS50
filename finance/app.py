@@ -114,20 +114,28 @@ def register():
     """Register user"""
     if request.method == "POST":
 
-        if not request.form.get("username"):
+        if not request.form.get("username") :
             return apology("must provide username", 403)
-
+        #username shi
         try:
             db.execute("INSERT INTO users (username) VALUES(?) ",request.form.get("username"))
 
         except:
-            apology("Username already taken", 7969)
+            return apology("Username already taken", 7969)
+
+        #password shi
+
+        if not request.form.get("password"):
+            return apology("must provide password", 403)
+
+        
+
 
     elif request.method == "GET":
 
         return render_template("register.html")
 
-    return apology("TODO")
+    return apology("Some retarded error??")
 
 
 @app.route("/sell", methods=["GET", "POST"])
