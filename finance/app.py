@@ -116,25 +116,22 @@ def register():
 
         uss = request.form.get("username")
 
+    #username shi and pass shi
+
         if not uss :
             return apology("must provide username", 403)
-        #username shi
-
-        db.execute("INSERT INTO users (username) VALUES(?) ",(uss,))
-
-
-        
-
-        #password shi
 
         if not request.form.get("password"):
             return apology("Must provide password", 403)
 
         if request.form.get("password") != request.form.get("conformation"):
-
             return apology("Passwords must match", 1729)
 
-        db.execute("INSERT INTO users (hash) VALUES(?)", generate_password_hash(request.form.get("password")))
+        try:
+            db.execute("INSERT INTO users (username,hash) VALUES(?,?)", uss, generate_password_hash(request.form.get("password")))
+
+        except:
+            return apologize("Username already exist")
 
         return redirect("/")
 
