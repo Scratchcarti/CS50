@@ -114,13 +114,17 @@ def quote():
 
     elif request.method == "POST":
 
-        dicc = lookup(request.form.get("symbol"))
+        symb = request.form.get("symbol")
+
+        dicc = lookup(symb)
 
         if not lookup:
             return apology("Enter a valid symbol")
+
         else:
-            
-            return render_template("quoted.html",dicc = dicc)
+            val = dicc["symb"]
+
+            return render_template("quoted.html",symb = symb, val = usd(val))
 
 
 
