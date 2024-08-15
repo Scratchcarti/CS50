@@ -114,11 +114,13 @@ def register():
     """Register user"""
     if request.method == "POST":
 
-        if not request.form.get("username") :
+        uss = request.form.get("username")
+
+        if not uss :
             return apology("must provide username", 403)
         #username shi
         try:
-            db.execute("INSERT INTO users (username) VALUES(?) ",request.form.get("username"))
+            db.execute("INSERT INTO users (username) VALUES(?) ",uss)
 
         except:
             return apology("Username already taken", 7969)
