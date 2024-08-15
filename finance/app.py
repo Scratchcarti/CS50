@@ -132,7 +132,7 @@ def register():
 
             return apology("Passwords must match", 1729)
 
-        db.execute("INSERT INTO users (hash) VALUES(?)", )
+        db.execute("INSERT INTO users (hash) VALUES(?)", generate_password_hash(request.form.get("password")))
 
 
     elif request.method == "GET":
