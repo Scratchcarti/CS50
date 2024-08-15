@@ -48,7 +48,40 @@ def index():
 @login_required
 def buy():
     """Buy shares of stock"""
-    if request.method == ""
+    if request.method == "GET":
+        return render_template("buy.html")
+
+    elif request.method == "POST":
+
+        sym = request.form.get("symbol")
+        shr = request.form.get("shares")
+
+        if (not sym) or (not sym in lookup(sym)):
+
+            return apology("Symbol doesnt exist")
+
+        if 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     return apology("TODO")
 
 
