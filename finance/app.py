@@ -120,7 +120,7 @@ def register():
             return apology("must provide username", 403)
         #username shi
         try:
-            db.execute("INSERT INTO users (username) VALUES(?) ",uss)
+            db.execute("INSERT INTO users (username) VALUES(?) ",(uss,))
 
         except:
             return apology("Username already taken", 7969)
