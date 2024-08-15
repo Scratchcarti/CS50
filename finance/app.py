@@ -118,7 +118,7 @@ def register():
             return apology("must provide username", 403)
 
         try:
-            
+            db.execute("INSERT (?) IN ")
 
 
     return apology("TODO")
