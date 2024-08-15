@@ -38,11 +38,29 @@ def index():
     return apology("TODO")
 
 
+
+
+#BUY
+
+
+
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
 def buy():
     """Buy shares of stock"""
     return apology("TODO")
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @app.route("/history")
@@ -51,7 +69,7 @@ def history():
     """Show history of transactions"""
     return apology("TODO")
 
-
+# LOGIN
 @app.route("/login", methods=["GET", "POST"])
 def login():
     """Log user in"""
