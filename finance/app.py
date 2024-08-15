@@ -118,7 +118,7 @@ def register():
             return apology("must provide username", 403)
 
         try:
-            db.execute("INSERT (?) IN ")
+            db.execute("INSERT INTO users (username) VALUES('?') ",request.form.get("username"))
 
 
     return apology("TODO")
