@@ -115,16 +115,18 @@ def register():
     if request.method == "POST":
 
         uss = request.form.get("username")
+        pss = request.form.get("password")
+        cpss = request.form.get("conformation")
 
     #username shi and pass shi
 
         if not uss :
             return apology("must provide username", 403)
 
-        if not request.form.get("password"):
+        if not pss:
             return apology("Must provide password", 403)
 
-        if request.form.get("password") != request.form.get("conformation"):
+        if pss != cpss:
             return apology("Passwords must match", 403)
 
         try:
