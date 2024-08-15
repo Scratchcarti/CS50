@@ -123,7 +123,7 @@ def register():
             db.execute("INSERT INTO users (username) VALUES(?) ",(uss,))
 
         except:
-            return apology("Username already taken", 7969)
+            return apology("Username already taken")
 
         #password shi
 
