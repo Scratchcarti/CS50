@@ -101,16 +101,32 @@ def logout():
     # Redirect user to login form
     return redirect("/")
 
+#QUOTE
+
+
 
 @app.route("/quote", methods=["GET", "POST"])
 @login_required
 def quote():
     """Get stock quote."""
-    
+    if request.method == "GET":
+        return render_template("quote.html")
+
+    if request.method == "POST":
+
+        dicc = lookup(request.form.get("symbol"))
+        return render_template("quoted.html",dicc = dicc)
+
+
 
     return apology("TODO")
 
 
+
+
+
+
+# REGISTER
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
