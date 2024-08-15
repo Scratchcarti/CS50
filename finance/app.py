@@ -116,7 +116,7 @@ def register():
 
         uss = request.form.get("username")
         pss = request.form.get("password")
-        cpss = request.form.get("conformation")
+        cpss = request.form.get("confirmation")
 
     #username shi and pass shi
 
