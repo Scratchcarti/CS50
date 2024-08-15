@@ -122,7 +122,7 @@ def quote():
             return apology("Enter a valid symbol")
 
         else:
-            val = dicc[symb]
+            val = dicc["NFLX"]
 
             return render_template("quoted.html",symb = symb, val = usd(val))
 
