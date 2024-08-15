@@ -118,8 +118,14 @@ def register():
             return apology("must provide username", 403)
 
         try:
-            db.execute("INSERT INTO users (username) VALUES('?') ",request.form.get("username"))
+            db.execute("INSERT INTO users (username) VALUES(?) ",request.form.get("username"))
 
+        except:
+            apology("Username already taken", 7969)
+
+    elif request.method == "GET":
+
+        return render_template("register.html")
 
     return apology("TODO")
 
