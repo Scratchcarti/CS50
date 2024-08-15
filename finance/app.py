@@ -134,6 +134,8 @@ def register():
 
         db.execute("INSERT INTO users (hash) VALUES(?)", generate_password_hash(request.form.get("password")))
 
+        return redirect("/")
+
 
     elif request.method == "GET":
 
