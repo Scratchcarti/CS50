@@ -20,7 +20,7 @@
             <tr>
                 <td class="text-start">{{shi.symbol}}</td>
                 <td class="text-end">{{shi.shares}}</td>
-                <td class="text-end">{{shi.cost}}</td>
+                <td class="text-end">{{shi.cost | usd}}</td>
                 <td class="text-end">{{shi.time}}</td>
             </tr>
             {% endfor %}
@@ -29,7 +29,7 @@
             <tr>
                 <td class="text-start">{{type.symbol}}</td>
                 <td class="text-end">-{{type.shares}}</td>
-                <td class="text-end">{{type.cost}}</td>
+                <td class="text-end">{{type.cost | usd}}</td>
                 <td class="text-end">{{type.time}}</td>
             </tr>
             {% endfor %}
