@@ -98,7 +98,9 @@ def buy():
                 return redirect("/")
 
             else:
-                
+                db.execute("UPDATE clientdata SET (shares = shares + (?)) WHERE userid = ?", shr)
+
+                return redirect("/")
 
 
 
