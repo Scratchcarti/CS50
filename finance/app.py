@@ -42,8 +42,8 @@ def index():
 
     data = db.execute("SELECT * FROM clientdata WHERE userid = ?",
                       session["user_id"] )
-    
-    return apology("TODO")
+
+    return render_template("index.html",data = data)
 
 
 # BUY
