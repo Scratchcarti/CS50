@@ -81,10 +81,11 @@ def buy():
 
         if (cash >= (shr * lookup(sym)["price"])):
 
-
-            db.execute("INSERT INTO clientdata (userid,symbol,shares,time) VALUES(?,?,?,?)",
+            try:
+                db.execute("INSERT INTO clientdata (userid,symbol,shares,time) VALUES(?,?,?,?)",
                                session["user_id"], sym, shr, datetime.now())
-
+            except ValueError:
+                db.execute(" UPDATE clientdata SET shares = shares + (?) WHERE userid = (?) AND symbol = (?)",shr,session["user_id"],sym)
 
 
             db.execute("INSERT INTO buydata(id,symbol,shares,time,cost) VALUES(?,?,?,?,?)",
