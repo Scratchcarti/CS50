@@ -83,16 +83,22 @@ def buy():
 
         if (cash >= (shr * lookup(sym)["price"])):
 
-            if (sym not in (db.execute("SELECT * FROM clientdata WHERE id = ?", session["user_id"])))
-            try:
-                db.execute("INSERT INTO clientdata (userid,symbol,shares,time) VALUES(?,?,?,?)",
+            if (sym not in (db.execute("SELECT symbol FROM clientdata WHERE id = ?", session["user_id"]))):
+
+                try:
+                    db.execute("INSERT INTO clientdata (userid,symbol,shares,time) VALUES(?,?,?,?)",
                            session["user_id"], sym, shr, datetime.now())
-            except:
-                return apology("INFO DUMP WASNT PROPER")
+                except:
+                    return apology("INFO DUMP WASNT PROPER")
 
-            db.execute("UPDATE users SET cash = (?) WHERE id = (?)", (cash - (shr * lookup(sym)["price"])), session["user_id"], )
+                db.execute("UPDATE users SET cash = (?) WHERE id = (?)", (cash - (shr * lookup(sym)["price"])), session["user_id"], )
 
-            return redirect("/")
+                return redirect("/")
+
+            else:
+
+                
+
 
         else:
             return apology("get your bread up broke boy")
