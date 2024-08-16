@@ -20,17 +20,17 @@
        <tbody>
                     {% for vals in data %}
                 <tr>
-                    <td class="text-start">{{vals.symbol}}</td>
-                    <td class="text-end">{{vals.shares}}</td>
-                    <td class="text-end">{{$663.22}}</td>
-                    <td class="text-end">$7,958.64</td>
+                    <td class="text-start">{{ vals.symbol }}</td>
+                    <td class="text-end">{{ vals.shares }}</td>
+                    <td class="text-end">{{ vals.symbol | lookup }}</td>
+                    <td class="text-end">{{ (vals.symbol | lookup) * (vals.shares) }}</td>
                 </tr>
                     {% endfor %}
         </tbody>
         <tfoot>
             <tr>
                 <td class="border-0 fw-bold text-end" colspan="3">Cash</td>
-                <td class="border-0 text-end">$2,041.36</td>
+                <td class="border-0 text-end">{{money}}</td>
             </tr>
             <tr>
                 <td class="border-0 fw-bold text-end" colspan="3">TOTAL</td>
