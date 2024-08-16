@@ -46,7 +46,7 @@ def index():
                       session["user_id"])
     cah = db.execute("SELECT cash FROM users WHERE id = ?",
                      session["user_id"])[0]["cash"]
-    
+
     ttl = 0
     for x in range(len(data)):
 
