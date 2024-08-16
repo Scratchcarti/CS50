@@ -272,3 +272,19 @@ def sell():
                 return redirect("/")
 
     return apology("kys")
+
+
+
+
+@app.route("/cpass", methods=["GET", "POST"])
+@login_required
+def cpass():
+
+    if request.method == "GET":
+        return render_template("cpass.html")
+
+    elif request.method == "POST":
+
+        
+
+
