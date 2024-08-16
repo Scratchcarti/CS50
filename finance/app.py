@@ -45,9 +45,14 @@ def index():
     cah = db.execute("SELECT cash FROM users WHERE id = ?",
                      session["user_id"])
     cuh = cah[0]["cash"]
-    for 
 
-    return render_template("index.html",data = data, money = cuh )
+    ttl = 0
+    for x in range(len(data)):
+
+        a = (lookup(data[x]["symbol"])["price"]) * (data[x]["shares"])
+        ttl = ttl + a
+
+    return render_template("index.html", data=data, money=cuh,fake = ttl )
 
 
 # BUY
