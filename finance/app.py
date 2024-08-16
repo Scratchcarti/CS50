@@ -83,6 +83,7 @@ def buy():
 
         if (cash >= (shr * lookup(sym)["price"])):
 
+            if (sym not in (db.execute("SELECT * FROM clientdata WHERE id = ?", session["user_id"])))
             try:
                 db.execute("INSERT INTO clientdata (userid,symbol,shares,time) VALUES(?,?,?,?)",
                            session["user_id"], sym, shr, datetime.now())
