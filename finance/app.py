@@ -62,7 +62,7 @@ def buy():
         if shr <= 0:
             return apology("Weird shares")
 
-        
+
 
 
 
@@ -132,6 +132,8 @@ def login():
         rows = db.execute(
             "SELECT * FROM users WHERE username = ?", request.form.get("username")
         )
+
+        print(rows)
 
         # Ensure username exists and password is correct
         if len(rows) != 1 or not check_password_hash(
