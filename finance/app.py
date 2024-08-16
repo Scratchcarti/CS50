@@ -56,15 +56,15 @@ def buy():
         sym = request.form.get("symbol")
         shr = int(request.form.get("shares"))
 
-        if (not sym) or (not sym in lookup(sym)):
+        if (not sym) or (not lookup(sym)):
             return apology("Symbol doesnt exist")
 
         if shr <= 0:
             return apology("Weird shares")
 
-    cash = db.execute("Select cash FROM users WHERE id = ?",session["userid"])
+    cash = db.execute("Select cash FROM users WHERE id = ?",session["user_id"])
 
-    print(cash)
+    
 
 
 
@@ -185,7 +185,7 @@ def quote():
 
         dicc = lookup(symb)
 
-        if not lookup:
+        if not dicc:
             return apology("Enter a valid symbol")
 
         else:
