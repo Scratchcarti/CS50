@@ -6,6 +6,8 @@ from flask_session import Session
 from werkzeug.security import check_password_hash, generate_password_hash
 
 from helpers import apology, login_required, lookup, usd
+from datetime import datetime
+
 
 # Configure application
 app = Flask(__name__)
@@ -65,8 +67,9 @@ def buy():
     cash = db.execute("Select cash FROM users WHERE id = ?",session["user_id"])
 
     if (cash >= (shr * lookup(sym))):
+        
 
-        db.execute("INSERT INTO clientdata (userid,symbol,shares,time) VALUES(?,?,?,?)", )
+        db.execute("INSERT INTO clientdata (userid,symbol,shares,time) VALUES(?,?,?,?)",session["user_id"],sym,shr,datetime.now())
 
 
 
