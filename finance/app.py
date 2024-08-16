@@ -64,23 +64,23 @@ def buy():
         if shr <= 0:
             return apology("Weird shares")
 
-     cash = db.execute("SELECT cash FROM users WHERE id = ?",session["user_id"])
+        cash = float(db.execute("SELECT cash FROM users WHERE id = ?",session["user_id"]))
 
-    if (cash >= (shr * lookup(sym)["price"])):
+        if (cash >= (shr * lookup(sym)["price"])):
 
-        try:
-            db.execute("INSERT INTO clientdata (userid,symbol,shares,time) VALUES(?,?,?,?)",session["user_id"],sym,shr,datetime.now())
-        except:
-            return apology("INFO DUMP WASNT PROPER")
+            try:
+                db.execute("INSERT INTO clientdata (userid,symbol,shares,time) VALUES(?,?,?,?)",session["user_id"],sym,shr,datetime.now())
+            except:
+                return apology("INFO DUMP WASNT PROPER")
 
-        db.execute("UPDATE users WHERE id = (?) SET cash = (?)",session["user_id"], (cash - (shr * lookup(sym)["price"])) )
+            db.execute("UPDATE users WHERE id = (?) SET cash = (?)",session["user_id"], (cash - (shr * lookup(sym)["price"])) )
 
-        return redirect("/")
+            return redirect("/")
 
 
-    else:
+        else:
 
-        return apology("get your bread up broke boy")
+            return apology("get your bread up broke boy")
 
 
 
