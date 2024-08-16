@@ -229,7 +229,7 @@ def register():
 
         return render_template("register.html")
 
-    return apology("Some retarded error??")
+    return apology("Some retded error??")
 
 #SELL THAT SHI
 
@@ -251,9 +251,22 @@ def sell():
 
         wha = db.execute("SELECT * FROM clientdata WHERE userid = ?",
                           session["user_id"])
-        
+    #FIRST DUMB CONDITION
+
+
+        count = 0
         for x in range(len(wha)):
-            if (symb == wha[x][])
+            if (symb == wha[x]["symbol"]):
+                count += 1
+        if (count == 0):
+            return apology("what the fuu")
+
+        #SECOND CONDI
+
+
+        
+
+
 
 
 
