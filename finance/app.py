@@ -40,7 +40,9 @@ def after_request(response):
 def index():
     """Show portfolio of stocks"""
 
-    
+    data = db.execute("SELECT * FROM clientdata WHERE userid = ?",
+                      session["user_id"] )
+    print(data)
     return apology("TODO")
 
 
