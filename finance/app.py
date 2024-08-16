@@ -42,9 +42,11 @@ def index():
 
     data = db.execute("SELECT * FROM clientdata WHERE userid = ?",
                       session["user_id"] )
+    cah = db.execute("SELECT cash FROM users WHERE id = ?",
+                     session["user_id"])
+    cuh = cah[0]["cash"]
 
-    return render_template("index.html",data = data, money = db.execute("SELECT cash FROM users WHERE id = ?",
-                                                                        session["user_id"]))
+    return render_template("index.html",data = data, money = cuh )
 
 
 # BUY
