@@ -249,7 +249,12 @@ def sell():
         symb = request.form.get("symbol")
         shr = request.form.get("shares")
 
+        wha = db.execute("SELECT * FROM clientdata WHERE userid = ?",
+                          session["user_id"])
         
+        for x in range(len(wha)):
+            if (symb == wha[x][])
+
 
 
     return apology("TODO")
