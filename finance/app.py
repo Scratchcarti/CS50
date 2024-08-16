@@ -231,11 +231,16 @@ def register():
 
     return apology("Some retarded error??")
 
+#SELL THAT SHI
+
 
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
 def sell():
     """Sell shares of stock"""
-    
+    if request.method == "GET":
+        symbols = db.execute("SELECT ")
+        return render_template("sell.html",)
+
 
     return apology("TODO")
