@@ -22,19 +22,19 @@
                 <tr>
                     <td class="text-start">{{ vals.symbol }}</td>
                     <td class="text-end">{{ vals.shares }}</td>
-                    <td class="text-end">{{ (vals.symbol | lookup).price }}</td>
-                    <td class="text-end">{{ ((vals.symbol | lookup).price) * (vals.shares) }}</td>
+                    <td class="text-end">{{ (vals.symbol | lookup).price | usd }}</td>
+                    <td class="text-end">{{ (((vals.symbol | lookup).price) * (vals.shares)) | usd }}</td>
                 </tr>
                     {% endfor %}
         </tbody>
         <tfoot>
             <tr>
                 <td class="border-0 fw-bold text-end" colspan="3">Cash</td>
-                <td class="border-0 text-end">{{money}}</td>
+                <td class="border-0 text-end">{{money | usd}}</td>
             </tr>
             <tr>
                 <td class="border-0 fw-bold text-end" colspan="3">TOTAL</td>
-                <td class="border-0 w-bold text-end">{{money + fake}}</td>
+                <td class="border-0 w-bold text-end">{{money + fake | usd}}</td>
             </tr>
         </tfoot>
     </table>
