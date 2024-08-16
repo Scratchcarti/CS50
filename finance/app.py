@@ -201,13 +201,13 @@ def register():
     # username shi and pass shi
 
         if not uss:
-            return apology("must provide username", 403)
+            return apology("must provide username", 400)
 
         if not pss:
-            return apology("Must provide password", 403)
+            return apology("Must provide password", 400)
 
         if pss != cpss:
-            return apology("Passwords must match", 403)
+            return apology("Passwords must match", 400)
 
         try:
             db.execute("INSERT INTO users (username,hash) VALUES(?,?)", uss, generate_password_hash(pss))
