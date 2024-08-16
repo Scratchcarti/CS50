@@ -104,7 +104,8 @@ def buy():
 def history():
     """Show history of transactions"""
 
-    
+    bhai = db.execute("SELECT * buydata WHERE id = ?",session["user_id"] )
+    salmon = db.execute("SELECT * selldata WHERE id = ?")
     return apology("TODO")
 
 # LOGIN
