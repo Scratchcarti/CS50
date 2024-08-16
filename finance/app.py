@@ -45,7 +45,7 @@ def index():
     cah = db.execute("SELECT cash FROM users WHERE id = ?",
                      session["user_id"])
     cuh = cah[0]["cash"]
-    ttl = db.execute("SELECT ")
+    for 
 
     return render_template("index.html",data = data, money = cuh )
 
