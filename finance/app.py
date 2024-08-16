@@ -45,16 +45,15 @@ def index():
     data = db.execute("SELECT * FROM clientdata WHERE userid = ?",
                       session["user_id"])
     cah = db.execute("SELECT cash FROM users WHERE id = ?",
-                     session["user_id"])
-    cuh = cah[0]["cash"]
-
+                     session["user_id"])[0]["cash"]
+    
     ttl = 0
     for x in range(len(data)):
 
         a = (lookup(data[x]["symbol"])["price"]) * (data[x]["shares"])
         ttl = ttl + a
 
-    return render_template("index.html", data=data, money=float(cuh), fake=float(ttl))
+    return render_template("index.html", data=data, money=float(cah), fake=float(ttl))
 
 
 # BUY
