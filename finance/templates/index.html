@@ -18,8 +18,8 @@
             </tr>
         </thead>
        <tbody>
-                    {% for vals in data %}
-                    
+                    {% for vals in data if vals.shares != 0 %}
+
                 <tr>
                     <td class="text-start">{{ vals.symbol }}</td>
                     <td class="text-end">{{ vals.shares }}</td>
