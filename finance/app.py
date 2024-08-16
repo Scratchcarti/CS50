@@ -64,7 +64,7 @@ def buy():
         if shr <= 0:
             return apology("Weird shares")
 
-    cash = db.execute("Select cash FROM users WHERE id = ?",session["user_id"])
+    cash = db.execute("SELECT cash FROM users WHERE id = ?",session["user_id"])
 
     if (cash >= (shr * lookup(sym))):
 
@@ -73,7 +73,7 @@ def buy():
         except:
             return apology("INFO DUMP WASNT PROPER")
 
-        db.execute("INSERT INTO")
+        db.execute("UPDATE users WHERE id = (?) SET cash = (?)",session["user_id"],)
 
 
 
