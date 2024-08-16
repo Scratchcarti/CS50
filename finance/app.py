@@ -210,7 +210,7 @@ def register():
             return apology("Passwords must match", 403)
 
         try:
-            db.execute("INSERT INTO users (username,hash) VALUES(?,?)", uss, generate_password_hash(request.form.get("password")))
+            db.execute("INSERT INTO users (username,hash) VALUES(?,?)", uss, generate_password_hash(pss))
 
         except:
             return apology("Username already exist")
@@ -303,6 +303,4 @@ def cpass():
 
 
         else:
-            print((db.execute("SELECT hash FROM users WHERE id = ?",session["user_id"]))[0]["hash"])
-            print(oldp)
             return apology("Old password is incorrect")
