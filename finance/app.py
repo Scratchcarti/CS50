@@ -263,11 +263,16 @@ def sell():
 
         #SECOND CONDI
 
+        else:
+            usr = db.execute("SELECT shares FROM clientdata WHERE userid = ? AND symbol = ?", session["user_id"], symb)[0]["shares"]
 
-        usr = db.execute("SELECT shares FROM clientdata WHERE userid = ? AND symbol = ?", session["user_id"], symb)[0]["shares"]
+            if usr < shr or shr <= 0:
+                return apology("know your worth")
 
-        if usr < shr or shr <= 0:
-            return apology("know your worth")
+            else:
+                db.execute("UPDATE clientdata SET shares = shares - (?) WHERE symbol = ? AND userid = ? ",
+                           shr,symb,session["user_id"])
+
 
 
 
