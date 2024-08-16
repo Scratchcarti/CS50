@@ -64,7 +64,7 @@ def buy():
         if shr <= 0:
             return apology("Weird shares")
 
-    cash = db.execute("SELECT cash FROM users WHERE id = ?",session["user_id"])
+     cash = db.execute("SELECT cash FROM users WHERE id = ?",session["user_id"])
 
     if (cash >= (shr * lookup(sym)["price"])):
 
