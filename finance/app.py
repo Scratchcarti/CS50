@@ -54,7 +54,7 @@ def index():
         a = (lookup(data[x]["symbol"])["price"]) * (data[x]["shares"])
         ttl = ttl + a
 
-    return render_template("index.html", data=data, money=float(cuh),fake = float(ttl) )
+    return render_template("index.html", data=data, money=float(cuh), fake = float(ttl) )
 
 
 # BUY
