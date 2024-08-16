@@ -1,4 +1,3 @@
-dic = {"name":"retard", "work": "beni"}
-work = "work"
+dic = {{"name":"retard", "work": "beni"},{"name":"mental", "word": "sex"}}
 
-print(dic[work])
+print(dic["work"])
