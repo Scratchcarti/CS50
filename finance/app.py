@@ -104,6 +104,9 @@ def buy():
 
             else:
                 db.execute("UPDATE clientdata SET shares = shares + (?) WHERE userid = ?", shr, session["user_id"])
+                db.execute("UPDATE users SET cash = (?) WHERE id = (?)",
+                            (cash - (shr * lookup(sym)["price"])), session["user_id"], )
+
 
                 return redirect("/")
 
