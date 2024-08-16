@@ -40,10 +40,7 @@ def index():
     return apology("TODO")
 
 
-
-
-#BUY
-
+# BUY
 
 
 @app.route("/buy", methods=["GET", "POST"])
@@ -64,13 +61,14 @@ def buy():
         if shr <= 0:
             return apology("Weird shares")
 
-        ca = (db.execute("SELECT cash FROM users WHERE id = ?",session["user_id"]))
+        ca = (db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"]))
         cash = ca[0]["cash"]
 
         if (cash >= (shr * lookup(sym)["price"])):
 
             try:
-                db.execute("INSERT INTO clientdata (userid,symbol,shares,time) VALUES(?,?,?,?)",session["user_id"],sym,shr,datetime.now())
+                db.execute("INSERT INTO clientdata (userid,symbol,shares,time) VALUES(?,?,?,?)",
+                           session["user_id"], sym, shr, datetime.now())
             except:
                 return apology("INFO DUMP WASNT PROPER")
 
@@ -78,22 +76,8 @@ def buy():
 
             return redirect("/")
 
-
         else:
-
             return apology("get your bread up broke boy")
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 @app.route("/history")
@@ -103,10 +87,11 @@ def history():
     return apology("TODO")
 
 # LOGIN
+
+
 @app.route("/login", methods=["GET", "POST"])
 def login():
     """Log user in"""
-
 
     session.clear()
 
@@ -124,7 +109,6 @@ def login():
         rows = db.execute(
             "SELECT * FROM users WHERE username = ?", request.form.get("username")
         )
-
 
         # Ensure username exists and password is correct
         if len(rows) != 1 or not check_password_hash(
@@ -153,8 +137,7 @@ def logout():
     # Redirect user to login form
     return redirect("/")
 
-#QUOTE
-
+# QUOTE
 
 
 @app.route("/quote", methods=["GET", "POST"])
@@ -176,15 +159,9 @@ def quote():
         else:
             val = dicc["price"]
 
-            return render_template("quoted.html",symb = symb, val = usd(val))
-
-
+            return render_template("quoted.html", symb=symb, val=usd(val))
 
     return apology("quote not working prop")
-
-
-
-
 
 
 # REGISTER
@@ -197,9 +174,9 @@ def register():
         pss = request.form.get("password")
         cpss = request.form.get("confirmation")
 
-    #username shi and pass shi
+    # username shi and pass shi
 
-        if not uss :
+        if not uss:
             return apology("must provide username", 403)
 
         if not pss:
@@ -215,7 +192,6 @@ def register():
             return apology("Username already exist")
 
         return redirect("/")
-
 
     elif request.method == "GET":
 
