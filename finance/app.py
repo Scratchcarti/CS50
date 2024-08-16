@@ -69,7 +69,7 @@ def buy():
 
     elif request.method == "POST":
 
-        sym = request.form.get("symbol")
+        sym = (request.form.get("symbol")).upper()
         shr = int(request.form.get("shares"))
 
         if (not sym) or (not lookup(sym)):
