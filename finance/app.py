@@ -264,7 +264,11 @@ def sell():
         #SECOND CONDI
 
 
-        
+        usr = db.execute("SELECT shares FROM cliendata WHERE id = ? AND symbol = ?", session["user_id"], symb)[0]["shares"]
+
+        if usr < shr:
+
+            return apology("know your worth")
 
 
 
