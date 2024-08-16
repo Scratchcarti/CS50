@@ -285,11 +285,11 @@ def cpass():
 
     elif request.method == "POST":
 
-        oldp = generate_password_hash(request.form.get("oldpass"))
-        newp = generate_password_hash(request.form.get("newpass"))
-        cp = generate_password_hash(request.form.get("confirm"))
+        oldp = (request.form.get("oldpass"))
+        newp = (request.form.get("newpass"))
+        cp = (request.form.get("confirm"))
 
-        if (oldp == (db.execute("SELECT hash FROM users WHERE id = ?",session["user_id"]))[0]["hash"]):
+        if (check_password_hash((db.execute("SELECT hash FROM users WHERE id = ?",session["user_id"]))[0]["hash"],oldp)):
 
             if (newp == cp):
 
