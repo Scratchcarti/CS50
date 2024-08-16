@@ -103,7 +103,7 @@ def buy():
                 return redirect("/")
 
             else:
-                db.execute("UPDATE clientdata SET (shares = shares + (?)) WHERE userid = ?", shr, session["user_id"])
+                db.execute("UPDATE clientdata SET shares = shares + (?) WHERE userid = ?", shr, session["user_id"])
 
                 return redirect("/")
 
