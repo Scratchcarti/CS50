@@ -303,5 +303,5 @@ def cpass():
 
 
         else:
-
+            print((db.execute("SELECT hash FROM users WHERE id = ?",session["user_id"]))[0]["hash"])
             return apology("Old password is incorrect")
