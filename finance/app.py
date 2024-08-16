@@ -62,7 +62,7 @@ def buy():
         if shr <= 0:
             return apology("Weird shares")
 
-    sessions["userid"]
+      cash = db.execute("Select cash FROM users WHERE id = ?",session["userid"])
 
 
 
