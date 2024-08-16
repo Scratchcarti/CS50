@@ -5,7 +5,7 @@
 {% endblock %}
 
 
-{% main title %}
+{% block main %}
 <table class="table">
     <thead>
         <tr>
@@ -16,14 +16,14 @@
         </tr>
     </thead>
     <tbody>
-            {% for }
+            {% for shi in bhai %}
             <tr>
-                <td class="text-start">NFLX</td>
-                <td class="text-end">12</td>
-                <td class="text-end">$663.22</td>
+                <td class="text-start">{{shi.symbol}}</td>
+                <td class="text-end">{{shi.shares}}</td>
+                <td class="text-end">{{$663.22}}</td>
                 <td class="text-end">2024-08-16 07:18:56</td>
             </tr>
-
+            {% endfor %}
     </tbody>
 </table>
 
