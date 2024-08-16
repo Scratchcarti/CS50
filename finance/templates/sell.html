@@ -10,9 +10,9 @@
         <select class="form-select mx-auto w-auto" name="symbol">
             <option disabled selected>Symbol</option>
 
-                {% for symbol in symbols%}
+                {% for symb in symbols%}
 
-                <option value="{{symbol.symbols}}">{{symbol.symbols}}</option>
+                <option value="{{symb.symbol}}">{{symb.symbol}}</option>
 
                 {% endblock %}
         </select>
