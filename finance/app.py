@@ -239,8 +239,13 @@ def register():
 def sell():
     """Sell shares of stock"""
     if request.method == "GET":
-        symbols = db.execute("SELECT symbol FROM clientdata WHERE userid = ?", session["user_id"])
+        symbols = db.execute("SELECT symbol FROM clientdata WHERE userid = ?",
+                              session["user_id"])
+
         return render_template("sell.html",symbols = symbols)
+
+    elif request.method == "POST":
+        
 
 
     return apology("TODO")
