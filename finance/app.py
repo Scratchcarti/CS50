@@ -64,7 +64,9 @@ def buy():
 
     cash = db.execute("Select cash FROM users WHERE id = ?",session["user_id"])
 
-    
+    if (cash >= (shr * lookup(sym))):
+
+        db.execute("INSERT ")
 
 
 
