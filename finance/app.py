@@ -88,7 +88,7 @@ def buy():
                     db.execute(" UPDATE clientdata SET shares = shares + (?) WHERE userid = (?) AND symbol = (?)",shr,session["user_id"],sym)
 
 
-                db.execute("INSERT INTO buydata(id,symbol,shares,time,cost) VALUES(?,?,?,?)",
+                db.execute("INSERT INTO buydata(id,symbol,shares,time,cost) VALUES(?,?,?,?,?)",
                             session["user_id"],sym,shr,datetime.now(),lookup(sym)["price"])
                 db.execute("UPDATE users SET cash = (?) WHERE id = (?)",
                            (cash - (shr * lookup(sym)["price"])), session["user_id"] )
@@ -266,7 +266,7 @@ def sell():
                            shr,symb,session["user_id"])
                 db.execute("UPDATE users SET cash = cash + (?)",
                            (shr)*(lookup(symb)["price"]))
-                db.execute("INSERT INTO selldata(id,symbol,shares,time,cost) VALUES(?,?,?,?)",
+                db.execute("INSERT INTO selldata(id,symbol,shares,time,cost) VALUES(?,?,?,?,?)",
                             session["user_id"],symb,shr,datetime.now(),lookup(symb)["price"])
 
                 return redirect("/")
