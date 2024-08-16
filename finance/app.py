@@ -73,37 +73,14 @@ def buy():
         except:
             return apology("INFO DUMP WASNT PROPER")
 
-        db.execute("UPDATE users WHERE id = (?) SET cash = (?)",session["user_id"],)
+        db.execute("UPDATE users WHERE id = (?) SET cash = (?)",session["user_id"], (cash - (shr * lookup(sym))) )
+
+        return redirect("/")
 
 
+    else:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    return redirect("/")
+        return apology("get your bread up broke boy")
 
 
 
