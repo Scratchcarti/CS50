@@ -85,7 +85,8 @@ def buy():
 
             fr = db.execute("SELECT symbol FROM clientdata WHERE userid = ?",
                                         session["user_id"])
-            if (sym not in fr["symbol"]):
+            if (sym not in (for x in range(len(fr)):
+                                fr[x]["symbol"])):
 
                 try:
                     db.execute("INSERT INTO clientdata (userid,symbol,shares,time) VALUES(?,?,?,?)",
