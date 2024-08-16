@@ -18,14 +18,14 @@
             </tr>
         </thead>
        <tbody>
-
+                    {% for vals in data %}
                 <tr>
-                    <td class="text-start">NFLX</td>
-                    <td class="text-end">12</td>
-                    <td class="text-end">$663.22</td>
+                    <td class="text-start">{{vals.symbol}}</td>
+                    <td class="text-end">{{vals.shares}}</td>
+                    <td class="text-end">{{vals.}}</td>
                     <td class="text-end">$7,958.64</td>
                 </tr>
-
+                    {% endfor %}
         </tbody>
         <tfoot>
             <tr>
