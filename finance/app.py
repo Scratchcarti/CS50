@@ -285,7 +285,10 @@ def cpass():
 
     elif request.method == "POST":
 
-        oldp = 
+        oldp = generate_password_hash(request.form.get(oldpass))
+        newp = generate_password_hash(request.form.get(newpass))
+        cp = generate_password_hash(request.form.get(confirm))
 
+        if (oldp == )
 
 
