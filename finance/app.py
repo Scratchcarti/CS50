@@ -285,10 +285,23 @@ def cpass():
 
     elif request.method == "POST":
 
-        oldp = generate_password_hash(request.form.get(oldpass))
-        newp = generate_password_hash(request.form.get(newpass))
-        cp = generate_password_hash(request.form.get(confirm))
+        oldp = generate_password_hash(request.form.get("oldpass"))
+        newp = generate_password_hash(request.form.get("newpass"))
+        cp = generate_password_hash(request.form.get("confirm"))
 
-        if (oldp == )
+        if (oldp == (db.execute("SELECT hash FROM users WHERE id = ?",session["user_id"]))[0]["hash"]):
+
+            if (newp == cp):
+
+                db.execute("UPDATE users SET hash = (?) WHERE id = ? ",
+                           cp, session["user_id"])
+
+                return redirect("/")
+
+            else:
+                return apology("NEW Passwords donot match")
 
 
+        else:
+
+            return apology("Old password is incorrect")
