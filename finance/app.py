@@ -261,6 +261,8 @@ def sell():
                            shr,symb,session["user_id"])
                 db.execute("UPDATE users SET cash = cash + (?)",
                            (shr)*(lookup(symb)["price"]))
+                db.execute("INSERT INTO selldata(id,symbol,shares,time) VALUES(?,?,?,?)",
+                            session["user_id"],symb,shr,datetime.now())
 
                 return redirect("/")
 
