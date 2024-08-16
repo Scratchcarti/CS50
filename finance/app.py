@@ -67,11 +67,13 @@ def buy():
     cash = db.execute("Select cash FROM users WHERE id = ?",session["user_id"])
 
     if (cash >= (shr * lookup(sym))):
-        
 
-        db.execute("INSERT INTO clientdata (userid,symbol,shares,time) VALUES(?,?,?,?)",session["user_id"],sym,shr,datetime.now())
+        try:
+            db.execute("INSERT INTO clientdata (userid,symbol,shares,time) VALUES(?,?,?,?)",session["user_id"],sym,shr,datetime.now())
+        except:
+            return apology("INFO DUMP WASNT PROPER")
 
-
+        db.execute("INSERT INTO")
 
 
 
