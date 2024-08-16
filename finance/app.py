@@ -247,7 +247,7 @@ def sell():
     elif request.method == "POST":
 
         symb = request.form.get("symbol")
-        shr = request.form.get("shares")
+        shr = int(request.form.get("shares"))
 
         wha = db.execute("SELECT * FROM clientdata WHERE userid = ?",
                           session["user_id"])
@@ -264,10 +264,9 @@ def sell():
         #SECOND CONDI
 
 
-        usr = db.execute("SELECT shares FROM cliendata WHERE id = ? AND symbol = ?", session["user_id"], symb)[0]["shares"]
+        usr = db.execute("SELECT shares FROM clientdata WHERE userid = ? AND symbol = ?", session["user_id"], symb)[0]["shares"]
 
-        if usr < shr:
-
+        if usr < shr or shr <= 0:
             return apology("know your worth")
 
 
