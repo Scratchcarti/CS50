@@ -74,7 +74,7 @@ def buy():
         if (not sym) or (not lookup(sym)):
             return apology("Symbol doesnt exist")
 
-        if shr <= 0:
+        if shr <= 0 or not shr.isdigit():
             return apology("Weird shares")
 
         cash = (db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"]))[0]["cash"]
