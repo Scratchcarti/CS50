@@ -43,7 +43,7 @@ def index():
     """Show portfolio of stocks"""
 
     data = db.execute("SELECT * FROM clientdata WHERE userid = ?",
-                      session["user_id"] )
+                      session["user_id"])
     cah = db.execute("SELECT cash FROM users WHERE id = ?",
                      session["user_id"])
     cuh = cah[0]["cash"]
@@ -54,7 +54,7 @@ def index():
         a = (lookup(data[x]["symbol"])["price"]) * (data[x]["shares"])
         ttl = ttl + a
 
-    return render_template("index.html", data=data, money=float(cuh), fake = float(ttl) )
+    return render_template("index.html", data=data, money=float(cuh), fake=float(ttl))
 
 
 # BUY
@@ -83,9 +83,9 @@ def buy():
 
         if (cash >= (shr * lookup(sym)["price"])):
 
-            li =[]
+            li = []
             fr = db.execute("SELECT symbol FROM clientdata WHERE userid = ?",
-                                        session["user_id"])
+                            session["user_id"])
             for x in range(len(fr)):
                 li.append(fr[x]["symbol"])
 
@@ -93,26 +93,21 @@ def buy():
 
                 try:
                     db.execute("INSERT INTO clientdata (userid,symbol,shares,time) VALUES(?,?,?,?)",
-                           session["user_id"], sym, shr, datetime.now())
+                               session["user_id"], sym, shr, datetime.now())
                 except:
                     return apology("INFO DUMP WASNT PROPER")
 
                 db.execute("UPDATE users SET cash = (?) WHERE id = (?)",
-                            (cash - (shr * lookup(sym)["price"])), session["user_id"], )
+                           (cash - (shr * lookup(sym)["price"])), session["user_id"], )
 
                 return redirect("/")
 
             else:
                 db.execute("UPDATE clientdata SET shares = shares + (?) WHERE userid = ?", shr, session["user_id"])
                 db.execute("UPDATE users SET cash = (?) WHERE id = (?)",
-                            (cash - (shr * lookup(sym)["price"])), session["user_id"], )
-
+                           (cash - (shr * lookup(sym)["price"])), session["user_id"], )
 
                 return redirect("/")
-
-
-
-
         else:
             return apology("get your bread up broke boy")
 
