@@ -22,8 +22,8 @@
                 <tr>
                     <td class="text-start">{{ vals.symbol }}</td>
                     <td class="text-end">{{ vals.shares }}</td>
-                    <td class="text-end">{{ vals.symbol | lookup }}</td>
-                    <td class="text-end">{{ (vals.symbol | lookup) * (vals.shares) }}</td>
+                    <td class="text-end">{{ (vals.symbol | lookup).price }}</td>
+                    <td class="text-end">{{ ((vals.symbol | lookup).price) * (vals.shares) }}</td>
                 </tr>
                     {% endfor %}
         </tbody>
