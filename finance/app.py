@@ -77,8 +77,7 @@ def buy():
         if shr <= 0:
             return apology("Weird shares")
 
-        ca = (db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"]))
-        cash = ca[0]["cash"]
+        cash = (db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"]))[0]["cash"]
 
         if (cash >= (shr * lookup(sym)["price"])):
 
@@ -87,7 +86,7 @@ def buy():
                                session["user_id"], sym, shr, datetime.now())
                 except:
 
-                    db.execute(" UPDATE clientdata SET shares = shares + (?) WHERE id = (?) AND symbol = (?)",shr,session["user_id"],sym)
+                    db.execute(" UPDATE clientdata SET shares = shares + (?) WHERE userid = (?) AND symbol = (?)",shr,session["user_id"],sym)
 
                 db.execute("UPDATE users SET cash = (?) WHERE id = (?)",
                            (cash - (shr * lookup(sym)["price"])), session["user_id"], )
