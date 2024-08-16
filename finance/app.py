@@ -245,6 +245,10 @@ def sell():
         return render_template("sell.html",symbols = symbols)
 
     elif request.method == "POST":
+
+        symb = request.form.get("symbol")
+        shr = request.form.get("shares")
+
         
 
 
