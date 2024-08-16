@@ -66,7 +66,7 @@ def buy():
 
     if (cash >= (shr * lookup(sym))):
 
-        db.execute("INSERT ")
+        db.execute("INSERT INTO clientdata (userid,symbol,shares,time) VALUES(?,?,?,?)", )
 
 
 
