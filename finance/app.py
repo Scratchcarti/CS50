@@ -88,8 +88,8 @@ def buy():
                     db.execute(" UPDATE clientdata SET shares = shares + (?) WHERE userid = (?) AND symbol = (?)",shr,session["user_id"],sym)
 
 
-                db.execute("INSERT INTO buydata(id,symbol,shares,time) VALUES(?,?,?,?)",
-                            session["user_id"],sym,shr,datetime.now())
+                db.execute("INSERT INTO buydata(id,symbol,shares,time,cost) VALUES(?,?,?,?)",
+                            session["user_id"],sym,shr,datetime.now(),lookup(sym)["price"])
                 db.execute("UPDATE users SET cash = (?) WHERE id = (?)",
                            (cash - (shr * lookup(sym)["price"])), session["user_id"] )
 
