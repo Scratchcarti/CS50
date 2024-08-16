@@ -83,15 +83,15 @@ def buy():
 
             try:
                 db.execute("INSERT INTO clientdata (userid,symbol,shares,time) VALUES(?,?,?,?)",
-                               session["user_id"], sym, shr, datetime.now())
+                           session["user_id"], sym, shr, datetime.now())
             except ValueError:
-                db.execute(" UPDATE clientdata SET shares = shares + (?) WHERE userid = (?) AND symbol = (?)",shr,session["user_id"],sym)
-
+                db.execute(" UPDATE clientdata SET shares = shares + (?) WHERE userid = (?) AND symbol = (?)",
+                           shr, session["user_id"], sym)
 
             db.execute("INSERT INTO buydata(id,symbol,shares,time,cost) VALUES(?,?,?,?,?)",
-                            session["user_id"],sym,shr,datetime.now(),lookup(sym)["price"])
+                       session["user_id"], sym, shr, datetime.now(), lookup(sym)["price"])
             db.execute("UPDATE users SET cash = (?) WHERE id = (?)",
-                           (cash - (shr * lookup(sym)["price"])), session["user_id"] )
+                       (cash - (shr * lookup(sym)["price"])), session["user_id"])
 
             return redirect("/")
 
@@ -104,9 +104,9 @@ def buy():
 def history():
     """Show history of transactions"""
     if request.method == "GET":
-        bhai = db.execute("SELECT * FROM buydata WHERE id = (?)",session["user_id"] )
-        salmon = db.execute("SELECT * FROM selldata WHERE id = (?)",session["user_id"])
-        return render_template("history.html",bhai = bhai, salmon = salmon)
+        bhai = db.execute("SELECT * FROM buydata WHERE id = (?)", session["user_id"])
+        salmon = db.execute("SELECT * FROM selldata WHERE id = (?)", session["user_id"])
+        return render_template("history.html", bhai=bhai, salmon=salmon)
 
     return apology("TODO")
 
@@ -223,7 +223,7 @@ def register():
 
     return apology("Some retded error??")
 
-#SELL THAT SHI
+# SELL THAT SHI
 
 
 @app.route("/sell", methods=["GET", "POST"])
@@ -232,9 +232,9 @@ def sell():
     """Sell shares of stock"""
     if request.method == "GET":
         symbols = db.execute("SELECT symbol FROM clientdata WHERE userid = ?",
-                              session["user_id"])
+                             session["user_id"])
 
-        return render_template("sell.html",symbols = symbols)
+        return render_template("sell.html", symbols=symbols)
 
     elif request.method == "POST":
 
@@ -242,9 +242,8 @@ def sell():
         shr = int(request.form.get("shares"))
 
         wha = db.execute("SELECT * FROM clientdata WHERE userid = ?",
-                          session["user_id"])
-    #FIRST DUMB CONDITION
-
+                         session["user_id"])
+    # FIRST DUMB CONDITION
 
         count = 0
         for x in range(len(wha)):
@@ -253,7 +252,7 @@ def sell():
         if (count == 0):
             return apology("what the fuu")
 
-        #SECOND CONDI
+        # SECOND CONDI
 
         else:
             usr = db.execute("SELECT shares FROM clientdata WHERE userid = ? AND symbol = ?", session["user_id"], symb)[0]["shares"]
@@ -263,17 +262,15 @@ def sell():
 
             else:
                 db.execute("UPDATE clientdata SET shares = shares - (?) WHERE symbol = ? AND userid = ? ",
-                           shr,symb,session["user_id"])
+                           shr, symb, session["user_id"])
                 db.execute("UPDATE users SET cash = cash + (?)",
                            (shr)*(lookup(symb)["price"]))
                 db.execute("INSERT INTO selldata(id,symbol,shares,time,cost) VALUES(?,?,?,?,?)",
-                            session["user_id"],symb,shr,datetime.now(),lookup(symb)["price"])
+                           session["user_id"], symb, shr, datetime.now(), lookup(symb)["price"])
 
                 return redirect("/")
 
     return apology("kys")
-
-
 
 
 @app.route("/cpass", methods=["GET", "POST"])
@@ -289,7 +286,7 @@ def cpass():
         newp = (request.form.get("newpass"))
         cp = (request.form.get("confirm"))
 
-        if (check_password_hash((db.execute("SELECT hash FROM users WHERE id = ?",session["user_id"]))[0]["hash"],oldp)):
+        if (check_password_hash((db.execute("SELECT hash FROM users WHERE id = ?", session["user_id"]))[0]["hash"], oldp)):
 
             if (newp == cp):
 
@@ -300,7 +297,6 @@ def cpass():
 
             else:
                 return apology("NEW Passwords donot match")
-
 
         else:
             return apology("Old password is incorrect")
