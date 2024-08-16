@@ -89,7 +89,7 @@ def buy():
                     db.execute(" UPDATE clientdata SET shares = shares + (?) WHERE userid = (?) AND symbol = (?)",shr,session["user_id"],sym)
 
                 db.execute("UPDATE users SET cash = (?) WHERE id = (?)",
-                           (cash - (shr * lookup(sym)["price"])), session["user_id"], )
+                           (cash - (shr * lookup(sym)["price"])), session["user_id"] )
 
                 return redirect("/")
 
