@@ -294,7 +294,7 @@ def cpass():
             if (newp == cp):
 
                 db.execute("UPDATE users SET hash = (?) WHERE id = ? ",
-                           cp, session["user_id"])
+                           generate_password_hash(cp), session["user_id"])
 
                 return redirect("/")
 
