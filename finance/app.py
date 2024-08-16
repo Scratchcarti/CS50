@@ -69,6 +69,8 @@ def buy():
     elif request.method == "POST":
 
         sym = (request.form.get("symbol")).upper()
+        if not request.form.get("shares").isdigit():
+            return apology("its not a digit")
         shr = int(request.form.get("shares"))
 
         if (not sym) or (not lookup(sym)):
