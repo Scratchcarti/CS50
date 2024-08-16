@@ -104,8 +104,8 @@ def buy():
 def history():
     """Show history of transactions"""
     if request.method == "GET":
-        bhai = db.execute("SELECT * buydata WHERE id = (?)",session["user_id"] )
-        salmon = db.execute("SELECT * selldata WHERE id = (?)",session["user_id"])
+        bhai = db.execute("SELECT * FROM buydata WHERE id = (?)",session["user_id"] )
+        salmon = db.execute("SELECT * FROM selldata WHERE id = (?)",session["user_id"])
         return render_template("history.html",bhai = bhai, salmon = salmon)
 
     return apology("TODO")
