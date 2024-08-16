@@ -272,10 +272,9 @@ def sell():
             else:
                 db.execute("UPDATE clientdata SET shares = shares - (?) WHERE symbol = ? AND userid = ? ",
                            shr,symb,session["user_id"])
+                db.execute("UPDATE users SET cash = cash + (?)",
+                           (shr)*(lookup(symb)["price"]))
 
+                return redirect("/")
 
-
-
-
-
-    return apology("TODO")
+    return apology("kys")
