@@ -1,5 +1,5 @@
 # CENTRALIZE AND ANALYZE
-#### Video Demo: https://youtu.be/tGMyO4uobiA
+#### Video Demo: https://youtu.be
 #### Description:
 chess.com is the most famous chess website out there.
 but there is a slight problem with it, whenever you click to begin gameplay, the chessboard is not placed in centre.
